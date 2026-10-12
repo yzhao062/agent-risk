@@ -105,11 +105,9 @@ print(is_equivalent(ci, margin=0.10))  # True: equivalent at alpha = 0.05
 
 1. **Get the logs.** Download the dataset into `data/` from the repository root; [`data/README.md`](https://github.com/yzhao062/agent-risk/blob/main/data/README.md) explains the layout, checksums, and redactions.
 
-   ```python
-   from huggingface_hub import snapshot_download
-
-   snapshot_download(repo_id="yzhao062/agent-risk-logs", repo_type="dataset", local_dir="data",
-                     allow_patterns=["logs/*", "arm-e/*", "MANIFEST.tsv", "REDACTIONS.tsv"])
+   ```bash
+   hf download yzhao062/agent-risk-logs --repo-type dataset --local-dir data \
+     --include "logs/*" "arm-e/*" MANIFEST.tsv REDACTIONS.tsv
    ```
 
 2. **Regenerate the numbers.** [`ARTIFACT.md`](https://github.com/yzhao062/agent-risk/blob/main/ARTIFACT.md) maps every table and figure of the paper to its logs, its registration, and its command (A1 to A39). The commands write to `outputs/` and leave `data/` untouched.
