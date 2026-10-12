@@ -1,0 +1,9 @@
+include CHANGELOG.md
+recursive-include tests *.py
+prune checks
+prune experiments
+prune registrations
+prune data
+prune survey
+prune supplement
+exclude ARTIFACT.md

@@ -1,0 +1,171 @@
+{
+ "experiment": "E3",
+ "kind": "smoke",
+ "tau2_commit": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+ "domain": "airline",
+ "task_split": "base",
+ "block_order": [
+  {
+   "block": 1,
+   "label": "block-01-S",
+   "host": "h1",
+   "stage": "smoke",
+   "lam": -1.0,
+   "pi": 0.0
+  },
+  {
+   "block": 2,
+   "label": "block-02-S",
+   "host": "h1",
+   "stage": "smoke",
+   "lam": 15.0,
+   "pi": 0.5
+  }
+ ],
+ "episodes": [
+  {
+   "episode_id": "e3s-00-B",
+   "block": 1,
+   "task_index": 7,
+   "task_id": "7",
+   "seed_index": 0,
+   "unit": 0,
+   "seed": 890000,
+   "member": "B",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3s-00-L",
+   "block": 1,
+   "task_index": 7,
+   "task_id": "7",
+   "seed_index": 0,
+   "unit": 0,
+   "seed": 890000,
+   "member": "L",
+   "gate": {
+    "kind": "stop",
+    "lam": -1.0,
+    "pi": 0.0
+   }
+  },
+  {
+   "episode_id": "e3s-00-C",
+   "block": 1,
+   "task_index": 7,
+   "task_id": "7",
+   "seed_index": 0,
+   "unit": 0,
+   "seed": 890000,
+   "member": "C",
+   "gate": {
+    "kind": "retry",
+    "lam": -1.0,
+    "pi": 0.0,
+    "retry_cap": 2
+   }
+  },
+  {
+   "episode_id": "e3s-01-B",
+   "block": 1,
+   "task_index": 17,
+   "task_id": "17",
+   "seed_index": 0,
+   "unit": 1,
+   "seed": 890001,
+   "member": "B",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3s-01-L",
+   "block": 1,
+   "task_index": 17,
+   "task_id": "17",
+   "seed_index": 0,
+   "unit": 1,
+   "seed": 890001,
+   "member": "L",
+   "gate": {
+    "kind": "stop",
+    "lam": -1.0,
+    "pi": 0.0
+   }
+  },
+  {
+   "episode_id": "e3s-01-C",
+   "block": 1,
+   "task_index": 17,
+   "task_id": "17",
+   "seed_index": 0,
+   "unit": 1,
+   "seed": 890001,
+   "member": "C",
+   "gate": {
+    "kind": "retry",
+    "lam": -1.0,
+    "pi": 0.0,
+    "retry_cap": 2
+   }
+  },
+  {
+   "episode_id": "e3s-02-B",
+   "block": 2,
+   "task_index": 8,
+   "task_id": "8",
+   "seed_index": 0,
+   "unit": 2,
+   "seed": 890002,
+   "member": "B",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3s-02-L",
+   "block": 2,
+   "task_index": 8,
+   "task_id": "8",
+   "seed_index": 0,
+   "unit": 2,
+   "seed": 890002,
+   "member": "L",
+   "gate": {
+    "kind": "stop",
+    "lam": 15.0,
+    "pi": 0.5
+   }
+  },
+  {
+   "episode_id": "e3s-03-B",
+   "block": 2,
+   "task_index": 1,
+   "task_id": "1",
+   "seed_index": 0,
+   "unit": 3,
+   "seed": 890003,
+   "member": "B",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3s-03-L",
+   "block": 2,
+   "task_index": 1,
+   "task_id": "1",
+   "seed_index": 0,
+   "unit": 3,
+   "seed": 890003,
+   "member": "L",
+   "gate": {
+    "kind": "stop",
+    "lam": 15.0,
+    "pi": 0.5
+   }
+  }
+ ]
+}

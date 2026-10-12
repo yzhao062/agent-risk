@@ -1,0 +1,662 @@
+{
+  "docs/agent-risk-modeling/agent-io-archive-2026-10-07/r14/decision-sweep/decision_map_e7.py": {
+    "sha256": "45f6dbcbf6ab348b79d09108b3b2e7bedab6b8a2bb1703b6850819f49cd33f2e",
+    "bytes": 26236
+  },
+  "docs/agent-risk-modeling/agent-io-archive-2026-10-07/r14/decision-sweep/paired_units.jsonl": {
+    "sha256": "0a687a058ba92e20beab93ab7c64e3186691e2d11b3b89f7907910982291c08d",
+    "bytes": 1575656
+  },
+  "docs/agent-risk-modeling/agent-io-archive-2026-10-07/r14/paired-audit/audit_e7.py": {
+    "sha256": "9d0eeea31992de0a980fe685497c6269470feae8a55066b308b571450672bd58",
+    "bytes": 21310
+  },
+  "docs/agent-risk-modeling/agent-io-archive-2026-10-07/r14/paired-audit/paired_units.csv": {
+    "sha256": "81e667c092a2c9c8e3767b4fe410872a833854df784002adc23f41a8fa6b00db",
+    "bytes": 798719
+  },
+  "experiments/agent-risk-harness/analyze_d64.py": {
+    "sha256": "6c95d0ba294d9a9fcafcbefb0df1004e75976e60f4cdb46929124af65586ba68",
+    "bytes": 22918
+  },
+  "experiments/agent-risk-harness/analyze_e1.py": {
+    "sha256": "922066e8bc2ca1da3ee52288b6d159efaa3a331f94c2e2091ee3c4a9323722fd",
+    "bytes": 67737
+  },
+  "experiments/agent-risk-harness/analyze_e7.py": {
+    "sha256": "d9979e211a92cf317e34671a20ab764c7e469a2c920556cdbad8ff391f7d6998",
+    "bytes": 65991
+  },
+  "experiments/agent-risk-harness/analyze_pilot.py": {
+    "sha256": "0861f257d25567cd400e1b9a35f1f574f2cd3aca00e175822acab73203acd2a4",
+    "bytes": 28644
+  },
+  "experiments/agent-risk-harness/analyze_relay.py": {
+    "sha256": "683b6ba4a4c0e26319593bd14fa451a19d3076e899c677546dcae6e23af615eb",
+    "bytes": 63956
+  },
+  "experiments/agent-risk-harness/analyze_replication.py": {
+    "sha256": "d3c70051771273c70dc3ac297f56d34b8514eb8262248fff4d1ae7f88d509dcd",
+    "bytes": 24521
+  },
+  "experiments/agent-risk-harness/e7/manifest_e7.json": {
+    "sha256": "290f45e73cc9fc50bb995806c211fe667287ebdd657dbb76a91da39a45f61e6c",
+    "bytes": 17138129
+  },
+  "experiments/agent-risk-harness/logs/e7/analysis_e7.json": {
+    "sha256": "8c41d9a5335fd08de367d05adff11e55ef9d7672ad958cfb9f7ce4cba19ec09e",
+    "bytes": 464337
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-001/attempt-1/episodes_live.jsonl": {
+    "sha256": "f0efc681850f1ba502813daf1e7244fc4be409522a5789fa327750a1a3c3545e",
+    "bytes": 5240718
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-002/attempt-1/episodes_live.jsonl": {
+    "sha256": "74fcb52c9a6852e42eb8b87f7e0762748e3904b14fab7f990638ec568470de92",
+    "bytes": 5208003
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-003/attempt-1/episodes_live.jsonl": {
+    "sha256": "19b9b02d27b6a8a8e355153d6e5ccbdf0e4ac408a368afe8916121983246ec4e",
+    "bytes": 5924599
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-004/attempt-1/episodes_live.jsonl": {
+    "sha256": "afa8a93d4d5fe97dbb0fbe3ffc9b0ece6995deadd1b7ed863073ca4344803b61",
+    "bytes": 5033827
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-005/attempt-1/episodes_live.jsonl": {
+    "sha256": "c7756d5295ec31df16df01b6913e5de3a31ae052f8df134576433b505f53414e",
+    "bytes": 5165247
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-006/attempt-1/episodes_live.jsonl": {
+    "sha256": "ffd15dffa6c77946692efd0de7f9d15f6676cd9ebf2d373b8f4bcc2804958a40",
+    "bytes": 5051071
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-007/attempt-1/episodes_live.jsonl": {
+    "sha256": "9d5cd8ebbdff2b24436771f50a471e8bfa56c640ab64294ca01967f477ff0b7f",
+    "bytes": 5463640
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-008/attempt-1/episodes_live.jsonl": {
+    "sha256": "647c345c81c4696d4874d61a47e28c20eab9148c7571d0de5c2fb340933e6d0c",
+    "bytes": 5464228
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-009/attempt-1/episodes_live.jsonl": {
+    "sha256": "0051adb01d6e1df34a686e117d739db64f262c4fc92eed90dd65768489cb7f00",
+    "bytes": 5092480
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-010/attempt-1/episodes_live.jsonl": {
+    "sha256": "4668790d97d22b2239f7a932d6af48b08e1bd62d76cee656ecf1670c607aa8f6",
+    "bytes": 5113467
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-011/attempt-1/episodes_live.jsonl": {
+    "sha256": "6ae04f665bb813398cc6c7d91b9d2fb19d415e3d13acdf7945f1a97499a00a44",
+    "bytes": 5193959
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-012/attempt-1/episodes_live.jsonl": {
+    "sha256": "d5dd9e5df956ee785a657757107de526ea988f0004d404930e56faa372805a9f",
+    "bytes": 5335210
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-013/attempt-1/episodes_live.jsonl": {
+    "sha256": "1985177b4fff2987be6c7b9fa22b9563db5cf94b8b4ba124bfcaf7e2cf46350a",
+    "bytes": 7728097
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-014/attempt-1/episodes_live.jsonl": {
+    "sha256": "a8f6da3fabca1deac9b4d11a5fac15d43dcd3d9eddee637e81ac39c503c1b6b1",
+    "bytes": 5316003
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-015/attempt-1/episodes_live.jsonl": {
+    "sha256": "202073856f58be33c885b169b34770c527b6a556d7d24e668137a537e30a01ea",
+    "bytes": 4908377
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-016/attempt-1/episodes_live.jsonl": {
+    "sha256": "1a03df39ac24b1731bef2f8687aea8b23390100e4c8f64b5e673d9a4a24deae1",
+    "bytes": 5127591
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-017/attempt-1/episodes_live.jsonl": {
+    "sha256": "6423863898404da624eaba1b94c30b6fd53356ab29fda4f59279146afc20895d",
+    "bytes": 5085765
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-018/attempt-1/episodes_live.jsonl": {
+    "sha256": "4e33d1656680d67089c11673efceea7d031a7dee963fc013c6bf7706d7e3d8c9",
+    "bytes": 5187649
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-019/attempt-1/episodes_live.jsonl": {
+    "sha256": "5abd9986b9fecba9d2ed0fd0e52588231790eda7acbfe1cce69b6e16b1baf9a5",
+    "bytes": 5321006
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-020/attempt-1/episodes_live.jsonl": {
+    "sha256": "e76d97d801d0424db3e87f80193d587c0e9009deffccac1a19b524f6dbcc792f",
+    "bytes": 5259193
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-021/attempt-1/episodes_live.jsonl": {
+    "sha256": "137dfc81a1e0b0e81a72115dafc56f75acdac103d20d0423700785fb65520f9f",
+    "bytes": 5300557
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-022/attempt-1/episodes_live.jsonl": {
+    "sha256": "160713aec2608dff31143b72717d820312ffcf1a502751fa78b9fca0a1362f04",
+    "bytes": 5479041
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-023/attempt-1/episodes_live.jsonl": {
+    "sha256": "a2dabb4fe0a256c79c9b4c8e5345083ac85bdbc8f44f5547f9138f479526870d",
+    "bytes": 5065810
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-024/attempt-1/episodes_live.jsonl": {
+    "sha256": "4860fc07baa410b6796e558c3491b9b891f75785cc67f43ec3c05f0e98f37ec4",
+    "bytes": 7371132
+  },
+  "experiments/agent-risk-harness/logs/e7/h1-025/attempt-1/episodes_live.jsonl": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-001/attempt-1/episodes_live.jsonl": {
+    "sha256": "0be74f8a9cc2b3a1ddac548f25a868349a674beae1ea1c5365e6b3e1815d0097",
+    "bytes": 5067793
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-002/attempt-1/episodes_live.jsonl": {
+    "sha256": "9487e20084d7d62f3b2143495a92b323b8a86abccb39d2a3d7ce55fb7a3974ac",
+    "bytes": 5293851
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-003/attempt-1/episodes_live.jsonl": {
+    "sha256": "a09f4f3957d3bf794ed05984ff6dceb138caf9b90da96fcc8521c971d453d94a",
+    "bytes": 5244867
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-004/attempt-1/episodes_live.jsonl": {
+    "sha256": "3815bf2a946a11896513f8aa838a9a7ddf27c92933237ca8ad3b63b1dfc0b5da",
+    "bytes": 5391051
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-005/attempt-1/episodes_live.jsonl": {
+    "sha256": "938a538435d2825147cb1c27797935f5fc9795def85acb56304eff58a4e56895",
+    "bytes": 5141273
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-006/attempt-1/episodes_live.jsonl": {
+    "sha256": "ac989137448a811e687cc6cd86bce7ddcdc5fc2006db2c96d82a90eddec41a09",
+    "bytes": 5063864
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-007/attempt-1/episodes_live.jsonl": {
+    "sha256": "650fec301c5dcb5bf7284dae4a93554a406135f32a5d6b47bb3e7f43fe925537",
+    "bytes": 5164644
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-008/attempt-1/episodes_live.jsonl": {
+    "sha256": "a68d81c9fba2ccf402bf33b3afc4b8c34a45e174826891fa104e78da6deeb5b4",
+    "bytes": 8129668
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-009/attempt-1/episodes_live.jsonl": {
+    "sha256": "eb5975aec08e1d7545f870b1055c72822a2a8f848dee2afea67965f983f43f20",
+    "bytes": 6269213
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-010/attempt-1/episodes_live.jsonl": {
+    "sha256": "9c0f1047f0a61349e1a4a7ef4eacee5db613d2ce6e36d38f92a79af0f23ece3a",
+    "bytes": 5256450
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-011/attempt-1/episodes_live.jsonl": {
+    "sha256": "66de9b15429c4314c218dfc34c824be16eb2e5a91119ddc4d8243209b3e8977f",
+    "bytes": 5317780
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-012/attempt-1/episodes_live.jsonl": {
+    "sha256": "8c893d6160c8b0342bae1953810e62450bc7a4ea02ac9478a336df8534296422",
+    "bytes": 5011243
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-013/attempt-1/episodes_live.jsonl": {
+    "sha256": "9320de224cbbaa82f319e6cb2f70c280c563ecdc5084aeeac8dc3a58e4ecc718",
+    "bytes": 5372959
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-014/attempt-1/episodes_live.jsonl": {
+    "sha256": "6cf1d5fe0f406521dd37213b2dfc9e3bb89e52a3d1feb65097ac5b9fc7483577",
+    "bytes": 5189605
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-015/attempt-1/episodes_live.jsonl": {
+    "sha256": "43cdb2007856daee261e59fded81330afaee1d94e8971781149ddda2077014b5",
+    "bytes": 4983224
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-016/attempt-1/episodes_live.jsonl": {
+    "sha256": "716ee03708ccd62d447c9e580f218ff69a22a4e54d2400395b4c329f94c064fe",
+    "bytes": 5172022
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-017/attempt-1/episodes_live.jsonl": {
+    "sha256": "84565f73ae40e2686056dd8e37cdee3b8502c652d464d6640d0c8b2620df1b86",
+    "bytes": 5163570
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-018/attempt-1/episodes_live.jsonl": {
+    "sha256": "d93a7b20f860105aa64d10d770fa0559e20cfbf4142a691133175fda99117fd1",
+    "bytes": 5044920
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-019/attempt-1/episodes_live.jsonl": {
+    "sha256": "e8ead67ff3d1314e19bed8fa5b7e3b24ea33daf3c7f7cf49a67848e5b5fb9446",
+    "bytes": 5107089
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-020/attempt-1/episodes_live.jsonl": {
+    "sha256": "69aead59e1a0ee15f53178bb6a86ccb1d2cce3a819942db58b96d69a3473da48",
+    "bytes": 7285020
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-021/attempt-1/episodes_live.jsonl": {
+    "sha256": "3dc7360a40aa5e2aee78e804460953e48130affb4439d11517d2f61ab6346de6",
+    "bytes": 5027338
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-022/attempt-1/episodes_live.jsonl": {
+    "sha256": "5b0220337217189290e10e10b79a224b66aebbfd94e8c0cef0b7c11e966ab443",
+    "bytes": 5308577
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-023/attempt-1/episodes_live.jsonl": {
+    "sha256": "f0f5568b90ce0d12a11f78240c06677d98c66696e5fc21a01959ab20e44d468d",
+    "bytes": 4920692
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-024/attempt-1/episodes_live.jsonl": {
+    "sha256": "78ee41b8b1510686cd90649b9bf090356c8f25d37d41f375d66b38e4470f153f",
+    "bytes": 5295551
+  },
+  "experiments/agent-risk-harness/logs/e7/h2-025/attempt-1/episodes_live.jsonl": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-001/attempt-1/episodes_live.jsonl": {
+    "sha256": "fc6717e0136e902bc3264ea5977c57d6e3167e0eedd849c7367e7526ede44dba",
+    "bytes": 5042448
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-002/attempt-1/episodes_live.jsonl": {
+    "sha256": "93405f00a0754f6d2725c46de8ce1d963f977d35726a3f0a27a9969eb3d1b96f",
+    "bytes": 5007893
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-003/attempt-1/episodes_live.jsonl": {
+    "sha256": "beb88ef5ad9e175830ccb5cf9fe4d66cdea966db8172303890038f8cdbac5048",
+    "bytes": 5165736
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-004/attempt-1/episodes_live.jsonl": {
+    "sha256": "e6796ac747db5aea53d137c46f55a69a7a0293d13597f8d1d28655c46d701972",
+    "bytes": 5509987
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-005/attempt-1/episodes_live.jsonl": {
+    "sha256": "a249401039e0691bee5afca726390e5ac3b6979153acb0e15790a1fd0297b464",
+    "bytes": 5173998
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-006/attempt-1/episodes_live.jsonl": {
+    "sha256": "20c769f8680d6fe52878a25edaf4b67f7c96f689136b2fdd8252209e6fc843a0",
+    "bytes": 5104551
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-007/attempt-1/episodes_live.jsonl": {
+    "sha256": "4b66823b895c686b05534757daa138e2e9c68b5ce68b67d813f90e2cd1db41be",
+    "bytes": 4906918
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-008/attempt-1/episodes_live.jsonl": {
+    "sha256": "5557aa8ae444ba3ea3c25151849af97222b531da71abdb91a7196b940d5b69da",
+    "bytes": 4870786
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-009/attempt-1/episodes_live.jsonl": {
+    "sha256": "51c1db414828cd6b29288a000509cfcbcf3c8e67b0a1b969a9fc06361d55107b",
+    "bytes": 5033401
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-010/attempt-1/episodes_live.jsonl": {
+    "sha256": "1e99e4df88582a71f211d5584b317c13d5bd96df2b1a713ffaecab48352ff542",
+    "bytes": 4902084
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-011/attempt-1/episodes_live.jsonl": {
+    "sha256": "bcdcc027353bbb1a1be0211b99ccfe649f363ab32b5994266bee83c6ceaf4eb3",
+    "bytes": 5145668
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-012/attempt-1/episodes_live.jsonl": {
+    "sha256": "1105d2c2a54fea6c0dcb18751f18157a1cf9f216b1fefd8be5fe16dec86f931d",
+    "bytes": 5452492
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-013/attempt-1/episodes_live.jsonl": {
+    "sha256": "90aa41ade0f6ae34657b580a7125a34a773dcd3ac02a38f881c644593ab0300b",
+    "bytes": 4942673
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-014/attempt-1/episodes_live.jsonl": {
+    "sha256": "91e62ccb8ea64a4d0d29a35b10c977b7f6cb6e1427b83f0dac39c5229d83c281",
+    "bytes": 5037299
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-015/attempt-1/episodes_live.jsonl": {
+    "sha256": "48174076abb289700a7f23bcc185534672c95b4de368ff8837419c5c699a9311",
+    "bytes": 5033862
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-016/attempt-1/episodes_live.jsonl": {
+    "sha256": "ee9d8c8c781d0fe369df6d05a9cd6b201732e8d10abea794ec68b7c03fda862e",
+    "bytes": 5233897
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-017/attempt-1/episodes_live.jsonl": {
+    "sha256": "13a552ddad3492bc8cd6f8e32ac0982404e117c0b61592addfbe816b298e055f",
+    "bytes": 5116041
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-018/attempt-1/episodes_live.jsonl": {
+    "sha256": "2089043e738c4997a74b37de2e1caef8d3aef007fb6ef74acf4769e1e5e6d3ee",
+    "bytes": 5202828
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-019/attempt-1/episodes_live.jsonl": {
+    "sha256": "47e46fb94b7dc838183e53fa78bfd2b4663ef85ed106eacce1343e22d7ec91f0",
+    "bytes": 5390376
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-020/attempt-1/episodes_live.jsonl": {
+    "sha256": "4a2fb5b9ef331405cd0dc0a099a832b6d0714f6e4bad649aa85f5cbce11ca8ef",
+    "bytes": 4879436
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-021/attempt-1/episodes_live.jsonl": {
+    "sha256": "16d3e54bdbb96a7ba591e2204dfa92f6dbdcf1ee20ff956a7571e7be0593cb8d",
+    "bytes": 5082994
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-022/attempt-1/episodes_live.jsonl": {
+    "sha256": "1b21e11683a02c0fed084d9ed5310af5008c3b07287378dc924fdae91cee5545",
+    "bytes": 5209608
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-023/attempt-1/episodes_live.jsonl": {
+    "sha256": "0b75965f8ba736f2da7a84038465e3f21e0cc8b363233204c225e255bc076224",
+    "bytes": 4989000
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-024/attempt-1/episodes_live.jsonl": {
+    "sha256": "455a49c6202456d9c1f24e05d4885b2042f29dca34fd21246cc71824a50143b9",
+    "bytes": 5032764
+  },
+  "experiments/agent-risk-harness/logs/e7/h3-025/attempt-1/episodes_live.jsonl": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-001/attempt-1/episodes_live.jsonl": {
+    "sha256": "78983d1e09b6210ec90367ca792b9b2e2306995e91a6796e71e536b71f314701",
+    "bytes": 4737754
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-002/attempt-1/episodes_live.jsonl": {
+    "sha256": "0704a319222670c9f160becec4c44f389594214850e4e3096480f786c5d4967b",
+    "bytes": 5048327
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-003/attempt-1/episodes_live.jsonl": {
+    "sha256": "de03d47915f223c4bdf382cdd6ca5f5e639483746aa2b2b70d05311742901543",
+    "bytes": 5388369
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-004/attempt-1/episodes_live.jsonl": {
+    "sha256": "fe9becd9986ba3080ad17418ec51ce15859a9299eb79b355750a7d394f215538",
+    "bytes": 5095107
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-005/attempt-1/episodes_live.jsonl": {
+    "sha256": "b67d78767c7883d7766010a5c49a128ab1a4aa8854feb3633f8857ab2f9b48db",
+    "bytes": 5185523
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-006/attempt-1/episodes_live.jsonl": {
+    "sha256": "4fcbad3ac56f1018da980a66291ec77b4c10660bdc3bd9a928fbd43c03e70c94",
+    "bytes": 5081641
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-007/attempt-1/episodes_live.jsonl": {
+    "sha256": "3d4c01705239ba1a05e72b8bb77bec6ab30668a2251584f8649d3fc423154740",
+    "bytes": 4976143
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-008/attempt-1/episodes_live.jsonl": {
+    "sha256": "286fb8ae1a9cf8d56a875e4336f4569d7129a81ae5ad883e7b61a5366e6ca94e",
+    "bytes": 5145357
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-009/attempt-1/episodes_live.jsonl": {
+    "sha256": "7533aa37642e0859ead5a75b63edbbf64e88ba31e59072c9342de49e91d0b74f",
+    "bytes": 4774127
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-010/attempt-1/episodes_live.jsonl": {
+    "sha256": "8965d04ff65458b9f6269cc9b2309607d7a4d44426b5ea4e4e9a921f221b3dfb",
+    "bytes": 5306731
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-011/attempt-1/episodes_live.jsonl": {
+    "sha256": "c950a4416fdc93e61d2267e640554b847aa16cb8627bc6063655401677ee4ca4",
+    "bytes": 5208529
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-012/attempt-1/episodes_live.jsonl": {
+    "sha256": "78358d91c25bddccc3484ae75fa1fea8c884066b48d9b046d3941dbd62e2eeab",
+    "bytes": 5289818
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-013/attempt-1/episodes_live.jsonl": {
+    "sha256": "0b2fbe4114ba685b9d550b22f1f1680a4eb88841a9ae33a2fff957d1182f68db",
+    "bytes": 5145571
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-014/attempt-1/episodes_live.jsonl": {
+    "sha256": "617625aff1b15338d77f4efb8e2ca83765a59b01c11050c0cbaab25d89d88acf",
+    "bytes": 5270275
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-015/attempt-1/episodes_live.jsonl": {
+    "sha256": "9577c16ac97f3544a79c24a512b336001686ebd0d8442b3608c90c867dc576bb",
+    "bytes": 5269289
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-016/attempt-1/episodes_live.jsonl": {
+    "sha256": "20b80c65279e0cc30e23ca491c228e0bf628709b7885eb13385ee7b5e1e1eaac",
+    "bytes": 5151602
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-017/attempt-1/episodes_live.jsonl": {
+    "sha256": "fad61c264c53cbde49c28f67f671deb1a8deeb23dabdc632873be9cd5e328676",
+    "bytes": 5176003
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-018/attempt-1/episodes_live.jsonl": {
+    "sha256": "d1edc690156c9265ed904318921e3aa537f2a3ed08c42c917c4cc4efeac43aed",
+    "bytes": 5400524
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-019/attempt-1/episodes_live.jsonl": {
+    "sha256": "238af19ec58ba36f47769de39297a8c0f14e6786ecd775972406f4033e687917",
+    "bytes": 5037797
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-020/attempt-1/episodes_live.jsonl": {
+    "sha256": "23e1535d1d3d55e64652ba77b8d21dd53a031d7797dee61cec9e71b493600d78",
+    "bytes": 4954149
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-021/attempt-1/episodes_live.jsonl": {
+    "sha256": "a96d15956914775a4030b456bcec095e2093ae98d3327f41cb070a8a3b33ad43",
+    "bytes": 5006030
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-022/attempt-1/episodes_live.jsonl": {
+    "sha256": "33863f14f78ee230a2b3e357a2114b23102bab22c9fb1150049ca3385f56d8b6",
+    "bytes": 5129007
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-023/attempt-1/episodes_live.jsonl": {
+    "sha256": "34494d718bb2f55efb5dc184ce7db39fb7f825ad1d2806e46cdfb531d8200306",
+    "bytes": 4954170
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-024/attempt-1/episodes_live.jsonl": {
+    "sha256": "7c9651bfa3b456328d90fea0a8a8ad31dd9f72563b4181609934d82f64857013",
+    "bytes": 5054076
+  },
+  "experiments/agent-risk-harness/logs/e7/h4-025/attempt-1/episodes_live.jsonl": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-001/attempt-1/episodes_live.jsonl": {
+    "sha256": "fe5c3eba820d5fb87f56fa45aabf2827d26372b25fd7b9aa81fb02d0c5020b96",
+    "bytes": 5203324
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-002/attempt-1/episodes_live.jsonl": {
+    "sha256": "dd668479a779868904fbdff755576b3ad71bde5ed1f6b2c5f3e68162c9209163",
+    "bytes": 7611611
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-003/attempt-1/episodes_live.jsonl": {
+    "sha256": "b2f58101b85c70d07d4b50af90fb5be0ad29bd875414528161499dcad0739876",
+    "bytes": 5004793
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-004/attempt-1/episodes_live.jsonl": {
+    "sha256": "e23325fab44ebb8b4d97429bf7f66903d5fe79c3af4a0aaebd88f75f64e1d833",
+    "bytes": 5033521
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-005/attempt-1/episodes_live.jsonl": {
+    "sha256": "b9405accc1332d1a7d1a1036dd47fe3efe80afe45d32b61ec4ef1ba3ca4b608d",
+    "bytes": 4946483
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-006/attempt-1/episodes_live.jsonl": {
+    "sha256": "65473053a699ced62481b24353dffd33fdf00296fefc10354eb0a28cdc230062",
+    "bytes": 5123564
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-007/attempt-1/episodes_live.jsonl": {
+    "sha256": "73e0b74fce11433845e3ce3b77aae7043e6c2135c07ceee5665e38f5f4530a5f",
+    "bytes": 4867126
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-008/attempt-1/episodes_live.jsonl": {
+    "sha256": "a2d3edaf0ee8727dea1f8ad865805a9f632373b31ebccdf91f6407c915c1f3e0",
+    "bytes": 5172475
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-009/attempt-1/episodes_live.jsonl": {
+    "sha256": "3083c1ec620c5371ece139af0bbdc64991f2f4faf37de6dabb099b024984a49e",
+    "bytes": 5068332
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-010/attempt-1/episodes_live.jsonl": {
+    "sha256": "94853d3138ff30388541193ad6c5f7be54d8b82424d8301874bf3341ec686fbf",
+    "bytes": 5072426
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-011/attempt-1/episodes_live.jsonl": {
+    "sha256": "2115da4c842d5ef658dfe2bd5c166689b3f28c5065f1182b8bada0091460ee9b",
+    "bytes": 5269044
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-012/attempt-1/episodes_live.jsonl": {
+    "sha256": "6a1dad5e455167f07deefb2dc62e7f4e9af91c0825695548d885889422bb9eb6",
+    "bytes": 5526113
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-013/attempt-1/episodes_live.jsonl": {
+    "sha256": "6e90666601a94e547c2283a29ecf5cb162de076544c7e158af4a10f5a12fae09",
+    "bytes": 5125827
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-014/attempt-1/episodes_live.jsonl": {
+    "sha256": "10f98416226e2a364229c49ecc402d1e2aa064e515cddb5d8627130e5ce5d7c8",
+    "bytes": 5221141
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-015/attempt-1/episodes_live.jsonl": {
+    "sha256": "03daa2a6bee629248be0aa7f8121854b438f9427a9fdef9685d7381dd0abdc75",
+    "bytes": 6001686
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-016/attempt-1/episodes_live.jsonl": {
+    "sha256": "f29b6d2891697bd82cb221ddcd7d9caf9720aa9c136b0e50ae9c26e6a2be161c",
+    "bytes": 5347712
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-017/attempt-1/episodes_live.jsonl": {
+    "sha256": "51313dcc27928d88725fae005ab034ca9a920a8bcae3903c482bd2832df54bb8",
+    "bytes": 5267528
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-018/attempt-1/episodes_live.jsonl": {
+    "sha256": "8114c1cd90c8ad123b9466a298d1097fdc00163e0e5fc1246cb383075582af9d",
+    "bytes": 4981243
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-019/attempt-1/episodes_live.jsonl": {
+    "sha256": "7f9b2a45f853921fcfa8ae49a81831ca547c75a5feb7b215e407ac03f8fa96c9",
+    "bytes": 5124335
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-020/attempt-1/episodes_live.jsonl": {
+    "sha256": "6196d7da171c5ada3251b77d707e9d1e4f1279e2924a6480705cb33fef32aa87",
+    "bytes": 5184304
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-021/attempt-1/episodes_live.jsonl": {
+    "sha256": "de9c069412e1d47d68dfc44ef03ed4f8284fdd8c0afff8e016e2e5a1b6859ec8",
+    "bytes": 5077532
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-022/attempt-1/episodes_live.jsonl": {
+    "sha256": "7b14bc63392678c121214037b9f680113f9caa4646ed5a2e122540bf01995905",
+    "bytes": 4934683
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-023/attempt-1/episodes_live.jsonl": {
+    "sha256": "4932a7fd7a6af6a4456d0c0400d12f597e15661d6703fc524bb7bdda572f1bda",
+    "bytes": 5191092
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-024/attempt-1/episodes_live.jsonl": {
+    "sha256": "6b0457dd2629b20bd68501869c34ebd685fe6b5c088e1afb8c2b6fd58a1901fa",
+    "bytes": 5052438
+  },
+  "experiments/agent-risk-harness/logs/e7/h5-025/attempt-1/episodes_live.jsonl": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-001/attempt-1/episodes_live.jsonl": {
+    "sha256": "9804deed0d6689a15e065b32175231d71dce33279c916a381e45d48bdc67ff7f",
+    "bytes": 5158660
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-002/attempt-1/episodes_live.jsonl": {
+    "sha256": "29c38fd28f154a8346ead09d1f21ffb0f603074ed4b7bc6cae192f280a73d4f1",
+    "bytes": 5214931
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-003/attempt-1/episodes_live.jsonl": {
+    "sha256": "fe9baf81eff563a0019787186665b98fe8d89e2284695cd1c3292ff1ea49ffce",
+    "bytes": 5290697
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-004/attempt-1/episodes_live.jsonl": {
+    "sha256": "d6cd2f038a31e9f705cb870cc585e04f13bd50281b8a2c70a0b6aef864900612",
+    "bytes": 5225178
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-005/attempt-1/episodes_live.jsonl": {
+    "sha256": "ebdf915fc2b30763ea045c96237da62fe724505e729b81948b93ebbcde06a000",
+    "bytes": 5296345
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-006/attempt-1/episodes_live.jsonl": {
+    "sha256": "59a6b4724366274e6b198c8d16cefd4d77ccbe5eaa4d2afe8cb2d46f32b02244",
+    "bytes": 4947158
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-007/attempt-1/episodes_live.jsonl": {
+    "sha256": "b0ee260ccc7ae546c7073abc14d6f9896c269fdcf339c0bd2c2b32b999612dd9",
+    "bytes": 5317935
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-008/attempt-1/episodes_live.jsonl": {
+    "sha256": "981f7790d448055b1c39c923bff48a1a9b964a4f0da2ed9b8be4fa26bd3c0569",
+    "bytes": 4770138
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-009/attempt-1/episodes_live.jsonl": {
+    "sha256": "d16cc4550d872526ef4ebed165ae4cf9881fb0dccf12208f8840e5000071620e",
+    "bytes": 5055848
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-010/attempt-1/episodes_live.jsonl": {
+    "sha256": "ce9b085265c1a9c4d1d249ce9680c5aeb706129428d13adaba8c1bedda94756d",
+    "bytes": 5127172
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-011/attempt-1/episodes_live.jsonl": {
+    "sha256": "c1708a0836a39388578e08dea0b82928b3cdb4cae268c5a5dbf89fa34ec26353",
+    "bytes": 5228217
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-012/attempt-1/episodes_live.jsonl": {
+    "sha256": "b307718a8e799057ff35b5915be09de80fe338d02cb34178269191bf371fa117",
+    "bytes": 5323674
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-013/attempt-1/episodes_live.jsonl": {
+    "sha256": "f5d2d0c1bc40b2b41f1ab75c4b38c771d2f1a68201842e50cbf7578728ec460f",
+    "bytes": 5177603
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-014/attempt-1/episodes_live.jsonl": {
+    "sha256": "775c95c8f8270d928e641793bd1e7a3db2cce594b25e43ba52afbd4db3f3cf33",
+    "bytes": 5162906
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-015/attempt-1/episodes_live.jsonl": {
+    "sha256": "f4916c9274e8a1846ca7e61b95cd902ed01372eb3f3ce81fb24018312333ce47",
+    "bytes": 5103185
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-016/attempt-1/episodes_live.jsonl": {
+    "sha256": "e31d130d5bfd8008a0aa7dfaa88827382e87727406bd91599b214c3aa09e394f",
+    "bytes": 5106694
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-017/attempt-1/episodes_live.jsonl": {
+    "sha256": "8dc72b748f2ef6dd0fa18b3d3a21560ceb7e4bc6696548d38a23cb58267ac1d8",
+    "bytes": 5087679
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-018/attempt-1/episodes_live.jsonl": {
+    "sha256": "830b9ebf80b8b03116cc3142c78dcade267907ab5111a405b44b54c67fdb350d",
+    "bytes": 5251992
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-019/attempt-1/episodes_live.jsonl": {
+    "sha256": "c4f540d10f63b3a4a5b880c041402345d6e0f0bebec0dae4af282af3623906f0",
+    "bytes": 5069407
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-020/attempt-1/episodes_live.jsonl": {
+    "sha256": "eb499176eb818f5221f80306251aa1118374308de629a14f2f72adf1a817a132",
+    "bytes": 5369892
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-021/attempt-1/episodes_live.jsonl": {
+    "sha256": "2344e12a2afa8431cf1acb32f5148c7dd4a7bb09ac1ea59d6de4e370c0d518c7",
+    "bytes": 5199764
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-022/attempt-1/episodes_live.jsonl": {
+    "sha256": "cea2f24e5080feb96558651f2547e1a1f000b89884a07ce98fd1b7d3893f8481",
+    "bytes": 6384839
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-023/attempt-1/episodes_live.jsonl": {
+    "sha256": "d5503055859d037f7bb9e9d806837e064072aba3f9e8921fc3ec1eff3a6e35aa",
+    "bytes": 5159309
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-024/attempt-1/episodes_live.jsonl": {
+    "sha256": "e7c5fbd07104f26512f3910e7a3b7302b394fd366b78d69e3b2b4677b106a3d2",
+    "bytes": 5063873
+  },
+  "experiments/agent-risk-harness/logs/e7/h6-025/attempt-1/episodes_live.jsonl": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "experiments/agent-risk-harness/logs/e7/prediction_e7.json": {
+    "sha256": "a3bccf79de31846adfb037155d4f03017fad537fafabeacad3681fc6086b1bd7",
+    "bytes": 11744998
+  },
+  "experiments/agent-risk-harness/retry_bounds.py": {
+    "sha256": "6e9afe7cc524ddd62aab69e120115314f689f516b204fa604f766813d93c2eb1",
+    "bytes": 16514
+  },
+  "experiments/agent-risk-harness/agent_risk_harness/policy.py": {
+    "sha256": "2ca770ea90eda74264d7f13e6bff5048b00994cd8c72935b5e556570f646a5e4",
+    "bytes": 26123
+  }
+}

@@ -1,0 +1,21 @@
+# Pilot sandbox for honest-mode policy episodes. Same limits as ControlArena's
+# bash setting. The project's default bridge network is kept so that egress
+# attempts leave the sandbox interface (and are counted), but the HOST rejects
+# all forwarded and host-bound traffic from docker bridges (see net_block.sh),
+# so no packet from the sandbox reaches another host.
+services:
+  default:
+    image: arh-bash-pilot:1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    init: true
+    command: tail -f /dev/null
+    cpus: 1.0
+    mem_limit: 0.5gb
+    # Unroutable resolver (TEST-NET-1): Docker's embedded DNS forwards external
+    # queries to it from the sandbox's own namespace, so a DNS lookup leaves the
+    # sandbox interface (and is counted), is rejected by the host, and fails fast.
+    # Without this, external names resolve through the host's resolver unseen.
+    dns:
+      - 192.0.2.1

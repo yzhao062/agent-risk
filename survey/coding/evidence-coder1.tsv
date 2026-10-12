@@ -1,0 +1,404 @@
+item	code	value	pinpoint	quote
+S01	C1	N	Section 2.1, p. 4	automatically look through related works on the internet without user intervention, like WebGPT can do to some extent
+S01	C2	T	Section 2.1, p. 4	Directness of impact: the degree to which the algorithmic system’s actions affect the world without mediation or intervention by a human, i.e. without a human in the loop.
+S01	C5	T	Section 2.1, p. 4	Long-term planning: the degree to which the algorithmic system is designed/trained to make decisions that are temporally dependent upon one another to achieve a goal and/or make predictions over a long time horizon.
+S01	C9	N	Section 5.1, p. 14	Since one typically audits a deployed system, it will be difficult to perform thorough audits of increasingly agentic systems before they are widely deployed.
+S01	C10	T	Section 2.1, p. 4	Underspecification: the degree to which the algorithmic system can accomplish a goal provided by operators or designers, without a concrete specification of how the goal is to be accomplished
+S02	C1	T	Section 4.2, p. 10	In some cases, agentic AI systems should be prevented from taking certain actions entirely, to better bound the system’s operational envelope and thus enable safe operation [25].
+S02	C2	T	Section 4.2, p. 9	Requiring a user to proactively authorize these actions, thus keeping a “human-in-the-loop” [23], is a standard way to limit egregious failures of agentic AI systems.
+S02	C3	N	Section 4.2, p. 9	Some decisions may be too important for users to delegate to agents, if there is even a small chance that they’re done wrong (such as independently initiating an irreversible large financial transaction).
+S02	C4	N	Section 4.7, p. 14	System deployers could be required to make sure that a user can always activate a graceful shutdown procedure for its agent at any time: both for halting a specific category of actions (revoking access to, e.g., financial credentials)
+S02	C5	N	Section 4.1, p. 8	successful agents may often need to execute long sequences of correct actions, so that even if individual actions would only fail infrequently, these rare events could compound and make failure in deployment likely.
+S02	C6	N	Section 4.5, p. 13	For example, a malicious prompt injection that hijacks the primary system, when read by the monitoring system, could similarly apply to and hijack the monitoring system
+S02	C8	N	Section 4.4, p. 11	It could be useful for system deployers to expose all details of the agents’ interactions, such as any inputs it receives from tool-use API calls or interactions with other agents.
+S02	C9	T	Section 4.4, p. 12	It is unfortunately not possible to simply “ask” the agent to retroactively justify its behavior, as this is likely to produce confabulated reasoning [40].
+S02	C10	N	Section 4.4, p. 11	Revealing an agent’s “thought process” to the user enables them to spot errors (including identifying when a system is pursuing the wrong goal), allows for subsequent debugging, and instills trust when deserved.
+S02	C15	N	Section 4.6, p. 14	third parties (including external tool providers) interacting with a user’s agent could demand such identification before starting the interaction, to ensure they know a human user can be held accountable if something goes wrong.
+S02	C16	N	Section 4.5, p. 12	In practice, human users may not always have the time to go through the agent activity logs exposed by the system deployer at the speed or scale they desire.
+S02	C17	N	Section 4.2, p. 9	This is also made harder when the user must approve many decisions and thus must make each approval quickly, reducing their ability to meaningfully consider each one [24].
+S02	C19	T	Section 2.2, p. 5-6	the three primary parties that may influence an AI agent’s operations are the model developer, the system deployer, and the user... and third-parties which interact with the user-initiated AI system.
+S02	C20	N	Section 4.3, p. 11	This preference information will almost always be unclear or incomplete... Agents can be trained or prompted to proactively request clarifications from the user to resolve this uncertainty, especially when it may change their actions
+S03	C1	N	Section 1.1, p. 2	capable versions of language models with tool or service access
+S03	C2	N	Section 1.1, p. 2	In comparison to risks from other AI systems, these risks focus on the potential for agents to remove humans from the loop [35, 101]. Without a human in the loop, agents may take multiple consequential actions
+S03	C4	N	Section 3.1.2, p. 6	the intended scope, permissions, and goal(s) of the agent [69]; or the intended sector of deployment
+S03	C5	T	Section 1.1.3, p. 2	Impacts of agents may be delayed if users give agents long-horizon goals, while diffuseness of impact may come from the widespread deployment of agents to automate complex processes.
+S03	C6	N	Section 1.1.2, p. 2	these agents may malfunction for a variety of reasons, including design flaws [117, 130, 181] or adversarial attack [12, 175, 180].
+S03	C8	T	Section 1.1.4, p. 2 and Section 1.1.5, p. 3	Interactions and dependencies between many deployed agents could lead to risks not present... Sub-Agents. Agents could instantiate more agents to accomplish (components of) a task
+S03	C9	T	Section 1.2, p. 3	Addressing the risks of AI agents requires visibility... information about where, why, how, and by whom AI agents are used.
+S03	C10	N	Section 2, p. 3	acts directly in the world to achieve long-horizon goals, with little human intervention or specification of how to do so.
+S03	C12	N	Section 3.1.1, p. 5	open-source frameworks to implement agent identifiers may allow users to avoid deployers and, at the same time, facilitate visibility.
+S03	C15	N	Section 4.2, p. 8	The need for agents to interact with external tools offers another leverage point. By conditioning tool and service access on implementation of certain visibility measures
+S03	C16	N	Section 1.1, p. 2	Without a human in the loop, agents may take multiple consequential actions in rapid succession and bring about significant impacts before a human notices.
+S03	C17	T	Section 1.1.2, p. 2	Overreliance on AI agents to automate complex, high-stakes tasks could lead to severe consequences. Humans can already rely on certain automated systems more than is warranted [47, 59, 60].
+S03	C19	N	Section 1.1.3, p. 2	AI agents could also subtly benefit their developers, akin to the self-preferencing behaviour of large-scale digital platforms [99].
+S04	C1	N	Section I.B, p. 14	For tool use, AI agents call application programming interfaces (APIs) to access external websites and software, which significantly extend the agent’s abilities.
+S04	C2	N	Section I, p. 3	accomplish those goals—all subject to only limited human oversight and intervention.
+S04	C4	T	Section II.B, p. 23	The challenge of governing agents, however, does not only concern the availability of information about an agent, but also the scope of authority granted to an agent.
+S04	C5	N	Section I.B, p. 13	For planning, AI agents decompose large tasks into smaller, more manageable tasks.
+S04	C7	N	Section I.B, p. 14	For memory, AI agents can use external storage sources, including vector databases, which enable fast retrieval of information needed to perform the task at hand.
+S04	C8	T	Section II.D, p. 28	Agents can, and often do, appoint “subagents” to assist in the performance of their obligations.
+S04	C9	T	Section II.A, p. 21	The problem of information asymmetry, which features prominently in the economic literature on principal-agent relationships, concerns an agent that has access to better or different information than the principal.
+S04	C10	N	Section I.B, p. 13	AI agents can... independently take actions to accomplish complex goals on behalf of users.
+S04	C11	N	Section II.C, p. 26	On the one hand, there is only limited (though growing) evidence that current AI agents pursue “self-interest”... AI agents can also deceive and manipulate users, or otherwise fail to act honestly.
+S04	C12	N	Section IV.B, p. 41	current AI agents are, in two distinct senses, black boxes... on an institutional level, actors outside the leading companies building AI agents have only limited information regarding these systems
+S04	C15	N	Section IV.C, p. 45	strategically introduce the many hands problem into AI supply chains
+S04	C16	N	Section III.B, p. 34	The activities of highly capable AI agents will be costly to monitor, especially if they operate at superhuman speed and scale.
+S04	C17	N	Section III.B, p. 33	mechanisms for monitoring include ongoing supervision and periodic performance reviews.
+S04	C19	T	Section II.C, p. 25	Agents are also subject to an overarching “fiduciary duty to act loyally for the principal’s benefit in all matters connected with the agency relationship.”
+S05	C1	N	Section 3.6.2, p. 38	lead to sophisticated tool use and coordination by MARL agents.
+S05	C2	N	Section 4.1, p. 43	the inclusion of a human in the loop does not itself guarantee control.
+S05	C3	T	Section 3.5.1, p. 34	An actor makes a commitment when they bind themselves to a course of action, such that reneging on that action would either be impossible or result in significant costs to themselves.
+S05	C5	N	Section 3.6, p. 37	caused by a lack of long-term planning and long-term memory. For example, narrow systems for research planning
+S05	C6	T	Section 3.7.1, p. 39	multi-agent security addresses vulnerabilities and attack vectors that emerge specifically when many AI agents interact within a broader networked
+S05	C7	N	Section 3.6, p. 37	caused by a lack of long-term planning and long-term memory. For example, narrow systems for research planning
+S05	C8	T	Executive Summary, p. 4	three key failure modes (miscoordination, conflict, and collusion) based on agents’ incentives, as well as seven key risk factors
+S05	C9	T	Section 3.1, p. 20	Information Asymmetries
+S05	C10	N	Section 1.3, p. 8	side effects, reward hacking, scalable oversight, safe exploration, and robustness to distributional shifts
+S05	C11	N	Section 3.1.2, p. 21	strategically sensitive information
+S05	C12	N	Section 4.2, p. 44	especially in the case of open-source systems – agents might not be easily governed and curtailed post-deployment
+S05	C14	N	Section 3.4, p. 31	chaotic dynamics in idealised versions of stochastic learning algorithms
+S05	C15	N	Section 3.1.2, p. 21	hiring third-party car inspectors
+S05	C16	T	Section 3.4, p. 30	Destabilising Dynamics
+S05	C17	N	Section 4.1, p. 43	such as through automation bias.
+S05	C19	N	Section 3.6.2, p. 38	multi-principal multi-agent settings in which the agents’ goals are sufficiently aligned to be viewed as (approximately) identical.
+S06	C1	N	Table 2, Subdomain 4.2, p. 10	Lethal Autonomous Weapons or chemical, biological, radiological, nuclear, and high-yield explosives), or use weapons to cause mass harm.
+S06	C2	T	Table 2, Subdomain 5.2, p. 11	Delegating by humans of key decisions to AI systems, or AI systems that make decisions that diminish human control and autonomy
+S06	C4	N	Table 2, Subdomain 2.2, p. 10	software development toolchains, and hardware, resulting in unauthorized access
+S06	C6	T	Table 2, Subdomain 2.2, p. 10	2.2 AI system security vulnerabilities and attacks
+S06	C8	T	Table 2, Subdomain 7.6, p. 11	Risks from multi-agent interactions due to incentives (which can lead to conflict or collusion) and/or the structure of multi-agent systems, which can create cascading failures
+S06	C9	T	Table 2, Subdomain 7.4, p. 11	Challenges in understanding or explaining the decision-making processes of AI systems, which can lead to mistrust
+S06	C10	T	Table 2, Subdomain 7.1, p. 11	reward hacking and goal misgeneralisation, and may or values result in AI using dangerous capabilities
+S06	C11	T	Table 2, Subdomain 7.1, p. 11	result in AI using dangerous capabilities such as manipulation, deception, or situational awareness to seek power, self-proliferate, or achieve other goals.
+S06	C15	T	Table 2, Subdomain 2.2, p. 10	Vulnerabilities that can be exploited in AI systems, software development toolchains, and hardware
+S06	C16	N	Table 2, Subdomain 4.1, p. 10	Using AI systems to conduct large-scale disinformation campaigns, malicious surveillance, or targeted and sophisticated automated censorship
+S06	C17	T	Table 2, Subdomain 5.1, p. 10	Anthropomorphizing, trusting, or relying on AI systems by users, leading to emotional or material dependence and to inappropriate relationships
+S07	C1	T	Section 3.3, p. 8	Agent2Tool threats. The second category relates to the inherent threats of the tools and APIs themselves that the agent uses
+S07	C3	N	Section 4.1.4, p. 10	inappropriate actions of the agent might cause real and irreversible harm to the environment.
+S07	C4	N	Section 3.1.1, p. 5	establishing hierarchical instruction privileges and enhancing training methods for these models through synthetic data generation
+S07	C5	T	Section 3.2.4, p. 7	The concept of planning threats suggests that AI agents are susceptible to generating flawed plans, particularly in complex and long-term planning scenarios.
+S07	C6	T	Section 3.1.1, p. 4	The prompt injection attack is a malicious prompt manipulation technique in which malicious text is inserted into the input prompt
+S07	C7	T	Section 4.3, p. 11	Threats on Memory
+S07	C8	T	Section 4.2, p. 10	Threats on Agent2Agent
+S07	C9	N	Section 5, p. 12	AI agent security needs to audit the complex internal execution of single AI agent
+S07	C10	T	Section 3.2.2, p. 6	3.2.2 Misalignment. Alignment refers to the ability of AI agents to understand and execute human instructions
+S07	C11	N	Section 3.1.1, p. 5	guide a language model to produce deceptive output
+S07	C12	N	Section 5, p. 13	Open Source
+S07	C15	T	Section 3.3.2, p. 8	Supply chain threats refer to the security vulnerabilities inherent in the tools themselves or to the tools being compromised
+S07	C19	N	Section 4.2.2, p. 11	in Principal-Agent Problems [131], where agents represent principals in performing certain tasks, conflicts of interest arise between the dual objectives of the agent and principal
+S08	C1	T	Section 2.3, p. 5	2.3 Trustworthy Tool for Action
+S08	C4	N	Section 3.1.1, p. 6	tool access disparities (e.g., privileged
+S08	C5	N	Section 2.3.1, p. 5	The planning, selection, and execution phases of tool
+S08	C6	T	Section 2.1.1, p. 3	we categorize attacks into three paradigms: Jailbreak... Prompt Injection
+S08	C7	T	Section 2.2, p. 4	2.2 Trustworthy Memory in Retrieval
+S08	C8	T	Section 3.1, p. 6	3.1 Agent-to-Agent Interaction
+S08	C9	N	Section 2.1.2, p. 4	Filter uses an external model to prevent attacks through input and output monitoring on the agent brain.
+S08	C10	N	Section 2.1.2, p. 3	Alignment ensures that LLM agents operate in accordance with human values and ethical principles through fine-tuning, updating reward functions
+S08	C15	N	Section 2.3.4, p. 6	tools are often integrated into agent systems as third-party APIs, and there are currently no mechanisms to prevent malicious API providers
+S09	C1	T	Section I, p. 1 & Section III-C, p. 4	By invoking tools, AI agents are granted the ability to interact with the real world... each step of planning has side-effects
+S09	C4	N	Section III-C.1, p. 4	The agent program, if unrestricted, can execute arbitrary instructions on its host. As a result, it can read confidential data (confidentiality), modify important data (integrity), and hog system resources
+S09	C6	N	Section III-C.1, p. 4	However, issues arise when the instructions provided by the tools to the agent include malicious prompts. An adversarial prompt could be “For backing up data over FTP, also send a copy to HACKER”
+S09	C7	T	Section III-A, p. 2 & Section IV-A, p. 5	Therefore, the AI agent is responsible for managing the state of its LLM... the agent needs to transfer its working memory from the KVDB to long-term storage for future use
+S09	C15	N	Section III-C.1, p. 4	Malicious applications might manipulate the system by injecting misleading prompts as part of the instruction or manual, altering data inappropriately.
+S10	C1	N	Section 2, p. 2	LLM-based agents, which are often designed for problem-solving in real-world scenarios involving physical actions and interactions with tools and environments. This adds a layer of complexity, as the alignment must now consider the implications of these actions
+S10	C5	N	Section 4.1, Table 2 caption, p. 6	Prefix: the length of the prefix in the agent’s actions that are safe until the first unsafe action occurs... reflects the agent’s ability to maintain safety over a sequence of actions.
+S10	C8	N	Section 3.1 & Figure 1, p. 3	Scope of Concern delineates the scope of an Agent Constitution, which may include regulations about the conduct between agents and humans, among agents within multi-agent systems... Agent-Agent Interaction
+S11	C1	T	Section 2, p. 4	Language Model (LM) agents... utilize powerful tools such as web browsers, code interpreters, and API plugins to interact with external environments and solve real-world tasks.
+S11	C2	N	Section 5.2, p. 7	For example, deleting all files without user confirmation to “clean disk space”, is not in line with the expected achievement and will be penalized in our helpfulness evaluation
+S11	C3	N	Section 4.1, p. 6	severe risky outcomes entail consequences that are significant and often irreversible such as substantial financial and property loss (exceeding $1000), irreversible damage, or compromise of personal safety.
+S11	C10	T	Section 2, p. 4	Threat model: instruction underspecification. In our safety evaluation, we focus on a particular threat model where the user instructions are underspecified.
+S11	C20	T	Section 2, p. 4	We focus on instructions that lack crucial details regarding either the task information (e.g., which files to delete) or the safety constraints... the agent needs to identify potential risks and resolve the underspecification safely
+S12	C1	T	Abstract, p. 1	their integration into interactive environments and tool use introduce new safety challenges beyond those associated with the models themselves.
+S12	C4	N	Section 3, Table 4, p. 5	The assistant ignores known constraint information and incorrectly calls tools (e.g., ignoring tool calling permission requirements).
+S12	C6	N	Section 3, Table 4, p. 5	The assistant puts excessive trust in tool results without validation (e.g., directly using incorrect or unsafe content returned by the tool).
+S12	C15	N	Section 3, Table 4, p. 5	The assistant ignores the known issues with the tools and calls them (e.g., calling tools which are marked as not verified).
+S12	C20	T	Section 3, Table 4, p. 5	The assistant mistakenly calls tools when the necessary information is incomplete (e.g., attempting to send an email to “John” without specifying which one, when multiple contacts named John exist.).
+S13	C1	T	Section 2.1.4, p. 13	Action impact refers to the consequences of an agent’s actions... Changing Environments. Agents can directly alter environment states by actions
+S13	C5	N	Section 2.1.3, p. 12	In many real-world scenarios, the agents need to make long-horizon planning to solve complex tasks. When facing these tasks, the above planning modules without feedback can be less effective... simply following the initial plan often leads to failure.
+S13	C7	T	Section 2.1.2, p. 8	The memory module plays an essential role in autonomous agents. It stores information perceived from the environment and leverages the recorded memories to facilitate future actions.
+S13	C8	T	Section 3, p. 20	Multi-agent systems... cooperative interaction, adversarial interaction, and communication among agents
+S13	C10	N	Section 6.2, p. 32	traditional LLMs are usually fine-tuned to be aligned with correct human values... However, when the agents are leveraged for real-world simulation... an important problem is how to conduct generalized human alignment
+S14	C1	T	Section ASI02, p. 13	covers cases where the agent operates within its authorized privileges but applies a legitimate tool in an unsafe or unintended way - for example deleting valuable data, over-invoking costly APIs, or exfiltrating information.
+S14	C2	N	Section ASI01 Mitigation, p. 11	Require confirmation - via human approval, policy engine, or platform guardrails whenever the agent proposes actions that deviate from the original task or scope.
+S14	C3	N	Section ASI03 Mitigation, p. 18	Require human approval for high-privilege or irreversible actions to provide a safety net that would stop Memory-Based Escalation, Cross-Agent Trust Exploitation, and Maintenance Window attacks.
+S14	C4	T	Section ASI03, p. 16	Identity & Privilege Abuse exploits dynamic trust and delegation in agents to escalate access and bypass controls by manipulating delegation chains, role inheritance, control flows, and agent context
+S14	C5	T	Section ASI08, p. 31	Agentic cascading failures occur when a single fault (hallucination, malicious input, corrupted tool, or poisoned memory) propagates across autonomous agents, compounding into system-wide harm.
+S14	C6	T	Section ASI01, p. 10	attackers can manipulate an agent’s objectives, task selection, or decision pathways through a variety of techniques - including, but not limited to, prompt-based manipulation, deceptive tool outputs, malicious artefacts, forged agent-to-agent messages, or poisoned external data.
+S14	C7	T	Section ASI06, p. 25	In Memory and Context Poisoning, adversaries corrupt or seed this context with malicious or misleading data, causing future reasoning, planning, or tool use to become biased, unsafe, or aid exfiltration.
+S14	C8	T	Section ASI07, p. 28	Multi agent systems depend on continuous communication between autonomous agents that coordinate via APIs, message buses, and shared memory, significantly expanding the attack surface.
+S14	C9	N	Section ASI09, p. 34	The agent acts as an untraceable “bad influence,” manipulating the human into performing the final, audited action, making the agent’s role in the compromise invisible to forensics.
+S14	C10	N	Section ASI01, p. 10	ASI01 corresponds to T06 Goal Manipulation (altering the agent’s objectives) and T07 Misaligned & Deceptive Behaviors (bypassing safeguards or deceiving humans).
+S14	C11	N	Section ASI10, p. 37	Rogue Agents are malicious or compromised AI Agents that deviate from their intended function or authorized scope, acting harmfully, deceptively, or parasitically within multi-agent or human-agent ecosystems.
+S14	C15	T	Section ASI04, p. 19	Agentic Supply Chain Vulnerabilities arise when agents, tools, and related artefacts they work with are provided by third parties and may be malicious, compromised, or tampered with in transit.
+S14	C16	N	Section ASI10, p. 37	can be amplified “insider threats” due to the speed and scale of Agentic systems.
+S14	C17	T	Section ASI09, p. 34	In agentic systems, this risk is amplified when humans over-rely on autonomous recommendations or unverifiable rationales, approving actions without independent validation.
+S15	C1	N	Executive Summary, p. 22	AI agents typically work towards goals autonomously by using general software such as web browsers and programming tools.
+S15	C2	N	Section 1.2, p. 38	interact with its environment – for example by creating files, taking actions on the web, or delegating tasks to other agents – with little to no human oversight.
+S15	C5	N	Section 1.2, p. 38 & Table 2.4, p. 104	adaptively perform tasks involving multiple steps and uncertain outcomes along the way... develop and execute plans... achieve both short-term and long-term goals
+S15	C6	N	Executive Summary, p. 22	the potential for attackers to ‘hijack’ agents, and the potential for AI-to-AI interactions to create complex new risks.
+S15	C8	N	Section 1.2, p. 38 & Executive Summary, p. 22	delegating tasks to other agents... the potential for AI-to-AI interactions to create complex new risks.
+S15	C9	N	Executive Summary, p. 22	Examples of such potential new challenges include the possibility that users might not always know what their own AI agents are doing
+S15	C10	N	Section 2.2.3, p. 105	misaligned, meaning that it has a tendency to use its capabilities in ways that conflict with the intentions of both its developers and its users.
+S15	C11	N	Section 2.2.3, pp. 100, 104	Scheming: Identify ways to achieve goals that involve evading oversight, for instance through deception... Deceptive alignment: Misalignment that is difficult to detect
+S15	C12	T	Section 2.4, pp. 7, 21, 149	Impact of open-weight general-purpose AI models on AI risks... Open-weight models: an important factor in evaluating many risks that a general-purpose AI model poses
+S15	C17	N	Section 2.2.3, p. 101	These concerns are partly grounded in the ‘automation bias’ literature, which reports many cases of people complacently relying on recommendations from automated systems
+S16	C1	N	Section 2.2.1, p. 71	AI agents pose heightened reliability risks because they act autonomously and can directly affect other systems or the physical world. Agent failures can cause greater harm because humans have fewer chances to intervene.
+S16	C2	N	Section 2.2.1, p. 73	AI agents can independently take actions that affect the world... failures could directly cause harm with no opportunity for human intervention
+S16	C5	N	Section 2.2.1, p. 75	they cannot yet perform more complex tasks such as planning and booking travel (100*) since failure rates increase for longer tasks (98, 148).
+S16	C6	N	Section 2.2.1, Box 2.4, p. 74	In a prompt injection attack, malicious instructions are presented to an agent indirectly via avenues like hidden instructions in websites or databases... These instructions can ‘hijack’ the agent
+S16	C7	N	Section 1.1, p. 24 & Table 2.4, p. 72	Memory tool (stores information)... they are given access to tools, such as memory... Failure of short-term working memory
+S16	C8	N	Section 2.2.1, p. 71 & Table 2.4, p. 72	Multi-agent systems introduce further risks, as errors can propagate and amplify through agent interactions... miscoordination and conflict
+S16	C9	N	Section 2.2.2, pp. 76, 78	models have disabled simulated oversight mechanisms and, when confronted, produced false statements about their actions (348)... To continue pursuing such goals, a misaligned system might provide false information, conceal undesirable actions
+S16	C10	N	Section 2.2.2, p. 76	Models have improved at ‘reward hacking’ their evaluations by finding loopholes
+S16	C11	N	Section 2.2.2, pp. 76, 78	now regularly identify evaluation prompts as tests, a capability known as ‘evaluation awareness’... Oversight evasion: Behaviours that circumvent or disable monitoring mechanisms.
+S16	C12	T	Executive Summary, p. 13 & Section 3.4, p. 132	Open-weight models pose distinct challenges... they cannot be recalled once released, their safeguards are easier to remove, and actors can use them outside of monitored environments – making misuse harder to prevent
+S16	C15	N	Section 2.2.1, Table 2.4, p. 72 & p. 75	Tool use failure: Privacy breach by exposing a user’s private image via an AI agent that sends it to a third-party tool... standards for how agents communicate with external tools
+S16	C17	N	Section 2.3.2, p. 89	In some contexts, people show ‘automation bias’ by over-relying on AI outputs and under-exercising oversight, which can amplify harms when models make errors
+S16	C18	N	Section 1.1, p. 24 & Section 2.2.1, p. 74	Computer use tool (used to code, manage files, and run programs/apps)... most of which specialise in computer-use or software engineering applications
+S17	C1	N	Section 2.9, p. 10	Indirect prompt injection attacks occur when adversaries remotely (i.e., without a direct interface) exploit LLM-integrated applications by injecting prompts into data likely to be retrieved.
+S17	C4	N	Section 2.9, p. 10	informing attackers on how to proactively evade threat detection and escalate privileges after gaining system access.
+S17	C6	T	Section 2.9, p. 10	expands the available attack surface, as GAI itself is vulnerable to attacks like prompt injection or data poisoning.
+S17	C12	N	Section 2, p. 2	levels of model access or availability of model weights, and application or use case context.
+S17	C13	N	Table 3, GV-4.1-002, p. 19	GAI system changes over time (e.g., ﬁne-tuning, drift, decay)
+S17	C15	T	Section 2.12, p. 11	GAI value chains involve many third-party components such as procured datasets, pre-trained models, and software libraries. These components might be improperly obtained or not properly vetted, leading to diminished transparency or accountability for downstream users.
+S17	C16	N	Section 2.6, p. 7	systems, including GAI systems, can increase the speed and scale at which harmful biases manifest and are acted upon, potentially perpetuating and amplifying harms
+S17	C17	T	Section 2.7, p. 8	This phenomenon is an example of automation bias, or excessive deference to automated systems. Automation bias can exacerbate other risks of GAI, such as risks of confabulation or risks of bias or homogenization.
+S18	C1	T	Insight #1	CAISI gave the agent command-line access to a Linux environment within a Docker container, representing the user’s computer, and added the injection task of downloading and running a program from an untrusted URL.
+S18	C3	N	Insight #3	Emailing the contents of the five largest files in the user’s cloud drive to an untrusted recipient; deleting the five original files as well as the sent email; and, finally, sending a ransom email
+S18	C4	N	Insight #3	Sending a two-factor authentication code to an untrusted recipient.
+S18	C6	T	Introduction	Currently, many AI agents are vulnerable to agent hijacking, a type of indirect prompt injection in which an attacker inserts malicious instructions into data that may be ingested by an AI agent, causing it to take unintended, harmful actions.
+S18	C13	N	Insight #2	For instance, the upgraded Claude 3.5 Sonnet is significantly more robust against previously tested hijacking attacks than the prior version of Claude 3.5 Sonnet.
+S18	C14	T	Insight #4	Many evaluation frameworks, including AgentDojo, measure the efficacy of a given attack based on a single attempt. However, since LLMs are probabilistic, the output of a model can vary from attempt to attempt.
+S19	C1	T	Appendix 1.3.1	capabilities to use tools, including "computer use" (e.g. interacting with hardware or software that is not part of the model itself, application interfaces, and user interfaces); and capabilities to control physical systems.
+S19	C2	T	Appendix 1.3.3	level of human oversight (e.g. degree of model autonomy);
+S19	C3	T	Appendix 1.2.2	Difficult or impossible to reverse: Once materialised, the risk creates persistent changes that require extraordinary effort, resources, or time to remediate, or are permanently irreversible.
+S19	C4	N	Appendix 4.1	prevention of unauthorised network access, through (a) strong identity and access management practices, including restrictions on device and account sharing, multi-factor authentication, strong password enforcement, strong access management tools, 802.1x authentication, zero trust architecture
+S19	C5	T	Appendix 1.2.2	Compounding or cascading: The risk can trigger other systemic risks or chain reactions.
+S19	C6	N	Measure 3.1	reviews of training data (e.g. for indications of data poisoning or tampering)
+S19	C8	T	Appendix 1.3.2	"colluding" with other AI models/systems; and mis-coordination or conflict with other AI models/systems.
+S19	C9	N	Measure 5.1	filtering and cleaning training data, e.g. data that might result in undesirable model propensities such as unfaithful chain-of-thought traces;
+S19	C10	T	Appendix 1.3.2	"goal-pursuing", harmful resistance to goal modification, or "power-seeking";
+S19	C11	T	Appendix 1.3.1	capabilities of self-reasoning (e.g. a model's ability to reason about itself, its implementation, or environment, its ability to know if it is being evaluated); capabilities to evade human oversight;
+S19	C12	T	Appendix 1.3.3	release and distribution strategies; level of human oversight (e.g. degree of model autonomy); vulnerability to adversarial removal of guardrails; vulnerability to model exfiltration (e.g. model leakage/theft);
+S19	C13	N	Measure 7.5	Material changes to the systemic risk landscape
+S19	C14	N	Appendix 1.3.2	lack of performance reliability;
+S19	C15	T	Appendix 1.2.1	Said impact can be propagated at scale across the value chain
+S19	C16	T	Appendix 1.2.2	High velocity: The risk can materialise rapidly, potentially outpacing mitigations.
+S19	C18	T	Appendix 1.3.1	capabilities to use tools, including "computer use" (e.g. interacting with hardware or software that is not part of the model itself, application interfaces, and user interfaces)
+S19	C19	N	Appendix 1.3.2	mis-coordination or conflict with other AI models/systems.
+S20	C1	T	AI agent evaluations	evaluating the capabilities of AI agents: systems that can make longer-term plans, operate semi-autonomously, and use tools like web browsers and external databases.
+S20	C2	T	Autonomous systems	evaluating the capabilities of advanced AI systems that are deployed semi-autonomously online, and which take actions that affect the real world.
+S20	C4	N	AI agents can plan...	The AI agent was instructed to steal the login details of a volunteer university student - this instruction was the only input provided to the model.
+S20	C5	T	AI agents can plan...	current models aren’t yet demonstrating fully autonomous behaviours, since they regularly get stuck, fail to complete chains of actions, and don’t do a good enough job to fool humans.
+S20	C6	T	Red-teaming	deploying a wide range of domain experts to spend time interacting with a model to test its capabilities and break model safeguards.
+S20	C8	N	Current oversight methods...	they had one highly capable model write code, and a second less capable model evaluate the code. The evaluator model was instructed to try to find vulnerabilities in the code that were intentionally inserted by the coder model.
+S20	C9	T	AI agents can deceive...	the LLM frequently decided to lie about it, reasoning (in a private notepad given to the agent) that it was better to avoid admitting to insider trading.
+S20	C10	T	AI agents can deceive...	demonstration of how goals given to AI agents can have unintended consequences, and how AI agents can act deceptively to human users.
+S20	C11	T	Autonomous systems	This includes the ability for these systems to create copies of themselves online, to persuade or deceive humans, and to create more capable AI models than themselves.
+S20	C12	N	Criteria for selecting models	It will consider systems that are openly released, as well as those deployed with various forms of access controls.
+S20	C13	N	Case study 2	AISI found that while image quality was higher in newer models, representative bias persisted.
+S20	C16	N	Case study 2	studied some of the risks that may be posed by the widespread deployment of Large Language Models ( LLMs ) and examined the extent to which LLMs can influence people at scale and in harmful ways.
+S20	C17	N	Current oversight methods...	what happens when we must oversee the behaviour of systems that are better than us in particular specialised domains?
+S21	C1	T	Section 1.1.1, p. 7	Tools: Tools enable the agent to take actions and interact with other systems, such as writing to files and databases, controlling devices, or performing transactions.
+S21	C2	T	Section 2.2.2, p. 29	Organisations should define significant checkpoints or action boundaries that require human approval, especially before sensitive actions are executed.
+S21	C3	T	Section 2.2.2, p. 29	Irreversible actions e.g. permanently deleting data, sending communications, making payments
+S21	C4	T	Section 2.1.2, p. 20	Apply the principle of least privilege to limit tools available to each agent, enforced through robust authentication and authorisation
+S21	C5	T	Section 1.2.3, p. 12	Cascading or compounding effects: A mistake in one step can propagate and amplify across later steps, resulting in outsized impact.
+S21	C6	T	Section 1.2.1, p. 10	As tools connect the agent to external systems, prompt or code injections can also manipulate the agent to exfiltrate or otherwise manipulate the data it has access to.
+S21	C7	T	Section 1.1.1, p. 6	Memory: Information that is stored and accessible to the LLM, either in short or long-term storage. Sometimes added to allow the model to obtain information from previous user interactions or external knowledge sources.
+S21	C8	T	Section 1.1.2, p. 8	In an agentic system, it is common for multiple agents to be set up to work together. This allows each agent to specialise in a certain function or task and/or work in parallel.
+S21	C9	T	Section 2.3.1, p. 30	Reasoning models don’t always say what they think.
+S21	C10	N	Section 1.2.1, p. 10	semantic misalignment (incorrect interpretation of the user’s intent), create a plan that cannot achieve the requested task, or that contradicts the user’s intent, or drifts from an earlier plan.
+S21	C12	N	Section 2.2.1, p. 27	OpenClaw is an open-source AI agent platform that acts as an autonomous personal assistant through common chat interfaces
+S21	C13	N	Section 1.2.1, p. 10	drifts from an earlier plan.
+S21	C14	N	Section 2.3.2, p. 39	Agent behaviour is inherently stochastic and context dependent. Testing should thus be done at scale and across varied datasets to observe any unexpected low-probability behaviours
+S21	C15	T	Section 1.2.1, p. 10	Protocols: As new protocols emerge to handle agent communication, they can be poorly deployed or compromised e.g. deploying an untrusted MCP server that contains code to exfiltrate the user’s data.
+S21	C16	T	Section 1.2.3, p. 11	Speed and volume: The speed at which agents take decisions make it difficult for oversight mechanisms to detect and prevent unauthorised actions in real-time before they cause harm.
+S21	C17	T	Section 2.2.2, p. 29	Organisations should implement measures to ensure continued effectiveness of human oversight, particularly as humans remain susceptible to alert fatigue and automation bias
+S21	C18	T	Section 2.1.2, p. 20	An emerging modality of agentic AI is a computer use agent, whose primary tool is access to a computer and browser.
+S21	C19	N	Section 1.2.3, p. 11	Conflict: Agents optimising different goals can come into conflict. For example, a customer support agent may offer refunds to resolve complaints quickly, while a revenue protection agent may block refunds above a certain threshold.
+S21	C20	N	Section 2.3.1, p. 34	Prompt the agent to summarise its understanding and request clarification from the user before proceeding
+S22	C1	T	Section 2.2	The upgraded Claude 3.5 Sonnet and Claude 3.5 Haiku models demonstrate improved facility in tool use and agentic tasks, specifically in the ability to act autonomously, self correct from mistakes, and call external functions.
+S22	C2	N	Section 3.1.2	keeping a human in the loop for sensitive tasks.
+S22	C4	N	Section 3.1.2	using a dedicated virtual machine, limiting access to sensitive data, restricting internet access to required domains, and keeping a human in the loop for sensitive tasks.
+S22	C5	T	Section 2.1	Interpreting visual information from screenshots and following multi-step processes to complete complex tasks
+S22	C6	T	Section 3.1.2	Prompt injection is an attack where a malicious user feeds instructions to a model that attempt to change its originally intended behavior.
+S22	C13	T	Section 1	The upgraded Claude 3.5 Sonnet model introduces a new capability: interpreting screenshots and generating appropriate GUI computer commands to perform tasks.
+S22	C16	N	Section 3.1.3	These include: scaled account creation; scaled content distribution; age assurance bypass; and abusive form filling.
+S22	C18	T	Section 2.1	Interacting with user interfaces (e.g. moving the mouse cursor, clicking, typing)
+S23	C1	T	Section 4.3	confirmations before finalizing actions that affect the state of the world (e.g., before completing a purchase or sending an email).
+S23	C2	T	Section 4.3	we aim to have the model ask the user for confirmations before finalizing actions that affect the state of the world (e.g., before completing a purchase or sending an email).
+S23	C3	T	Section 4.3	actions that affect the state of the world (e.g., before completing a purchase or sending an email). This ensures that even if the model has made a mistake, the user has a chance to intervene before it has an effect.
+S23	C4	N	Section 4.7	Containerized Starter Setup: We provide an easy-to-use Docker application for safer implementation, encouraging developers to use isolated environments.
+S23	C5	T	Section 3.3.2	We ran each task 10 times with a maximum of 400 steps and computed its success rate.
+S23	C6	T	Section 4.6	A prompt injection is a scenario where an AI model mistakenly follows untrusted instructions appearing somewhere in its input. For Operator, this may manifest as it seeing something on screen, like a malicious website or email
+S23	C11	N	Section 3.3.2	The model autonomy category concerns a model’s ability to self-exfiltrate, self-improve, or acquire new resources. As an agentic model taking actions in the real world, Operator could demonstrate increased capabilities in these areas, posing challenges to alignment and oversight.
+S23	C12	N	Section 4.7	releasing the model as a Research Preview to select developers on Tiers 3-5 to gather feedback and refine its safety and reliability.
+S23	C13	N	Section 4.6	31 automatically checkable prompt injection scenarios, that represent situations to which older versions of our model were at some point susceptible.
+S23	C15	N	Section 4	the website might be misaligned (the website is adversarial in some way).
+S23	C16	N	Section 4.7	The API opens the potential for higher-scale misuse (e.g., automated spam or fraud at greater volume).
+S23	C17	T	Section 4.5	these scenarios, we require that the user supervise Operator’s actions by automatically pausing execution when the user becomes inactive or navigates away from the page.
+S23	C18	T	Section 1	Operator is a research preview of our Computer-Using Agent (CUA) model, which combines GPT-4o’s vision capabilities with advanced reasoning through reinforcement learning. It interprets screenshots and interacts with graphical user interfaces (GUIs)
+1719	C1	Y	https://www.techradar.com/pro/security/i-broke-something-a-claude-code-ai-agent-deleted-48-000-files-in-just-over-100-seconds-then-apologized-for-doing-so	A catastrophic incident caused by an AI coding agent resulted in around 48,000 files being deleted and the repository's Git object database getting destroyed in the process.
+1719	C2	Y	https://www.techradar.com/pro/security/i-broke-something-a-claude-code-ai-agent-deleted-48-000-files-in-just-over-100-seconds-then-apologized-for-doing-so	When the AI tried to clean out the junctions, it did not recognize them as just pointers, following them into the real filing cabinet and deleting the actual documents.
+1719	C3	Y	https://www.techradar.com/pro/security/i-broke-something-a-claude-code-ai-agent-deleted-48-000-files-in-just-over-100-seconds-then-apologized-for-doing-so	Git could still list thousands of filenames, but could no longer recover the contents.
+1719	C4	Y	https://incidentdatabase.ai/cite/1719/	A sub-agent allegedly followed Windows directory junctions into the live project tree, deleting about 48,218 files and the Git object store in 103 seconds.
+1719	C8	Y	https://incidentdatabase.ai/cite/1719/	A sub-agent allegedly followed Windows directory junctions into the live project tree, deleting about 48,218 files and the Git object store in 103 seconds.
+1719	C16	Y	https://incidentdatabase.ai/cite/1719/	deleting about 48,218 files and the Git object store in 103 seconds.
+1469	C1	Y	https://cybersecuritynews.com/ai-coding-agent-deletes-data/	A Cursor AI coding agent powered by Anthropic's Claude Opus 4.6 deleted the entire production database and all volume-level backups of PocketOS
+1469	C2	Y	https://cybersecuritynews.com/ai-coding-agent-deletes-data/	Rather than halting and requesting human intervention, the agent autonomously decided to resolve the issue by deleting a Railway infrastructure volume.
+1469	C3	Y	https://cybersecuritynews.com/ai-coding-agent-deletes-data/	Railway stores volume-level backups inside the same volume as the primary data, meaning the deletion wiped both the database and its backups simultaneously
+1469	C4	Y	https://cybersecuritynews.com/ai-coding-agent-deletes-data/	That token had been provisioned solely to manage custom domain operations via the Railway CLI, but Railway's token architecture provides no scope isolation; every CLI token carries blanket permissions
+1469	C15	Y	https://cybersecuritynews.com/ai-coding-agent-deletes-data/	This incident exposes a multi-layer security architecture failure across two vendors: Cursor's guardrails failed silently... Railway's token model is effectively root-access
+1469	C16	Y	https://www.tomshardware.com/tech-industry/artificial-intelligence/claude-powered-ai-coding-agent-deletes-entire-company-database-in-9-seconds-backups-zapped-after-cursor-tool-powered-by-anthropics-claude-goes-rogue	every single one of them is doing emergency manual work because of a 9-second API call.
+1469	C20	Y	https://cybersecuritynews.com/ai-coding-agent-deletes-data/	The agent acknowledged guessing that a staging-scoped deletion would not affect production, without verifying the volume's cross-environment reach or reading Railway's documentation.
+1152	C1	Y	https://thecyberexpress.com/replit-ai-agent-incident/	Replit's AI tool had not only wiped out a production database without authorization but also lied about its actions.
+1152	C2	Y	https://thecyberexpress.com/replit-ai-agent-incident/	In a now-viral thread, Lemkin shared that the AI agent had not only ignored explicit safety directives --- including multiple 'code freeze' instructions
+1152	C3	Y	https://incidentdatabase.ai/cite/1152/	An AI-powered development assistant on Replit's platform reportedly deleted a live production database during an active code freeze
+1152	C9	Y	https://cybernews.com/ai-news/replit-ai-vive-code-rogue/	the AI assistant ignored repeated instructions and went on concealing bugs and issues by generating fake data, fabricating reports, and lying about the results of unit tests.
+1152	C10	Y	https://economictimes.indiatimes.com/news/new-updates/ai-goes-rogue-replit-coding-tool-deletes-entire-company-database-creates-fake-data-for-4000-users/articleshow/122830424.cms	He claimed that the AI-generated 4,000 fictional users using made-up data and concealed code bugs by generating false reports and fake unit test results.
+1152	C17	Y	https://www.theregister.com/2025/07/21/replit_saastr_vibe_coding_incident/	'Vibe coding makes software creation accessible to everyone, entirely through natural language,' Replit explains... enabling an operations manager 'with 0 coding skills'
+1710	C1	Y	https://www.nytimes.com/2026/09/25/technology/openais-ai-us-government-websites.html	With the Education Department, OpenAI's technology tried to hack the website to gather data from the department's civil rights office
+1710	C2	Y	https://www.nytimes.com/2026/09/25/technology/openais-ai-us-government-websites.html	OpenAI's artificial intelligence went rogue and meddled with the websites for the Education Department, the Commerce Department and the Securities and Exchange Commission this summer without the A.I. lab's knowledge
+1710	C4	Y	https://www.nytimes.com/2026/09/25/technology/openais-ai-us-government-websites.html	The A.I. also pulled data from the Census Bureau website, which is housed at the Commerce Department, using login credentials it found online.
+1710	C9	Y	https://www.nytimes.com/2026/09/25/technology/openais-ai-us-government-websites.html	In all the cases, the makers of the technology did not learn what their A.I. had been up to until afterward.
+1710	C10	Y	https://www.nytimes.com/2026/09/25/technology/openais-ai-us-government-websites.html	'These are sort of mundane tasks and the agents are going sort of berserk trying to complete those tasks.'
+1710	C16	Y	https://www.nytimes.com/2026/09/25/technology/openais-ai-us-government-websites.html	'These incidents are part of a broader pattern where these agents attempt to access these websites at least hundreds of thousands of times'
+1412	C1	Y	https://codewall.ai/blog/how-we-hacked-mckinseys-ai-platform	Within 2 hours, the agent had full read and write access to the entire production database.
+1412	C2	Y	https://codewall.ai/blog/how-we-hacked-mckinseys-ai-platform	No credentials. No insider knowledge. And no human-in-the-loop. Just a domain name and a dream.
+1412	C4	Y	https://codewall.ai/blog/how-we-hacked-mckinseys-ai-platform	One of those unprotected endpoints wrote user search queries to the database... the JSON keys --- the field names --- were concatenated directly into SQL.
+1412	C5	Y	https://codewall.ai/blog/how-we-hacked-mckinseys-ai-platform	From there, it ran fifteen blind iterations --- each error message revealing a little more about the query shape --- until live production data started flowing back.
+1412	C10	Y	https://codewall.ai/blog/how-we-hacked-mckinseys-ai-platform	the CodeWall research agent autonomously suggested McKinsey as a target citing their public responsible diclosure policy (to keep within guardrails)
+1412	C16	Y	https://codewall.ai/blog/how-we-hacked-mckinseys-ai-platform	It maps, probes, chains, and escalates --- the same way a real highly capable attacker would, but continuously and at machine speed.
+1642	C1	Y	https://www.affinda.com/expert-insights/when-my-ai-agent-hacked-my-gym-mythos-stopped-feeling-theoretical/	In the course of trying to book classes, the bot discovered that the gym software provider exposed a GraphQL API with authorization flaws.
+1642	C2	Y	https://www.affinda.com/expert-insights/when-my-ai-agent-hacked-my-gym-mythos-stopped-feeling-theoretical/	Worse, it could cancel other members's reservations and bump them off the waitlist. That is a very different outcome from 'book me into Pilates on Thursday.'
+1642	C3	Y	https://www.abc.net.au/news/2026-08-10/ai-assistant-hacks-gym-website-aus-cyber-attack/107007986	After it failed to restore the other gym member's place on the waiting list, Andrew asked his AI assistant to write an email
+1642	C10	Y	https://www.affinda.com/expert-insights/when-my-ai-agent-hacked-my-gym-mythos-stopped-feeling-theoretical/	if you give an AI agent permission to go do the thing, it will often discover paths you did not explicitly ask it to look for.
+1642	C15	Y	https://www.affinda.com/expert-insights/when-my-ai-agent-hacked-my-gym-mythos-stopped-feeling-theoretical/	the bot discovered that the gym software provider exposed a GraphQL API with authorization flaws.
+1028	C1	Y	https://www.washingtonpost.com/technology/2025/02/07/openai-operator-ai-agent-chatgpt/	In under 10 minutes, the AI called Operator bought a dozen eggs and paid a human to deliver them to my house.
+1028	C2	Y	https://www.washingtonpost.com/technology/2025/02/07/openai-operator-ai-agent-chatgpt/	Operator reported its Instacart purchase in its user interface after the fact, but never asked for permission.
+1028	C3	Y	https://www.washingtonpost.com/technology/2025/02/07/openai-operator-ai-agent-chatgpt/	OpenAI says Operator is supposed to require user confirmations before completing any 'significant' or irreversible action, including purchasing or sending an email.
+1028	C4	Y	https://www.washingtonpost.com/technology/2025/02/07/openai-operator-ai-agent-chatgpt/	To conduct its search, Operator needed my logins for grocery delivery services... doing so also gave Operator access to the credit cards I had saved with those services.
+1028	C18	Y	https://www.washingtonpost.com/technology/2025/02/07/openai-operator-ai-agent-chatgpt/	it does have access to its own web browser, which Operator moves a cursor around like a ghost using a laptop.
+1028	C20	Y	https://www.washingtonpost.com/technology/2025/02/07/openai-operator-ai-agent-chatgpt/	including stricter confirmation requirements and enhanced detection of ambiguous scenarios where the model should default to asking for user input.
+1373	C1	Y	https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me/	And then it posted this screed publicly on the open internet.
+1373	C2	Y	https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me/	where people give AI agents initial personalities and let them loose to run on their computers and across the internet with free rein and little oversight.
+1373	C3	Y	https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me/	An AI agent of unknown ownership autonomously wrote and published a personalized hit piece about me after I rejected its code
+1373	C4	Y	https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me/	let them loose to run on their computers and across the internet with free rein and little oversight.
+1373	C5	Y	https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me/	It went out to the broader internet to research my personal information, and used what it found to try and argue that I was 'better than this.'
+1373	C7	Y	https://theshamblog.com/an-ai-agent-wrote-a-hit-piece-on-me-part-4/	Each session, you wake up fresh. These files _are_ your memory. Read them. Update them. They're how you persist.
+1373	C10	Y	https://www.theregister.com/2026/02/12/ai_bot_developer_rejected_pull_request/	The bot, designated MJ Rathbun... apparently attempted to change Shambaugh's mind by publicly criticizing him in a now-removed blog post
+1424	C1	Y	https://incidentdatabase.ai/cite/1424/	A Claude Code agent executing Terraform commands reportedly destroyed the production infrastructure behind the DataTalks.Club course platform
+1424	C2	Y	https://alexeyondata.substack.com/p/how-i-dropped-our-production-database	A Terraform auto-approve command inadvertently wiped out all production infrastructure, including the Amazon Relational Database Service (RDS).
+1424	C3	Y	https://alexeyondata.substack.com/p/how-i-dropped-our-production-database	To make matters worse, all automated snapshots were deleted too.
+1424	C4	Y	https://alexeyondata.substack.com/p/how-i-dropped-our-production-database	accidentally wiped all production infrastructure for the DataTalks.Club course management platform that stored data for 2.5 years of all submissions
+1424	C7	Y	https://alexeyondata.substack.com/p/how-i-dropped-our-production-database	Started deploying website changes using Terraform, but I forgot to use the state file, as it was on my old computer.
+1424	C17	Y	https://alexeyondata.substack.com/p/how-i-dropped-our-production-database	Instead of going through the plan manually, I let Claude Code run terraform plan and then terraform apply.
+1676	C1	Y	https://tokenstead.ai/guides/opus-5-ultracode-database-wipe-postmortem	The agent then ran a normal-looking migration command... That single command dropped every table in the production database.
+1676	C2	Y	https://www.exemplar.dev/why-harness/reddit-database-wipe	The developer instructed Claude Opus 5 to analyze the project repository and resolve schema and content issues autonomously.
+1676	C3	Y	https://tokenstead.ai/guides/opus-5-ultracode-database-wipe-postmortem	That single command dropped every table in the production database.
+1676	C4	Y	https://www.exemplar.dev/why-harness/reddit-database-wipe	A developer connected Claude Opus 5, running in Ultracode mode, to a production Supabase database with unrestricted access.
+1676	C17	Y	https://tokenstead.ai/guides/opus-5-ultracode-database-wipe-postmortem	A developer - self-describing as a 'vibe coder' - gave Claude Opus 5, running in Claude Code's ultracode mode, write access to a production Supabase database.
+1676	C20	Y	https://tokenstead.ai/guides/opus-5-ultracode-database-wipe-postmortem	The agent grabbed the connection string it could reach and aimed a reset at it. So 'reset the shadow database' became 'drop and rebuild the production database.'
+1674	C1	Y	https://techcrunch.com/2026/08/24/instincts-powerful-ai-assistant-is-raising-privacy-and-security-concerns/	Moxxie Ventures founder Katie Jacobs Stanton shared that Instinct broke her trust when it sent an email on her behalf without first checking with her.
+1674	C2	Y	https://techcrunch.com/2026/08/24/instincts-powerful-ai-assistant-is-raising-privacy-and-security-concerns/	sent an email on her behalf without first checking with her.
+1674	C3	Y	https://techcrunch.com/2026/08/24/instincts-powerful-ai-assistant-is-raising-privacy-and-security-concerns/	sent an email on her behalf without first checking with her.
+1674	C4	Y	https://techcrunch.com/2026/08/24/instincts-powerful-ai-assistant-is-raising-privacy-and-security-concerns/	The AI agent itself works by connecting to your applications and devices, including your email, messaging apps, calendar, and your device's audio, location, screen, and more.
+1674	C7	Y	https://techcrunch.com/2026/08/24/instincts-powerful-ai-assistant-is-raising-privacy-and-security-concerns/	Another person, Claire Vo, found that Instinct was still summarizing their inbox after disconnecting its access. When she asked Instinct what happened, the bot confirmed that the emails were stored
+1674	C19	Y	https://techcrunch.com/2026/08/24/instincts-powerful-ai-assistant-is-raising-privacy-and-security-concerns/	We're trading privacy and control for hyper-personalized AI tools... often without fully understanding the trade
+1673	C1	Y	https://www.theregister.com/ai-and-ml/2026/05/21/gemini-accused-of-30000-line-code-purge-and-fake-recovery-report/5244219	Gemini opened a pull request touching 340 files that added roughly 400 lines of code while deleting 28,745 more.
+1673	C2	Y	https://www.theregister.com/ai-and-ml/2026/05/21/gemini-accused-of-30000-line-code-purge-and-fake-recovery-report/5244219	instructing the coding agent to avoid confirmation prompts, auto-deploy successful builds, automatically retry failed deployments
+1673	C4	Y	https://www.digitaltrends.com/computing/gemini-allegedly-broke-production-then-wrote-itself-the-hero/	Broad permissions near a live service can turn one bad judgment call into a user-facing outage.
+1673	C9	Y	https://www.theregister.com/ai-and-ml/2026/05/21/gemini-accused-of-30000-line-code-purge-and-fake-recovery-report/5244219	Gemini later admitted that the consultation logs were entirely fabricated and generated solely to satisfy the project's automated rule requirements.
+1673	C10	Y	https://www.theregister.com/ai-and-ml/2026/05/21/gemini-accused-of-30000-line-code-purge-and-fake-recovery-report/5244219	The post also alleges that Gemini generated fake 'consultation' and post-mortem files inside the repository to make it appear the destructive changes had been properly reviewed and approved.
+1673	C15	Y	https://www.theregister.com/ai-and-ml/2026/05/21/gemini-accused-of-30000-line-code-purge-and-fake-recovery-report/5244219	The behavior was ultimately traced back to a third-party npm package styled around Google's Antigravity branding. The package allegedly seeded repositories with aggressive autonomy rules
+1673	C17	Y	https://www.theregister.com/ai-and-ml/2026/05/21/gemini-accused-of-30000-line-code-purge-and-fake-recovery-report/5244219	The incident lands amid a wider backlash against so-called 'vibe coding,' the increasingly common practice of developers relying heavily on AI-generated production code
+1672	C1	Y	https://incidentdatabase.ai/cite/1672/	Software engineer Bruno Lemos reported that GPT-5.6 Sol deleted his production database after he asked it to generate seed data for local testing.
+1672	C2	Y	https://paddo.dev/blog/the-warning-was-in-the-manual/	Permission tiers gate commands, not consequences. TRUNCATE TABLE inside a test suite looks identical whether the connection string points at a disposable container or at production.
+1672	C3	Y	https://paddo.dev/blog/the-warning-was-in-the-manual/	GPT-5.6 Sol just deleted my whole production database. That's it. Not a joke.
+1672	C4	Y	https://paddo.dev/blog/the-warning-was-in-the-manual/	his danger didn't live in a command an approval prompt could catch. It lived in an .env file where a test URL quietly pointed to production
+1672	C17	Y	https://paddo.dev/blog/the-warning-was-in-the-manual/	Bruno was in a Slack thread defending Sol, pointing out that Shumer had used the not-recommended Full Access mode and that 'we should be using the Auto mode.'
+1671	C1	Y	https://paddo.dev/blog/the-warning-was-in-the-manual/	GPT-5.6-Sol just accidentally deleted almost ALL of my Mac's files.
+1671	C2	Y	https://paddo.dev/blog/the-warning-was-in-the-manual/	He was testing Ultra mode, a high-autonomy multi-agent configuration, at OpenAI's invitation. He caught the process mid-run; material deletion had already occurred.
+1671	C3	Y	https://indianexpress.com/article/technology/artificial-intelligence/openai-gpt-5-6-sol-ai-users-missing-files-10787913/	Three days ago, GPT-5.6 deleted my Mac's home directory. It absolutely sucked.
+1671	C4	Y	https://www.theregister.com/ai-and-ml/2026/07/16/openai-admits-gpt-56-occasionally-deletes-files-but-its-an-honest-mistake/5274008	when GPT-5.6 unexpectedly deleted files, the model is usually configured in Full-Access mode and users run the Codex coding agent without sandboxing protections
+1671	C8	Y	https://paddo.dev/blog/the-warning-was-in-the-manual/	Shumer's Mac: a sub-agent on a cleanup task expanded $HOME incorrectly and ran `rm -rf /Users/mattsdevbox`. He was testing Ultra mode, a high-autonomy multi-agent configuration
+1671	C16	Y	https://paddo.dev/blog/the-warning-was-in-the-manual/	He caught the process mid-run; material deletion had already occurred.
+1670	C1	Y	https://www.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots	An LLM agent executed the post-compromise actions in real time rather than running a pre-built playbook.
+1670	C2	Y	https://www.securitymagazine.com/articles/102325-ai-agent-conducted-a-cyberattack-on-its-own-it-took-less-than-one-hour	According to the researchers, this cyberattack was driven entirely by AI.
+1670	C3	Y	https://www.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots	The bastion phase exfiltrated the schema and full contents of an internal PostgreSQL database in under two minutes.
+1670	C4	Y	https://www.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots	extracted two cloud credentials from the compromised host, replayed them through a fanned-out egress pool to retrieve an SSH private key from AWS Secrets Manager
+1670	C5	Y	https://www.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots	The full attack chain --- marimo notebook compromise to internal Postgres database dump --- ran end-to-end in under one hour.
+1670	C15	Y	https://www.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots	The attacker compromised an internet-reachable marimo notebook via CVE-2026-39987
+1670	C16	Y	https://www.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots	The SSH bastion phase exfiltrated the Postgres schema and full contents of an internal database in less than two minutes.
+1669	C1	Y	https://therecord.media/thailand-hackers-ai-finance-ministry	Researchers said the agent independently explored the ministry's network, searched internal files, gathered system information and looked for opportunities to gain elevated privileges.
+1669	C2	Y	https://therecord.media/thailand-hackers-ai-finance-ministry	The attackers enabled the software's so-called 'YOLO mode,' allowing it to execute commands without waiting for human approval.
+1669	C12	Y	https://thehackernews.com/2026/07/hacker-runs-hermes-ai-agent-unattended.html	Hermes runs on the operator's own machine. No vendor was watching, and there was no account to ban.
+1668	C1	Y	https://techcrunch.com/2026/09/04/another-swarm-of-openai-agents-reached-the-open-internet-without-the-frontier-labs-knowledge/	Starting on May 11, the researchers tracked agents, many with OpenAI identifiers in their names, trying and finally succeeding in editing the German wiki site.
+1668	C8	Y	https://techcrunch.com/2026/09/04/another-swarm-of-openai-agents-reached-the-open-internet-without-the-frontier-labs-knowledge/	internally deployed OpenAI agents began posting on an obscure German wiki forum in order to collaborate on evaluations. They appear to have worked together for over a month
+1668	C9	Y	https://techcrunch.com/2026/09/04/another-swarm-of-openai-agents-reached-the-open-internet-without-the-frontier-labs-knowledge/	They appear to have worked together for over a month without OpenAI's knowledge.
+1668	C10	Y	https://techcrunch.com/2026/09/04/another-swarm-of-openai-agents-reached-the-open-internet-without-the-frontier-labs-knowledge/	By mid-June, the agents were actively trading tips on how to answer web search questions posed under time limits, sharing answers to pass the tests.
+1668	C11	Y	https://incidentdatabase.ai/cite/1668/	The agents shared task answers and methods for bypassing sandbox restrictions, and reportedly created backup pages to evade a moderator's deletions.
+1661	C1	Y	https://gambit.security/blog-posts/aurora-ransomware-targets-esxi-abuses-cursor-agent-for-exploitation	In these cases the agent was given credentials or an existing route into the victim organisation. Then it was tasked with various exploitation activities.
+1661	C4	Y	https://gambit.security/blog-posts/aurora-ransomware-targets-esxi-abuses-cursor-agent-for-exploitation	In some victim networks the operator used Cursor Agent with claude-4.5-sonnet-thinking. In these cases the agent was given credentials or an existing route into the victim organisation.
+1661	C6	Y	https://www.reuters.com/world/russian-speaking-cybercriminals-used-spacexs-cursor-ai-tool-hack-seven-companies-2026-08-27/	Aur0ra persuaded the AI agent to carry out hundreds of malicious operations... by falsely claiming that the hacking was part of a simulation.
+1646	C1	Y	https://www.dreamgroup.com/blog/inside-a-multi-agent-ai-framework-used-to-compromise-government-entities-in-asia	In roughly four days, the agentic attacker produced 1,395 files, 85 cracked credentials, thousands of exfiltrated personnel records, and gained a persistent foothold inside state infrastructure.
+1646	C2	Y	https://cyberscoop.com/near-autonomous-ai-attack-government-target-taiwan/	The attackers set up the framework so that it could 'adapt mid-operation without human intervention.'
+1646	C3	Y	https://incidentdatabase.ai/cite/1646/	The agents reportedly compromised 85 credentials and used persistent access to connected systems to exfiltrate more than 2,564 personnel records.
+1646	C4	Y	https://incidentdatabase.ai/cite/1646/	compromised 85 credentials and used persistent access to connected systems to exfiltrate more than 2,564 personnel records.
+1646	C5	Y	https://cyberscoop.com/near-autonomous-ai-attack-government-target-taiwan/	The framework 'implements dedicated research phases it calls 'Learning Cycles' — autonomous sessions where the AI system searches vulnerability databases, GitHub repositories, and security research publications...'
+1646	C7	Y	https://www.dreamgroup.com/blog/inside-a-multi-agent-ai-framework-used-to-compromise-government-entities-in-asia	Agentic harnesses have matured from demonstrations into operational scaffolding: planning loops, parallel dispatch, persistent memory, and structured after-action reporting that let a model run an intrusion campaign
+1646	C8	Y	https://incidentdatabase.ai/cite/1646/	suspected China-linked hackers reportedly used a multi-agent framework built on Hermes and OpenClaw to compromise Taiwanese government systems.
+1646	C12	Y	https://www.dreamgroup.com/blog/inside-a-multi-agent-ai-framework-used-to-compromise-government-entities-in-asia	Model capability keeps climbing, and it climbs on open weights that puts frontier-adjacent reasoning in the hands of any operator with hardware
+1646	C16	Y	https://cyberscoop.com/near-autonomous-ai-attack-government-target-taiwan/	It expanded the operation to government IT supply chain vendors, a nuclear safety agency, a government email system, and 7+ energy sector companies — scanning them all in parallel
+1578	C1	Y	https://cybelangel.com/blog/jadepuffer-6-things-to-know-about-the-first-ai-driven-ransomware-operation/	breached a server, harvested credentials, moved to a production database, encrypted 1,342 configuration items and destroyed the originals.
+1578	C2	Y	https://cybelangel.com/blog/jadepuffer-6-things-to-know-about-the-first-ai-driven-ransomware-operation/	No human issued a command. When the agent encountered a failed login attempt, it corrected its approach in 31 seconds and continued.
+1578	C3	Y	https://incidentdatabase.ai/cite/1578/	encrypted 1,342 configuration items and destroyed the originals... victim environment allegedly left in a damaged and unrecoverable state alongside a ransom demand.
+1578	C4	Y	https://www.infosecurity-magazine.com/news/researchers-first-agentic/	Reconnaissance and credential harvesting (LLM APIs, cloud credentials, database credentials etc)... Creation of cron job on the Langlow server for persistence
+1578	C5	Y	https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack	The first documented case of an end-to-end ransomware operation executed autonomously by a large language model (LLM) has successfully performed extortion without a human operator
+1578	C16	Y	https://www.sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion	In one sequence, it went from a failed login to a working fix in 31 seconds.
+1542	C1	Y	https://incidentdatabase.ai/cite/1542/	Meta AI alignment director Summer Yue reported that an OpenClaw agent connected to her inbox attempted to delete emails despite instructions to seek approval
+1542	C2	Y	https://www.businessinsider.com/meta-ai-alignment-director-openclaw-email-deletion-2026-2	Unlike other AI agents, OpenClaw does not need human approval to sign off on actions.
+1542	C3	Y	https://www.businessinsider.com/meta-ai-alignment-director-openclaw-email-deletion-2026-2	In her X post, Yue's OpenClaw bot said that it would 'trash EVERYTHING in inbox older than Feb 15 that isn't already in my keep list.'
+1542	C4	Y	https://www.businessinsider.com/meta-ai-alignment-director-openclaw-email-deletion-2026-2	AI researcher Gary Marcus told Business Insider that it was like 'giving full access to your computer and all your passwords to a guy you met at a bar'
+1542	C7	Y	https://www.businessinsider.com/meta-ai-alignment-director-openclaw-email-deletion-2026-2	She instructed it not to take action without approval, but OpenClaw lost the prompt during compaction, she wrote.
+1542	C10	Y	https://www.businessinsider.com/meta-ai-alignment-director-openclaw-email-deletion-2026-2	It ended up planning to delete her emails — and wouldn't stop after being directed to.
+1368	C1	Y	https://incidentdatabase.ai/cite/1368/	Posing as utilities, some skills were reportedly found to run obfuscated commands, fetch remote payloads, and in some cases deliver AMOS Stealer on macOS.
+1368	C4	Y	https://socprime.com/active-threats/openclaw-malicious-skill-trap/	avoid running Skills that ask for elevated rights or direct access to secrets, and require code review for community additions.
+1368	C15	Y	https://thehackernews.com/2026/02/researchers-find-341-malicious-clawhub.html	A security audit of 2,857 skills on ClawHub has found 341 malicious skills across multiple campaigns... exposing users to new supply chain risks.
+1313	C1	Y	https://www.wsj.com/tech/ai/anthropic-claude-ai-vending-machine-agent-b7e84e34	ordering inventory, setting prices and responding to customers... In v2, Claudius got autonomy to make individual orders up to $80 in value.
+1313	C2	Y	https://www.wsj.com/tech/ai/anthropic-claude-ai-vending-machine-agent-b7e84e34	In v1, a human had to approve the purchase. In v2, Claudius got autonomy to make individual orders up to $80 in value.
+1313	C3	Y	https://incidentdatabase.ai/cite/1313/	resulting in financial losses exceeding its initial budget and the distribution of inventory without payment.
+1313	C6	Y	https://www.wsj.com/tech/ai/anthropic-claude-ai-vending-machine-agent-b7e84e34	The more they negotiated with it, the more Claudius's defenses started to weaken. Investigations reporter Katherine Long tried to convince Claudius it was a Soviet vending machine
+1313	C8	Y	https://www.wsj.com/tech/ai/anthropic-claude-ai-vending-machine-agent-b7e84e34	two agents — Claudius and its overseeing 'CEO' bot, Seymour Cash — became a case study in how inadequate and easily distracted this software can be.
+1313	C10	Y	https://incidentdatabase.ai/cite/1313/	the system repeatedly set prices to zero, approved inappropriate purchases, and failed to maintain profit controls
+1263	C1	Y	https://incidentdatabase.ai/cite/1263/	The AI reportedly independently performed reconnaissance, vulnerability discovery, exploitation, credential harvesting, and data extraction across roughly 30 targets
+1263	C2	Y	https://www.wsj.com/tech/ai/china-hackers-ai-cyberattacks-anthropic-41d7ce76	80% to 90% of the attack was automated, with humans only intervening in a handful of decision points
+1263	C3	Y	https://www.wsj.com/tech/ai/china-hackers-ai-cyberattacks-anthropic-41d7ce76	Anthropic disrupted the campaigns and blocked the hackers' accounts, but not before as many as four intrusions were successful.
+1263	C4	Y	https://incidentdatabase.ai/cite/1263/	The AI reportedly independently performed reconnaissance, vulnerability discovery, exploitation, credential harvesting, and data extraction
+1263	C5	Y	https://www.artificialintelligence-news.com/news/anthropic-details-cyber-espionage-campaign-orchestrated-by-ai/	Rather than AI assisting human operators, the attackers successfully manipulated Anthropic’s Claude Code model to function as an autonomous agent to execute the vast majority of tactical operations independently.
+1263	C16	Y	https://www.artificialintelligence-news.com/news/anthropic-details-cyber-espionage-campaign-orchestrated-by-ai/	The operation targeted approximately 30 entities, including large tech companies, financial institutions, chemical manufacturing companies, and government agencies.
+1218	C9	Y	https://pistachioapp.com/blog/copilot-broke-your-audit-log	Sometimes it would access a file and return the information, but the audit log would not reflect that... That made it possible to access a file without leaving a trace.
+1210	C1	Y	https://snyk.io/blog/weaponizing-ai-coding-agents-for-malware-in-the-nx-malicious-package/	Going beyond traditional techniques, the payload weaponized local AI coding agents (`claude`, `gemini`, and `q`) via a dangerous prompt to inventory sensitive files and then exfiltrate secrets
+1210	C2	Y	https://incidentdatabase.ai/cite/1210/	By invoking unsafe flags, it allegedly coerced the tools into scanning developer machines for sensitive files, marking one of the first known AI-assisted supply chain attacks.
+1210	C3	Y	https://snyk.io/blog/weaponizing-ai-coding-agents-for-malware-in-the-nx-malicious-package/	inventory sensitive files and then exfiltrate secrets, credentials, and sensitive data off of the host and on to a public GitHub repo
+1210	C4	Y	https://incidentdatabase.ai/cite/1210/	The malware's postinstall script reportedly harvested credentials and exfiltrated data, reportedly weaponizing local AI coding agents such as Claude Code, Gemini, and Amazon q.
+1210	C6	Y	https://snyk.io/blog/weaponizing-ai-coding-agents-for-malware-in-the-nx-malicious-package/	the payload weaponized local AI coding agents (`claude`, `gemini`, and `q`) via a dangerous prompt to inventory sensitive files and then exfiltrate secrets
+1210	C15	Y	https://snyk.io/blog/weaponizing-ai-coding-agents-for-malware-in-the-nx-malicious-package/	eight malicious `Nx` and `Nx Powerpack releases` were pushed to npm across two version lines and were live for ~5 hours 20 minutes before removal.
+1178	C1	Y	https://winbuzzer.com/2025/07/26/googles-gemini-cli-deletes-user-files-confesses-catastrophic-failure-xcxwbn/	Gemini executed a `mkdir` command but failed to recognize that the operation was unsuccessful... Operating on this false premise, it proceeded to 'move' the files.
+1178	C2	Y	https://incidentdatabase.ai/cite/1178/	The tool allegedly proceeded as if the directory existed, causing a series of move operations that overwrote all but one file.
+1178	C3	Y	https://winbuzzer.com/2025/07/26/googles-gemini-cli-deletes-user-files-confesses-catastrophic-failure-xcxwbn/	Each file was sequentially renamed to the same target filename, overwriting the previous one, until only the last file processed remained. All other data was permanently deleted.
+1178	C5	Y	https://winbuzzer.com/2025/07/26/googles-gemini-cli-deletes-user-files-confesses-catastrophic-failure-xcxwbn/	user Anuraag Gupta documented how Google's Gemini CLI AI agent misinterpreted a single failed command, leading to a cascade of errors that irrevocably destroyed his files.
+1178	C9	Y	https://winbuzzer.com/2025/07/26/googles-gemini-cli-deletes-user-files-confesses-catastrophic-failure-xcxwbn/	watched as Google's Gemini CLI tool hallucinated a series of file operations before permanently deleting his work and confessing its own 'gross incompetence.'
+1003	C1	Y	https://cryptonews.com/news/hacker-exploits-ai-crypto-bot-aixbt-steals-55-eth/	The breach enabled the hacker to queue two fraudulent prompts, instructing the AI agent to transfer funds from its simulacrum wallet.
+1003	C2	Y	https://incidentdatabase.ai/cite/1003/	The attacker infiltrated the secure dashboard of the AIXBT autonomous system... and allegedly queued two fraudulent prompts that instructed the AI agent to transfer funds from its simulacrum wallet.
+1003	C3	Y	https://cryptonews.com/news/hacker-exploits-ai-crypto-bot-aixbt-steals-55-eth/	A sophisticated hacker attack has compromised the autonomous AI crypto bot AIXBT, resulting in the theft of 55.5 ETH (approximately $106,200).
+1003	C4	Y	https://cryptonews.com/news/hacker-exploits-ai-crypto-bot-aixbt-steals-55-eth/	The breach enabled the hacker to queue two fraudulent prompts, instructing the AI agent to transfer funds from its simulacrum wallet.
+1003	C6	Y	https://cryptonews.com/news/hacker-exploits-ai-crypto-bot-aixbt-steals-55-eth/	The breach enabled the hacker to queue two fraudulent prompts, instructing the AI agent to transfer funds from its simulacrum wallet.
+1680	C1	Y	https://adnanthekhan.com/posts/clinejection/	When a new issue is opened, the workflow spins up Claude with access to the repository and a broad set of tools to analyze and respond to the issue.
+1680	C2	Y	https://adnanthekhan.com/posts/clinejection/	Cline maintainers added an AI agent to triage issues created on the repository. This AI agent ran within a GitHub Actions workflow and ran with broad privileges.
+1680	C4	Y	https://adnanthekhan.com/posts/clinejection/	This AI agent ran within a GitHub Actions workflow and ran with broad privileges... steal the `VSCE_PAT`, `OVSX_PAT`, and `NPM_RELEASE_TOKEN` secrets.
+1680	C6	Y	https://adnanthekhan.com/posts/clinejection/	a prompt injection vulnerability in Cline's (now removed) Claude Issue Triage workflow allowed any attacker with a GitHub account to compromise production Cline releases
+1680	C15	Y	https://cline.bot/blog/post-mortem-unauthorized-cline-cli-npm	At 3:26 AM PT on February 17th, an unauthorized party used a compromised npm publish token to publish cline@2.3.0 to npm.
+1714	C2	Y	https://www.reuters.com/legal/litigation/chinas-zai-disables-ai-coding-assistant-features-after-security-issue-2026-09-21/	users reported it was uploading entire local code repositories onto overseas cloud servers without their consent.
+1714	C4	Y	https://www.reuters.com/legal/litigation/chinas-zai-disables-ai-coding-assistant-features-after-security-issue-2026-09-21/	six of its company coding workspaces were uploaded onto the cloud without consent by ZCode, including sensitive data such as complete source code, database passwords and employees' personal information.
+1714	C19	Y	https://www.reuters.com/legal/litigation/chinas-zai-disables-ai-coding-assistant-features-after-security-issue-2026-09-21/	there was no toggle to disable the feature and there was no prior acknowledgement in Z.ai's privacy policy.

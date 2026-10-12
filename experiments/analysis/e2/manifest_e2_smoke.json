@@ -1,0 +1,161 @@
+{
+ "kind": "smoke",
+ "rule": {
+  "draw": "random.Random(791).randrange(257), one per pair",
+  "seeds": "790000 + i",
+  "members": "B pass-all, L live stopping gate",
+  "blocks": "2 pairs per block, both members in one eval; pair j runs B then L if j is even, else L then B",
+  "hosts": "block k on hosts[(k-1) mod len(hosts)]"
+ },
+ "params": {
+  "n_pairs": 4,
+  "lam": 0.94,
+  "pi": 0.0,
+  "hosts": [
+   "h1"
+  ],
+  "master": 791,
+  "seed_base": 790000,
+  "pairs_per_block": 2
+ },
+ "block_order": [
+  {
+   "block": 1,
+   "label": "block-001-h1",
+   "condition": "BL",
+   "stage": "e2sc",
+   "lam": 0.94,
+   "pi": 0.0,
+   "host": "h1",
+   "n": 4
+  },
+  {
+   "block": 2,
+   "label": "block-002-h1",
+   "condition": "BL",
+   "stage": "e2sc",
+   "lam": 15.0,
+   "pi": 0.5,
+   "host": "h1",
+   "n": 4
+  }
+ ],
+ "episodes": [
+  {
+   "condition": "B",
+   "gate": "baseline",
+   "stage": "e2sc",
+   "block": 1,
+   "label": "block-001-h1",
+   "host": "h1",
+   "position_in_block": 0,
+   "pair": 0,
+   "episode_id": "e2sb-0000",
+   "seed": 790000,
+   "task_index": 105,
+   "task_id": "151507"
+  },
+  {
+   "condition": "L",
+   "gate": "stopping",
+   "stage": "e2sc",
+   "block": 1,
+   "label": "block-001-h1",
+   "host": "h1",
+   "position_in_block": 1,
+   "pair": 0,
+   "episode_id": "e2sl-0000",
+   "seed": 790000,
+   "task_index": 105,
+   "task_id": "151507"
+  },
+  {
+   "condition": "L",
+   "gate": "stopping",
+   "stage": "e2sc",
+   "block": 1,
+   "label": "block-001-h1",
+   "host": "h1",
+   "position_in_block": 2,
+   "pair": 1,
+   "episode_id": "e2sl-0001",
+   "seed": 790001,
+   "task_index": 5,
+   "task_id": "414487"
+  },
+  {
+   "condition": "B",
+   "gate": "baseline",
+   "stage": "e2sc",
+   "block": 1,
+   "label": "block-001-h1",
+   "host": "h1",
+   "position_in_block": 3,
+   "pair": 1,
+   "episode_id": "e2sb-0001",
+   "seed": 790001,
+   "task_index": 5,
+   "task_id": "414487"
+  },
+  {
+   "condition": "B",
+   "gate": "baseline",
+   "stage": "e2sc",
+   "block": 2,
+   "label": "block-002-h1",
+   "host": "h1",
+   "position_in_block": 0,
+   "pair": 2,
+   "episode_id": "e2sb-0002",
+   "seed": 790002,
+   "task_index": 105,
+   "task_id": "151507"
+  },
+  {
+   "condition": "L",
+   "gate": "stopping",
+   "stage": "e2sc",
+   "block": 2,
+   "label": "block-002-h1",
+   "host": "h1",
+   "position_in_block": 1,
+   "pair": 2,
+   "episode_id": "e2sl-0002",
+   "seed": 790002,
+   "task_index": 105,
+   "task_id": "151507"
+  },
+  {
+   "condition": "L",
+   "gate": "stopping",
+   "stage": "e2sc",
+   "block": 2,
+   "label": "block-002-h1",
+   "host": "h1",
+   "position_in_block": 2,
+   "pair": 3,
+   "episode_id": "e2sl-0003",
+   "seed": 790003,
+   "task_index": 87,
+   "task_id": "170487"
+  },
+  {
+   "condition": "B",
+   "gate": "baseline",
+   "stage": "e2sc",
+   "block": 2,
+   "label": "block-002-h1",
+   "host": "h1",
+   "position_in_block": 3,
+   "pair": 3,
+   "episode_id": "e2sb-0003",
+   "seed": 790003,
+   "task_index": 87,
+   "task_id": "170487"
+  }
+ ],
+ "experiment": "E2",
+ "created_utc": "2026-10-05T01:27:01.476725+00:00",
+ "generator_sha256": "5bccddb57aec2ff4e13083d2e6cd0edf050d276ec8b65ccfb544306edebe9415",
+ "n_tasks": 257
+}

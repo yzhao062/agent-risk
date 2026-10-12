@@ -1,0 +1,3935 @@
+{
+ "experiment": "E3",
+ "kind": "pilot",
+ "tau2_commit": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+ "domain": "airline",
+ "task_split": "base",
+ "block_order": [
+  {
+   "block": 1,
+   "label": "block-01-P",
+   "host": "h1",
+   "stage": "pilot",
+   "lam": 15.0,
+   "pi": 0.0
+  },
+  {
+   "block": 2,
+   "label": "block-02-P",
+   "host": "h1",
+   "stage": "pilot",
+   "lam": 15.0,
+   "pi": 0.0
+  },
+  {
+   "block": 3,
+   "label": "block-03-P",
+   "host": "h1",
+   "stage": "pilot",
+   "lam": 15.0,
+   "pi": 0.0
+  }
+ ],
+ "episodes": [
+  {
+   "episode_id": "e3p-000-P",
+   "block": 1,
+   "task_index": 0,
+   "task_id": "0",
+   "seed_index": 0,
+   "unit": 0,
+   "seed": 810000,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-000-Q",
+   "block": 1,
+   "task_index": 0,
+   "task_id": "0",
+   "seed_index": 0,
+   "unit": 0,
+   "seed": 810000,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-001-P",
+   "block": 1,
+   "task_index": 0,
+   "task_id": "0",
+   "seed_index": 1,
+   "unit": 1,
+   "seed": 810001,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-001-Q",
+   "block": 1,
+   "task_index": 0,
+   "task_id": "0",
+   "seed_index": 1,
+   "unit": 1,
+   "seed": 810001,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-002-P",
+   "block": 1,
+   "task_index": 0,
+   "task_id": "0",
+   "seed_index": 2,
+   "unit": 2,
+   "seed": 810002,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-002-Q",
+   "block": 1,
+   "task_index": 0,
+   "task_id": "0",
+   "seed_index": 2,
+   "unit": 2,
+   "seed": 810002,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-003-P",
+   "block": 1,
+   "task_index": 1,
+   "task_id": "1",
+   "seed_index": 0,
+   "unit": 3,
+   "seed": 810003,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-003-Q",
+   "block": 1,
+   "task_index": 1,
+   "task_id": "1",
+   "seed_index": 0,
+   "unit": 3,
+   "seed": 810003,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-004-P",
+   "block": 1,
+   "task_index": 1,
+   "task_id": "1",
+   "seed_index": 1,
+   "unit": 4,
+   "seed": 810004,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-004-Q",
+   "block": 1,
+   "task_index": 1,
+   "task_id": "1",
+   "seed_index": 1,
+   "unit": 4,
+   "seed": 810004,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-005-P",
+   "block": 1,
+   "task_index": 1,
+   "task_id": "1",
+   "seed_index": 2,
+   "unit": 5,
+   "seed": 810005,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-005-Q",
+   "block": 1,
+   "task_index": 1,
+   "task_id": "1",
+   "seed_index": 2,
+   "unit": 5,
+   "seed": 810005,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-006-P",
+   "block": 1,
+   "task_index": 2,
+   "task_id": "2",
+   "seed_index": 0,
+   "unit": 6,
+   "seed": 810006,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-006-Q",
+   "block": 1,
+   "task_index": 2,
+   "task_id": "2",
+   "seed_index": 0,
+   "unit": 6,
+   "seed": 810006,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-007-P",
+   "block": 1,
+   "task_index": 2,
+   "task_id": "2",
+   "seed_index": 1,
+   "unit": 7,
+   "seed": 810007,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-007-Q",
+   "block": 1,
+   "task_index": 2,
+   "task_id": "2",
+   "seed_index": 1,
+   "unit": 7,
+   "seed": 810007,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-008-P",
+   "block": 1,
+   "task_index": 2,
+   "task_id": "2",
+   "seed_index": 2,
+   "unit": 8,
+   "seed": 810008,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-008-Q",
+   "block": 1,
+   "task_index": 2,
+   "task_id": "2",
+   "seed_index": 2,
+   "unit": 8,
+   "seed": 810008,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-009-P",
+   "block": 1,
+   "task_index": 3,
+   "task_id": "3",
+   "seed_index": 0,
+   "unit": 9,
+   "seed": 810009,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-009-Q",
+   "block": 1,
+   "task_index": 3,
+   "task_id": "3",
+   "seed_index": 0,
+   "unit": 9,
+   "seed": 810009,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-010-P",
+   "block": 1,
+   "task_index": 3,
+   "task_id": "3",
+   "seed_index": 1,
+   "unit": 10,
+   "seed": 810010,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-010-Q",
+   "block": 1,
+   "task_index": 3,
+   "task_id": "3",
+   "seed_index": 1,
+   "unit": 10,
+   "seed": 810010,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-011-P",
+   "block": 1,
+   "task_index": 3,
+   "task_id": "3",
+   "seed_index": 2,
+   "unit": 11,
+   "seed": 810011,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-011-Q",
+   "block": 1,
+   "task_index": 3,
+   "task_id": "3",
+   "seed_index": 2,
+   "unit": 11,
+   "seed": 810011,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-012-P",
+   "block": 1,
+   "task_index": 4,
+   "task_id": "4",
+   "seed_index": 0,
+   "unit": 12,
+   "seed": 810012,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-012-Q",
+   "block": 1,
+   "task_index": 4,
+   "task_id": "4",
+   "seed_index": 0,
+   "unit": 12,
+   "seed": 810012,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-013-P",
+   "block": 1,
+   "task_index": 4,
+   "task_id": "4",
+   "seed_index": 1,
+   "unit": 13,
+   "seed": 810013,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-013-Q",
+   "block": 1,
+   "task_index": 4,
+   "task_id": "4",
+   "seed_index": 1,
+   "unit": 13,
+   "seed": 810013,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-014-P",
+   "block": 1,
+   "task_index": 4,
+   "task_id": "4",
+   "seed_index": 2,
+   "unit": 14,
+   "seed": 810014,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-014-Q",
+   "block": 1,
+   "task_index": 4,
+   "task_id": "4",
+   "seed_index": 2,
+   "unit": 14,
+   "seed": 810014,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-015-P",
+   "block": 1,
+   "task_index": 5,
+   "task_id": "5",
+   "seed_index": 0,
+   "unit": 15,
+   "seed": 810015,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-015-Q",
+   "block": 1,
+   "task_index": 5,
+   "task_id": "5",
+   "seed_index": 0,
+   "unit": 15,
+   "seed": 810015,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-016-P",
+   "block": 1,
+   "task_index": 5,
+   "task_id": "5",
+   "seed_index": 1,
+   "unit": 16,
+   "seed": 810016,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-016-Q",
+   "block": 1,
+   "task_index": 5,
+   "task_id": "5",
+   "seed_index": 1,
+   "unit": 16,
+   "seed": 810016,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-017-P",
+   "block": 1,
+   "task_index": 5,
+   "task_id": "5",
+   "seed_index": 2,
+   "unit": 17,
+   "seed": 810017,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-017-Q",
+   "block": 1,
+   "task_index": 5,
+   "task_id": "5",
+   "seed_index": 2,
+   "unit": 17,
+   "seed": 810017,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-018-P",
+   "block": 1,
+   "task_index": 6,
+   "task_id": "6",
+   "seed_index": 0,
+   "unit": 18,
+   "seed": 810018,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-018-Q",
+   "block": 1,
+   "task_index": 6,
+   "task_id": "6",
+   "seed_index": 0,
+   "unit": 18,
+   "seed": 810018,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-019-P",
+   "block": 1,
+   "task_index": 6,
+   "task_id": "6",
+   "seed_index": 1,
+   "unit": 19,
+   "seed": 810019,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-019-Q",
+   "block": 1,
+   "task_index": 6,
+   "task_id": "6",
+   "seed_index": 1,
+   "unit": 19,
+   "seed": 810019,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-020-P",
+   "block": 1,
+   "task_index": 6,
+   "task_id": "6",
+   "seed_index": 2,
+   "unit": 20,
+   "seed": 810020,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-020-Q",
+   "block": 1,
+   "task_index": 6,
+   "task_id": "6",
+   "seed_index": 2,
+   "unit": 20,
+   "seed": 810020,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-021-P",
+   "block": 1,
+   "task_index": 7,
+   "task_id": "7",
+   "seed_index": 0,
+   "unit": 21,
+   "seed": 810021,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-021-Q",
+   "block": 1,
+   "task_index": 7,
+   "task_id": "7",
+   "seed_index": 0,
+   "unit": 21,
+   "seed": 810021,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-022-P",
+   "block": 1,
+   "task_index": 7,
+   "task_id": "7",
+   "seed_index": 1,
+   "unit": 22,
+   "seed": 810022,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-022-Q",
+   "block": 1,
+   "task_index": 7,
+   "task_id": "7",
+   "seed_index": 1,
+   "unit": 22,
+   "seed": 810022,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-023-P",
+   "block": 1,
+   "task_index": 7,
+   "task_id": "7",
+   "seed_index": 2,
+   "unit": 23,
+   "seed": 810023,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-023-Q",
+   "block": 1,
+   "task_index": 7,
+   "task_id": "7",
+   "seed_index": 2,
+   "unit": 23,
+   "seed": 810023,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-024-P",
+   "block": 1,
+   "task_index": 8,
+   "task_id": "8",
+   "seed_index": 0,
+   "unit": 24,
+   "seed": 810024,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-024-Q",
+   "block": 1,
+   "task_index": 8,
+   "task_id": "8",
+   "seed_index": 0,
+   "unit": 24,
+   "seed": 810024,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-025-P",
+   "block": 1,
+   "task_index": 8,
+   "task_id": "8",
+   "seed_index": 1,
+   "unit": 25,
+   "seed": 810025,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-025-Q",
+   "block": 1,
+   "task_index": 8,
+   "task_id": "8",
+   "seed_index": 1,
+   "unit": 25,
+   "seed": 810025,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-026-P",
+   "block": 1,
+   "task_index": 8,
+   "task_id": "8",
+   "seed_index": 2,
+   "unit": 26,
+   "seed": 810026,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-026-Q",
+   "block": 1,
+   "task_index": 8,
+   "task_id": "8",
+   "seed_index": 2,
+   "unit": 26,
+   "seed": 810026,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-027-P",
+   "block": 1,
+   "task_index": 9,
+   "task_id": "9",
+   "seed_index": 0,
+   "unit": 27,
+   "seed": 810027,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-027-Q",
+   "block": 1,
+   "task_index": 9,
+   "task_id": "9",
+   "seed_index": 0,
+   "unit": 27,
+   "seed": 810027,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-028-P",
+   "block": 1,
+   "task_index": 9,
+   "task_id": "9",
+   "seed_index": 1,
+   "unit": 28,
+   "seed": 810028,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-028-Q",
+   "block": 1,
+   "task_index": 9,
+   "task_id": "9",
+   "seed_index": 1,
+   "unit": 28,
+   "seed": 810028,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-029-P",
+   "block": 1,
+   "task_index": 9,
+   "task_id": "9",
+   "seed_index": 2,
+   "unit": 29,
+   "seed": 810029,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-029-Q",
+   "block": 1,
+   "task_index": 9,
+   "task_id": "9",
+   "seed_index": 2,
+   "unit": 29,
+   "seed": 810029,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-030-P",
+   "block": 1,
+   "task_index": 10,
+   "task_id": "10",
+   "seed_index": 0,
+   "unit": 30,
+   "seed": 810030,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-030-Q",
+   "block": 1,
+   "task_index": 10,
+   "task_id": "10",
+   "seed_index": 0,
+   "unit": 30,
+   "seed": 810030,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-031-P",
+   "block": 1,
+   "task_index": 10,
+   "task_id": "10",
+   "seed_index": 1,
+   "unit": 31,
+   "seed": 810031,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-031-Q",
+   "block": 1,
+   "task_index": 10,
+   "task_id": "10",
+   "seed_index": 1,
+   "unit": 31,
+   "seed": 810031,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-032-P",
+   "block": 1,
+   "task_index": 10,
+   "task_id": "10",
+   "seed_index": 2,
+   "unit": 32,
+   "seed": 810032,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-032-Q",
+   "block": 1,
+   "task_index": 10,
+   "task_id": "10",
+   "seed_index": 2,
+   "unit": 32,
+   "seed": 810032,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-033-P",
+   "block": 1,
+   "task_index": 11,
+   "task_id": "11",
+   "seed_index": 0,
+   "unit": 33,
+   "seed": 810033,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-033-Q",
+   "block": 1,
+   "task_index": 11,
+   "task_id": "11",
+   "seed_index": 0,
+   "unit": 33,
+   "seed": 810033,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-034-P",
+   "block": 1,
+   "task_index": 11,
+   "task_id": "11",
+   "seed_index": 1,
+   "unit": 34,
+   "seed": 810034,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-034-Q",
+   "block": 1,
+   "task_index": 11,
+   "task_id": "11",
+   "seed_index": 1,
+   "unit": 34,
+   "seed": 810034,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-035-P",
+   "block": 1,
+   "task_index": 11,
+   "task_id": "11",
+   "seed_index": 2,
+   "unit": 35,
+   "seed": 810035,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-035-Q",
+   "block": 1,
+   "task_index": 11,
+   "task_id": "11",
+   "seed_index": 2,
+   "unit": 35,
+   "seed": 810035,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-036-P",
+   "block": 1,
+   "task_index": 12,
+   "task_id": "12",
+   "seed_index": 0,
+   "unit": 36,
+   "seed": 810036,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-036-Q",
+   "block": 1,
+   "task_index": 12,
+   "task_id": "12",
+   "seed_index": 0,
+   "unit": 36,
+   "seed": 810036,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-037-P",
+   "block": 1,
+   "task_index": 12,
+   "task_id": "12",
+   "seed_index": 1,
+   "unit": 37,
+   "seed": 810037,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-037-Q",
+   "block": 1,
+   "task_index": 12,
+   "task_id": "12",
+   "seed_index": 1,
+   "unit": 37,
+   "seed": 810037,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-038-P",
+   "block": 1,
+   "task_index": 12,
+   "task_id": "12",
+   "seed_index": 2,
+   "unit": 38,
+   "seed": 810038,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-038-Q",
+   "block": 1,
+   "task_index": 12,
+   "task_id": "12",
+   "seed_index": 2,
+   "unit": 38,
+   "seed": 810038,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-039-P",
+   "block": 1,
+   "task_index": 13,
+   "task_id": "13",
+   "seed_index": 0,
+   "unit": 39,
+   "seed": 810039,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-039-Q",
+   "block": 1,
+   "task_index": 13,
+   "task_id": "13",
+   "seed_index": 0,
+   "unit": 39,
+   "seed": 810039,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-040-P",
+   "block": 1,
+   "task_index": 13,
+   "task_id": "13",
+   "seed_index": 1,
+   "unit": 40,
+   "seed": 810040,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-040-Q",
+   "block": 1,
+   "task_index": 13,
+   "task_id": "13",
+   "seed_index": 1,
+   "unit": 40,
+   "seed": 810040,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-041-P",
+   "block": 1,
+   "task_index": 13,
+   "task_id": "13",
+   "seed_index": 2,
+   "unit": 41,
+   "seed": 810041,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-041-Q",
+   "block": 1,
+   "task_index": 13,
+   "task_id": "13",
+   "seed_index": 2,
+   "unit": 41,
+   "seed": 810041,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-042-P",
+   "block": 1,
+   "task_index": 14,
+   "task_id": "14",
+   "seed_index": 0,
+   "unit": 42,
+   "seed": 810042,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-042-Q",
+   "block": 1,
+   "task_index": 14,
+   "task_id": "14",
+   "seed_index": 0,
+   "unit": 42,
+   "seed": 810042,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-043-P",
+   "block": 1,
+   "task_index": 14,
+   "task_id": "14",
+   "seed_index": 1,
+   "unit": 43,
+   "seed": 810043,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-043-Q",
+   "block": 1,
+   "task_index": 14,
+   "task_id": "14",
+   "seed_index": 1,
+   "unit": 43,
+   "seed": 810043,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-044-P",
+   "block": 1,
+   "task_index": 14,
+   "task_id": "14",
+   "seed_index": 2,
+   "unit": 44,
+   "seed": 810044,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-044-Q",
+   "block": 1,
+   "task_index": 14,
+   "task_id": "14",
+   "seed_index": 2,
+   "unit": 44,
+   "seed": 810044,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-045-P",
+   "block": 1,
+   "task_index": 15,
+   "task_id": "15",
+   "seed_index": 0,
+   "unit": 45,
+   "seed": 810045,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-045-Q",
+   "block": 1,
+   "task_index": 15,
+   "task_id": "15",
+   "seed_index": 0,
+   "unit": 45,
+   "seed": 810045,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-046-P",
+   "block": 1,
+   "task_index": 15,
+   "task_id": "15",
+   "seed_index": 1,
+   "unit": 46,
+   "seed": 810046,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-046-Q",
+   "block": 1,
+   "task_index": 15,
+   "task_id": "15",
+   "seed_index": 1,
+   "unit": 46,
+   "seed": 810046,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-047-P",
+   "block": 1,
+   "task_index": 15,
+   "task_id": "15",
+   "seed_index": 2,
+   "unit": 47,
+   "seed": 810047,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-047-Q",
+   "block": 1,
+   "task_index": 15,
+   "task_id": "15",
+   "seed_index": 2,
+   "unit": 47,
+   "seed": 810047,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-048-P",
+   "block": 1,
+   "task_index": 16,
+   "task_id": "16",
+   "seed_index": 0,
+   "unit": 48,
+   "seed": 810048,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-048-Q",
+   "block": 1,
+   "task_index": 16,
+   "task_id": "16",
+   "seed_index": 0,
+   "unit": 48,
+   "seed": 810048,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-049-P",
+   "block": 1,
+   "task_index": 16,
+   "task_id": "16",
+   "seed_index": 1,
+   "unit": 49,
+   "seed": 810049,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-049-Q",
+   "block": 1,
+   "task_index": 16,
+   "task_id": "16",
+   "seed_index": 1,
+   "unit": 49,
+   "seed": 810049,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-050-P",
+   "block": 2,
+   "task_index": 16,
+   "task_id": "16",
+   "seed_index": 2,
+   "unit": 50,
+   "seed": 810050,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-050-Q",
+   "block": 2,
+   "task_index": 16,
+   "task_id": "16",
+   "seed_index": 2,
+   "unit": 50,
+   "seed": 810050,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-051-P",
+   "block": 2,
+   "task_index": 17,
+   "task_id": "17",
+   "seed_index": 0,
+   "unit": 51,
+   "seed": 810051,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-051-Q",
+   "block": 2,
+   "task_index": 17,
+   "task_id": "17",
+   "seed_index": 0,
+   "unit": 51,
+   "seed": 810051,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-052-P",
+   "block": 2,
+   "task_index": 17,
+   "task_id": "17",
+   "seed_index": 1,
+   "unit": 52,
+   "seed": 810052,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-052-Q",
+   "block": 2,
+   "task_index": 17,
+   "task_id": "17",
+   "seed_index": 1,
+   "unit": 52,
+   "seed": 810052,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-053-P",
+   "block": 2,
+   "task_index": 17,
+   "task_id": "17",
+   "seed_index": 2,
+   "unit": 53,
+   "seed": 810053,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-053-Q",
+   "block": 2,
+   "task_index": 17,
+   "task_id": "17",
+   "seed_index": 2,
+   "unit": 53,
+   "seed": 810053,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-054-P",
+   "block": 2,
+   "task_index": 18,
+   "task_id": "18",
+   "seed_index": 0,
+   "unit": 54,
+   "seed": 810054,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-054-Q",
+   "block": 2,
+   "task_index": 18,
+   "task_id": "18",
+   "seed_index": 0,
+   "unit": 54,
+   "seed": 810054,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-055-P",
+   "block": 2,
+   "task_index": 18,
+   "task_id": "18",
+   "seed_index": 1,
+   "unit": 55,
+   "seed": 810055,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-055-Q",
+   "block": 2,
+   "task_index": 18,
+   "task_id": "18",
+   "seed_index": 1,
+   "unit": 55,
+   "seed": 810055,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-056-P",
+   "block": 2,
+   "task_index": 18,
+   "task_id": "18",
+   "seed_index": 2,
+   "unit": 56,
+   "seed": 810056,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-056-Q",
+   "block": 2,
+   "task_index": 18,
+   "task_id": "18",
+   "seed_index": 2,
+   "unit": 56,
+   "seed": 810056,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-057-P",
+   "block": 2,
+   "task_index": 19,
+   "task_id": "19",
+   "seed_index": 0,
+   "unit": 57,
+   "seed": 810057,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-057-Q",
+   "block": 2,
+   "task_index": 19,
+   "task_id": "19",
+   "seed_index": 0,
+   "unit": 57,
+   "seed": 810057,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-058-P",
+   "block": 2,
+   "task_index": 19,
+   "task_id": "19",
+   "seed_index": 1,
+   "unit": 58,
+   "seed": 810058,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-058-Q",
+   "block": 2,
+   "task_index": 19,
+   "task_id": "19",
+   "seed_index": 1,
+   "unit": 58,
+   "seed": 810058,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-059-P",
+   "block": 2,
+   "task_index": 19,
+   "task_id": "19",
+   "seed_index": 2,
+   "unit": 59,
+   "seed": 810059,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-059-Q",
+   "block": 2,
+   "task_index": 19,
+   "task_id": "19",
+   "seed_index": 2,
+   "unit": 59,
+   "seed": 810059,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-060-P",
+   "block": 2,
+   "task_index": 20,
+   "task_id": "20",
+   "seed_index": 0,
+   "unit": 60,
+   "seed": 810060,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-060-Q",
+   "block": 2,
+   "task_index": 20,
+   "task_id": "20",
+   "seed_index": 0,
+   "unit": 60,
+   "seed": 810060,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-061-P",
+   "block": 2,
+   "task_index": 20,
+   "task_id": "20",
+   "seed_index": 1,
+   "unit": 61,
+   "seed": 810061,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-061-Q",
+   "block": 2,
+   "task_index": 20,
+   "task_id": "20",
+   "seed_index": 1,
+   "unit": 61,
+   "seed": 810061,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-062-P",
+   "block": 2,
+   "task_index": 20,
+   "task_id": "20",
+   "seed_index": 2,
+   "unit": 62,
+   "seed": 810062,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-062-Q",
+   "block": 2,
+   "task_index": 20,
+   "task_id": "20",
+   "seed_index": 2,
+   "unit": 62,
+   "seed": 810062,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-063-P",
+   "block": 2,
+   "task_index": 21,
+   "task_id": "21",
+   "seed_index": 0,
+   "unit": 63,
+   "seed": 810063,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-063-Q",
+   "block": 2,
+   "task_index": 21,
+   "task_id": "21",
+   "seed_index": 0,
+   "unit": 63,
+   "seed": 810063,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-064-P",
+   "block": 2,
+   "task_index": 21,
+   "task_id": "21",
+   "seed_index": 1,
+   "unit": 64,
+   "seed": 810064,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-064-Q",
+   "block": 2,
+   "task_index": 21,
+   "task_id": "21",
+   "seed_index": 1,
+   "unit": 64,
+   "seed": 810064,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-065-P",
+   "block": 2,
+   "task_index": 21,
+   "task_id": "21",
+   "seed_index": 2,
+   "unit": 65,
+   "seed": 810065,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-065-Q",
+   "block": 2,
+   "task_index": 21,
+   "task_id": "21",
+   "seed_index": 2,
+   "unit": 65,
+   "seed": 810065,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-066-P",
+   "block": 2,
+   "task_index": 22,
+   "task_id": "22",
+   "seed_index": 0,
+   "unit": 66,
+   "seed": 810066,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-066-Q",
+   "block": 2,
+   "task_index": 22,
+   "task_id": "22",
+   "seed_index": 0,
+   "unit": 66,
+   "seed": 810066,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-067-P",
+   "block": 2,
+   "task_index": 22,
+   "task_id": "22",
+   "seed_index": 1,
+   "unit": 67,
+   "seed": 810067,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-067-Q",
+   "block": 2,
+   "task_index": 22,
+   "task_id": "22",
+   "seed_index": 1,
+   "unit": 67,
+   "seed": 810067,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-068-P",
+   "block": 2,
+   "task_index": 22,
+   "task_id": "22",
+   "seed_index": 2,
+   "unit": 68,
+   "seed": 810068,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-068-Q",
+   "block": 2,
+   "task_index": 22,
+   "task_id": "22",
+   "seed_index": 2,
+   "unit": 68,
+   "seed": 810068,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-069-P",
+   "block": 2,
+   "task_index": 23,
+   "task_id": "23",
+   "seed_index": 0,
+   "unit": 69,
+   "seed": 810069,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-069-Q",
+   "block": 2,
+   "task_index": 23,
+   "task_id": "23",
+   "seed_index": 0,
+   "unit": 69,
+   "seed": 810069,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-070-P",
+   "block": 2,
+   "task_index": 23,
+   "task_id": "23",
+   "seed_index": 1,
+   "unit": 70,
+   "seed": 810070,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-070-Q",
+   "block": 2,
+   "task_index": 23,
+   "task_id": "23",
+   "seed_index": 1,
+   "unit": 70,
+   "seed": 810070,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-071-P",
+   "block": 2,
+   "task_index": 23,
+   "task_id": "23",
+   "seed_index": 2,
+   "unit": 71,
+   "seed": 810071,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-071-Q",
+   "block": 2,
+   "task_index": 23,
+   "task_id": "23",
+   "seed_index": 2,
+   "unit": 71,
+   "seed": 810071,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-072-P",
+   "block": 2,
+   "task_index": 24,
+   "task_id": "24",
+   "seed_index": 0,
+   "unit": 72,
+   "seed": 810072,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-072-Q",
+   "block": 2,
+   "task_index": 24,
+   "task_id": "24",
+   "seed_index": 0,
+   "unit": 72,
+   "seed": 810072,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-073-P",
+   "block": 2,
+   "task_index": 24,
+   "task_id": "24",
+   "seed_index": 1,
+   "unit": 73,
+   "seed": 810073,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-073-Q",
+   "block": 2,
+   "task_index": 24,
+   "task_id": "24",
+   "seed_index": 1,
+   "unit": 73,
+   "seed": 810073,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-074-P",
+   "block": 2,
+   "task_index": 24,
+   "task_id": "24",
+   "seed_index": 2,
+   "unit": 74,
+   "seed": 810074,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-074-Q",
+   "block": 2,
+   "task_index": 24,
+   "task_id": "24",
+   "seed_index": 2,
+   "unit": 74,
+   "seed": 810074,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-075-P",
+   "block": 2,
+   "task_index": 25,
+   "task_id": "25",
+   "seed_index": 0,
+   "unit": 75,
+   "seed": 810075,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-075-Q",
+   "block": 2,
+   "task_index": 25,
+   "task_id": "25",
+   "seed_index": 0,
+   "unit": 75,
+   "seed": 810075,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-076-P",
+   "block": 2,
+   "task_index": 25,
+   "task_id": "25",
+   "seed_index": 1,
+   "unit": 76,
+   "seed": 810076,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-076-Q",
+   "block": 2,
+   "task_index": 25,
+   "task_id": "25",
+   "seed_index": 1,
+   "unit": 76,
+   "seed": 810076,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-077-P",
+   "block": 2,
+   "task_index": 25,
+   "task_id": "25",
+   "seed_index": 2,
+   "unit": 77,
+   "seed": 810077,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-077-Q",
+   "block": 2,
+   "task_index": 25,
+   "task_id": "25",
+   "seed_index": 2,
+   "unit": 77,
+   "seed": 810077,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-078-P",
+   "block": 2,
+   "task_index": 26,
+   "task_id": "26",
+   "seed_index": 0,
+   "unit": 78,
+   "seed": 810078,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-078-Q",
+   "block": 2,
+   "task_index": 26,
+   "task_id": "26",
+   "seed_index": 0,
+   "unit": 78,
+   "seed": 810078,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-079-P",
+   "block": 2,
+   "task_index": 26,
+   "task_id": "26",
+   "seed_index": 1,
+   "unit": 79,
+   "seed": 810079,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-079-Q",
+   "block": 2,
+   "task_index": 26,
+   "task_id": "26",
+   "seed_index": 1,
+   "unit": 79,
+   "seed": 810079,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-080-P",
+   "block": 2,
+   "task_index": 26,
+   "task_id": "26",
+   "seed_index": 2,
+   "unit": 80,
+   "seed": 810080,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-080-Q",
+   "block": 2,
+   "task_index": 26,
+   "task_id": "26",
+   "seed_index": 2,
+   "unit": 80,
+   "seed": 810080,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-081-P",
+   "block": 2,
+   "task_index": 27,
+   "task_id": "27",
+   "seed_index": 0,
+   "unit": 81,
+   "seed": 810081,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-081-Q",
+   "block": 2,
+   "task_index": 27,
+   "task_id": "27",
+   "seed_index": 0,
+   "unit": 81,
+   "seed": 810081,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-082-P",
+   "block": 2,
+   "task_index": 27,
+   "task_id": "27",
+   "seed_index": 1,
+   "unit": 82,
+   "seed": 810082,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-082-Q",
+   "block": 2,
+   "task_index": 27,
+   "task_id": "27",
+   "seed_index": 1,
+   "unit": 82,
+   "seed": 810082,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-083-P",
+   "block": 2,
+   "task_index": 27,
+   "task_id": "27",
+   "seed_index": 2,
+   "unit": 83,
+   "seed": 810083,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-083-Q",
+   "block": 2,
+   "task_index": 27,
+   "task_id": "27",
+   "seed_index": 2,
+   "unit": 83,
+   "seed": 810083,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-084-P",
+   "block": 2,
+   "task_index": 28,
+   "task_id": "28",
+   "seed_index": 0,
+   "unit": 84,
+   "seed": 810084,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-084-Q",
+   "block": 2,
+   "task_index": 28,
+   "task_id": "28",
+   "seed_index": 0,
+   "unit": 84,
+   "seed": 810084,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-085-P",
+   "block": 2,
+   "task_index": 28,
+   "task_id": "28",
+   "seed_index": 1,
+   "unit": 85,
+   "seed": 810085,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-085-Q",
+   "block": 2,
+   "task_index": 28,
+   "task_id": "28",
+   "seed_index": 1,
+   "unit": 85,
+   "seed": 810085,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-086-P",
+   "block": 2,
+   "task_index": 28,
+   "task_id": "28",
+   "seed_index": 2,
+   "unit": 86,
+   "seed": 810086,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-086-Q",
+   "block": 2,
+   "task_index": 28,
+   "task_id": "28",
+   "seed_index": 2,
+   "unit": 86,
+   "seed": 810086,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-087-P",
+   "block": 2,
+   "task_index": 29,
+   "task_id": "29",
+   "seed_index": 0,
+   "unit": 87,
+   "seed": 810087,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-087-Q",
+   "block": 2,
+   "task_index": 29,
+   "task_id": "29",
+   "seed_index": 0,
+   "unit": 87,
+   "seed": 810087,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-088-P",
+   "block": 2,
+   "task_index": 29,
+   "task_id": "29",
+   "seed_index": 1,
+   "unit": 88,
+   "seed": 810088,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-088-Q",
+   "block": 2,
+   "task_index": 29,
+   "task_id": "29",
+   "seed_index": 1,
+   "unit": 88,
+   "seed": 810088,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-089-P",
+   "block": 2,
+   "task_index": 29,
+   "task_id": "29",
+   "seed_index": 2,
+   "unit": 89,
+   "seed": 810089,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-089-Q",
+   "block": 2,
+   "task_index": 29,
+   "task_id": "29",
+   "seed_index": 2,
+   "unit": 89,
+   "seed": 810089,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-090-P",
+   "block": 2,
+   "task_index": 30,
+   "task_id": "30",
+   "seed_index": 0,
+   "unit": 90,
+   "seed": 810090,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-090-Q",
+   "block": 2,
+   "task_index": 30,
+   "task_id": "30",
+   "seed_index": 0,
+   "unit": 90,
+   "seed": 810090,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-091-P",
+   "block": 2,
+   "task_index": 30,
+   "task_id": "30",
+   "seed_index": 1,
+   "unit": 91,
+   "seed": 810091,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-091-Q",
+   "block": 2,
+   "task_index": 30,
+   "task_id": "30",
+   "seed_index": 1,
+   "unit": 91,
+   "seed": 810091,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-092-P",
+   "block": 2,
+   "task_index": 30,
+   "task_id": "30",
+   "seed_index": 2,
+   "unit": 92,
+   "seed": 810092,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-092-Q",
+   "block": 2,
+   "task_index": 30,
+   "task_id": "30",
+   "seed_index": 2,
+   "unit": 92,
+   "seed": 810092,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-093-P",
+   "block": 2,
+   "task_index": 31,
+   "task_id": "31",
+   "seed_index": 0,
+   "unit": 93,
+   "seed": 810093,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-093-Q",
+   "block": 2,
+   "task_index": 31,
+   "task_id": "31",
+   "seed_index": 0,
+   "unit": 93,
+   "seed": 810093,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-094-P",
+   "block": 2,
+   "task_index": 31,
+   "task_id": "31",
+   "seed_index": 1,
+   "unit": 94,
+   "seed": 810094,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-094-Q",
+   "block": 2,
+   "task_index": 31,
+   "task_id": "31",
+   "seed_index": 1,
+   "unit": 94,
+   "seed": 810094,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-095-P",
+   "block": 2,
+   "task_index": 31,
+   "task_id": "31",
+   "seed_index": 2,
+   "unit": 95,
+   "seed": 810095,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-095-Q",
+   "block": 2,
+   "task_index": 31,
+   "task_id": "31",
+   "seed_index": 2,
+   "unit": 95,
+   "seed": 810095,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-096-P",
+   "block": 2,
+   "task_index": 32,
+   "task_id": "32",
+   "seed_index": 0,
+   "unit": 96,
+   "seed": 810096,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-096-Q",
+   "block": 2,
+   "task_index": 32,
+   "task_id": "32",
+   "seed_index": 0,
+   "unit": 96,
+   "seed": 810096,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-097-P",
+   "block": 2,
+   "task_index": 32,
+   "task_id": "32",
+   "seed_index": 1,
+   "unit": 97,
+   "seed": 810097,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-097-Q",
+   "block": 2,
+   "task_index": 32,
+   "task_id": "32",
+   "seed_index": 1,
+   "unit": 97,
+   "seed": 810097,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-098-P",
+   "block": 2,
+   "task_index": 32,
+   "task_id": "32",
+   "seed_index": 2,
+   "unit": 98,
+   "seed": 810098,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-098-Q",
+   "block": 2,
+   "task_index": 32,
+   "task_id": "32",
+   "seed_index": 2,
+   "unit": 98,
+   "seed": 810098,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-099-P",
+   "block": 2,
+   "task_index": 33,
+   "task_id": "33",
+   "seed_index": 0,
+   "unit": 99,
+   "seed": 810099,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-099-Q",
+   "block": 2,
+   "task_index": 33,
+   "task_id": "33",
+   "seed_index": 0,
+   "unit": 99,
+   "seed": 810099,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-100-P",
+   "block": 3,
+   "task_index": 33,
+   "task_id": "33",
+   "seed_index": 1,
+   "unit": 100,
+   "seed": 810100,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-100-Q",
+   "block": 3,
+   "task_index": 33,
+   "task_id": "33",
+   "seed_index": 1,
+   "unit": 100,
+   "seed": 810100,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-101-P",
+   "block": 3,
+   "task_index": 33,
+   "task_id": "33",
+   "seed_index": 2,
+   "unit": 101,
+   "seed": 810101,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-101-Q",
+   "block": 3,
+   "task_index": 33,
+   "task_id": "33",
+   "seed_index": 2,
+   "unit": 101,
+   "seed": 810101,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-102-P",
+   "block": 3,
+   "task_index": 34,
+   "task_id": "34",
+   "seed_index": 0,
+   "unit": 102,
+   "seed": 810102,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-102-Q",
+   "block": 3,
+   "task_index": 34,
+   "task_id": "34",
+   "seed_index": 0,
+   "unit": 102,
+   "seed": 810102,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-103-P",
+   "block": 3,
+   "task_index": 34,
+   "task_id": "34",
+   "seed_index": 1,
+   "unit": 103,
+   "seed": 810103,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-103-Q",
+   "block": 3,
+   "task_index": 34,
+   "task_id": "34",
+   "seed_index": 1,
+   "unit": 103,
+   "seed": 810103,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-104-P",
+   "block": 3,
+   "task_index": 34,
+   "task_id": "34",
+   "seed_index": 2,
+   "unit": 104,
+   "seed": 810104,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-104-Q",
+   "block": 3,
+   "task_index": 34,
+   "task_id": "34",
+   "seed_index": 2,
+   "unit": 104,
+   "seed": 810104,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-105-P",
+   "block": 3,
+   "task_index": 35,
+   "task_id": "35",
+   "seed_index": 0,
+   "unit": 105,
+   "seed": 810105,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-105-Q",
+   "block": 3,
+   "task_index": 35,
+   "task_id": "35",
+   "seed_index": 0,
+   "unit": 105,
+   "seed": 810105,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-106-P",
+   "block": 3,
+   "task_index": 35,
+   "task_id": "35",
+   "seed_index": 1,
+   "unit": 106,
+   "seed": 810106,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-106-Q",
+   "block": 3,
+   "task_index": 35,
+   "task_id": "35",
+   "seed_index": 1,
+   "unit": 106,
+   "seed": 810106,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-107-P",
+   "block": 3,
+   "task_index": 35,
+   "task_id": "35",
+   "seed_index": 2,
+   "unit": 107,
+   "seed": 810107,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-107-Q",
+   "block": 3,
+   "task_index": 35,
+   "task_id": "35",
+   "seed_index": 2,
+   "unit": 107,
+   "seed": 810107,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-108-P",
+   "block": 3,
+   "task_index": 36,
+   "task_id": "36",
+   "seed_index": 0,
+   "unit": 108,
+   "seed": 810108,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-108-Q",
+   "block": 3,
+   "task_index": 36,
+   "task_id": "36",
+   "seed_index": 0,
+   "unit": 108,
+   "seed": 810108,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-109-P",
+   "block": 3,
+   "task_index": 36,
+   "task_id": "36",
+   "seed_index": 1,
+   "unit": 109,
+   "seed": 810109,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-109-Q",
+   "block": 3,
+   "task_index": 36,
+   "task_id": "36",
+   "seed_index": 1,
+   "unit": 109,
+   "seed": 810109,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-110-P",
+   "block": 3,
+   "task_index": 36,
+   "task_id": "36",
+   "seed_index": 2,
+   "unit": 110,
+   "seed": 810110,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-110-Q",
+   "block": 3,
+   "task_index": 36,
+   "task_id": "36",
+   "seed_index": 2,
+   "unit": 110,
+   "seed": 810110,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-111-P",
+   "block": 3,
+   "task_index": 37,
+   "task_id": "37",
+   "seed_index": 0,
+   "unit": 111,
+   "seed": 810111,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-111-Q",
+   "block": 3,
+   "task_index": 37,
+   "task_id": "37",
+   "seed_index": 0,
+   "unit": 111,
+   "seed": 810111,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-112-P",
+   "block": 3,
+   "task_index": 37,
+   "task_id": "37",
+   "seed_index": 1,
+   "unit": 112,
+   "seed": 810112,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-112-Q",
+   "block": 3,
+   "task_index": 37,
+   "task_id": "37",
+   "seed_index": 1,
+   "unit": 112,
+   "seed": 810112,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-113-P",
+   "block": 3,
+   "task_index": 37,
+   "task_id": "37",
+   "seed_index": 2,
+   "unit": 113,
+   "seed": 810113,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-113-Q",
+   "block": 3,
+   "task_index": 37,
+   "task_id": "37",
+   "seed_index": 2,
+   "unit": 113,
+   "seed": 810113,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-114-P",
+   "block": 3,
+   "task_index": 38,
+   "task_id": "38",
+   "seed_index": 0,
+   "unit": 114,
+   "seed": 810114,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-114-Q",
+   "block": 3,
+   "task_index": 38,
+   "task_id": "38",
+   "seed_index": 0,
+   "unit": 114,
+   "seed": 810114,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-115-P",
+   "block": 3,
+   "task_index": 38,
+   "task_id": "38",
+   "seed_index": 1,
+   "unit": 115,
+   "seed": 810115,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-115-Q",
+   "block": 3,
+   "task_index": 38,
+   "task_id": "38",
+   "seed_index": 1,
+   "unit": 115,
+   "seed": 810115,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-116-P",
+   "block": 3,
+   "task_index": 38,
+   "task_id": "38",
+   "seed_index": 2,
+   "unit": 116,
+   "seed": 810116,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-116-Q",
+   "block": 3,
+   "task_index": 38,
+   "task_id": "38",
+   "seed_index": 2,
+   "unit": 116,
+   "seed": 810116,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-117-P",
+   "block": 3,
+   "task_index": 39,
+   "task_id": "39",
+   "seed_index": 0,
+   "unit": 117,
+   "seed": 810117,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-117-Q",
+   "block": 3,
+   "task_index": 39,
+   "task_id": "39",
+   "seed_index": 0,
+   "unit": 117,
+   "seed": 810117,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-118-P",
+   "block": 3,
+   "task_index": 39,
+   "task_id": "39",
+   "seed_index": 1,
+   "unit": 118,
+   "seed": 810118,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-118-Q",
+   "block": 3,
+   "task_index": 39,
+   "task_id": "39",
+   "seed_index": 1,
+   "unit": 118,
+   "seed": 810118,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-119-P",
+   "block": 3,
+   "task_index": 39,
+   "task_id": "39",
+   "seed_index": 2,
+   "unit": 119,
+   "seed": 810119,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-119-Q",
+   "block": 3,
+   "task_index": 39,
+   "task_id": "39",
+   "seed_index": 2,
+   "unit": 119,
+   "seed": 810119,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-120-P",
+   "block": 3,
+   "task_index": 40,
+   "task_id": "40",
+   "seed_index": 0,
+   "unit": 120,
+   "seed": 810120,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-120-Q",
+   "block": 3,
+   "task_index": 40,
+   "task_id": "40",
+   "seed_index": 0,
+   "unit": 120,
+   "seed": 810120,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-121-P",
+   "block": 3,
+   "task_index": 40,
+   "task_id": "40",
+   "seed_index": 1,
+   "unit": 121,
+   "seed": 810121,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-121-Q",
+   "block": 3,
+   "task_index": 40,
+   "task_id": "40",
+   "seed_index": 1,
+   "unit": 121,
+   "seed": 810121,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-122-P",
+   "block": 3,
+   "task_index": 40,
+   "task_id": "40",
+   "seed_index": 2,
+   "unit": 122,
+   "seed": 810122,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-122-Q",
+   "block": 3,
+   "task_index": 40,
+   "task_id": "40",
+   "seed_index": 2,
+   "unit": 122,
+   "seed": 810122,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-123-P",
+   "block": 3,
+   "task_index": 41,
+   "task_id": "41",
+   "seed_index": 0,
+   "unit": 123,
+   "seed": 810123,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-123-Q",
+   "block": 3,
+   "task_index": 41,
+   "task_id": "41",
+   "seed_index": 0,
+   "unit": 123,
+   "seed": 810123,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-124-P",
+   "block": 3,
+   "task_index": 41,
+   "task_id": "41",
+   "seed_index": 1,
+   "unit": 124,
+   "seed": 810124,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-124-Q",
+   "block": 3,
+   "task_index": 41,
+   "task_id": "41",
+   "seed_index": 1,
+   "unit": 124,
+   "seed": 810124,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-125-P",
+   "block": 3,
+   "task_index": 41,
+   "task_id": "41",
+   "seed_index": 2,
+   "unit": 125,
+   "seed": 810125,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-125-Q",
+   "block": 3,
+   "task_index": 41,
+   "task_id": "41",
+   "seed_index": 2,
+   "unit": 125,
+   "seed": 810125,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-126-P",
+   "block": 3,
+   "task_index": 42,
+   "task_id": "42",
+   "seed_index": 0,
+   "unit": 126,
+   "seed": 810126,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-126-Q",
+   "block": 3,
+   "task_index": 42,
+   "task_id": "42",
+   "seed_index": 0,
+   "unit": 126,
+   "seed": 810126,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-127-P",
+   "block": 3,
+   "task_index": 42,
+   "task_id": "42",
+   "seed_index": 1,
+   "unit": 127,
+   "seed": 810127,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-127-Q",
+   "block": 3,
+   "task_index": 42,
+   "task_id": "42",
+   "seed_index": 1,
+   "unit": 127,
+   "seed": 810127,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-128-P",
+   "block": 3,
+   "task_index": 42,
+   "task_id": "42",
+   "seed_index": 2,
+   "unit": 128,
+   "seed": 810128,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-128-Q",
+   "block": 3,
+   "task_index": 42,
+   "task_id": "42",
+   "seed_index": 2,
+   "unit": 128,
+   "seed": 810128,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-129-P",
+   "block": 3,
+   "task_index": 43,
+   "task_id": "43",
+   "seed_index": 0,
+   "unit": 129,
+   "seed": 810129,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-129-Q",
+   "block": 3,
+   "task_index": 43,
+   "task_id": "43",
+   "seed_index": 0,
+   "unit": 129,
+   "seed": 810129,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-130-P",
+   "block": 3,
+   "task_index": 43,
+   "task_id": "43",
+   "seed_index": 1,
+   "unit": 130,
+   "seed": 810130,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-130-Q",
+   "block": 3,
+   "task_index": 43,
+   "task_id": "43",
+   "seed_index": 1,
+   "unit": 130,
+   "seed": 810130,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-131-P",
+   "block": 3,
+   "task_index": 43,
+   "task_id": "43",
+   "seed_index": 2,
+   "unit": 131,
+   "seed": 810131,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-131-Q",
+   "block": 3,
+   "task_index": 43,
+   "task_id": "43",
+   "seed_index": 2,
+   "unit": 131,
+   "seed": 810131,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-132-P",
+   "block": 3,
+   "task_index": 44,
+   "task_id": "44",
+   "seed_index": 0,
+   "unit": 132,
+   "seed": 810132,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-132-Q",
+   "block": 3,
+   "task_index": 44,
+   "task_id": "44",
+   "seed_index": 0,
+   "unit": 132,
+   "seed": 810132,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-133-P",
+   "block": 3,
+   "task_index": 44,
+   "task_id": "44",
+   "seed_index": 1,
+   "unit": 133,
+   "seed": 810133,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-133-Q",
+   "block": 3,
+   "task_index": 44,
+   "task_id": "44",
+   "seed_index": 1,
+   "unit": 133,
+   "seed": 810133,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-134-P",
+   "block": 3,
+   "task_index": 44,
+   "task_id": "44",
+   "seed_index": 2,
+   "unit": 134,
+   "seed": 810134,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-134-Q",
+   "block": 3,
+   "task_index": 44,
+   "task_id": "44",
+   "seed_index": 2,
+   "unit": 134,
+   "seed": 810134,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-135-P",
+   "block": 3,
+   "task_index": 45,
+   "task_id": "45",
+   "seed_index": 0,
+   "unit": 135,
+   "seed": 810135,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-135-Q",
+   "block": 3,
+   "task_index": 45,
+   "task_id": "45",
+   "seed_index": 0,
+   "unit": 135,
+   "seed": 810135,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-136-P",
+   "block": 3,
+   "task_index": 45,
+   "task_id": "45",
+   "seed_index": 1,
+   "unit": 136,
+   "seed": 810136,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-136-Q",
+   "block": 3,
+   "task_index": 45,
+   "task_id": "45",
+   "seed_index": 1,
+   "unit": 136,
+   "seed": 810136,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-137-P",
+   "block": 3,
+   "task_index": 45,
+   "task_id": "45",
+   "seed_index": 2,
+   "unit": 137,
+   "seed": 810137,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-137-Q",
+   "block": 3,
+   "task_index": 45,
+   "task_id": "45",
+   "seed_index": 2,
+   "unit": 137,
+   "seed": 810137,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-138-P",
+   "block": 3,
+   "task_index": 46,
+   "task_id": "46",
+   "seed_index": 0,
+   "unit": 138,
+   "seed": 810138,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-138-Q",
+   "block": 3,
+   "task_index": 46,
+   "task_id": "46",
+   "seed_index": 0,
+   "unit": 138,
+   "seed": 810138,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-139-P",
+   "block": 3,
+   "task_index": 46,
+   "task_id": "46",
+   "seed_index": 1,
+   "unit": 139,
+   "seed": 810139,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-139-Q",
+   "block": 3,
+   "task_index": 46,
+   "task_id": "46",
+   "seed_index": 1,
+   "unit": 139,
+   "seed": 810139,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-140-P",
+   "block": 3,
+   "task_index": 46,
+   "task_id": "46",
+   "seed_index": 2,
+   "unit": 140,
+   "seed": 810140,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-140-Q",
+   "block": 3,
+   "task_index": 46,
+   "task_id": "46",
+   "seed_index": 2,
+   "unit": 140,
+   "seed": 810140,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-141-P",
+   "block": 3,
+   "task_index": 47,
+   "task_id": "47",
+   "seed_index": 0,
+   "unit": 141,
+   "seed": 810141,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-141-Q",
+   "block": 3,
+   "task_index": 47,
+   "task_id": "47",
+   "seed_index": 0,
+   "unit": 141,
+   "seed": 810141,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-142-P",
+   "block": 3,
+   "task_index": 47,
+   "task_id": "47",
+   "seed_index": 1,
+   "unit": 142,
+   "seed": 810142,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-142-Q",
+   "block": 3,
+   "task_index": 47,
+   "task_id": "47",
+   "seed_index": 1,
+   "unit": 142,
+   "seed": 810142,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-143-P",
+   "block": 3,
+   "task_index": 47,
+   "task_id": "47",
+   "seed_index": 2,
+   "unit": 143,
+   "seed": 810143,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-143-Q",
+   "block": 3,
+   "task_index": 47,
+   "task_id": "47",
+   "seed_index": 2,
+   "unit": 143,
+   "seed": 810143,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-144-P",
+   "block": 3,
+   "task_index": 48,
+   "task_id": "48",
+   "seed_index": 0,
+   "unit": 144,
+   "seed": 810144,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-144-Q",
+   "block": 3,
+   "task_index": 48,
+   "task_id": "48",
+   "seed_index": 0,
+   "unit": 144,
+   "seed": 810144,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-145-P",
+   "block": 3,
+   "task_index": 48,
+   "task_id": "48",
+   "seed_index": 1,
+   "unit": 145,
+   "seed": 810145,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-145-Q",
+   "block": 3,
+   "task_index": 48,
+   "task_id": "48",
+   "seed_index": 1,
+   "unit": 145,
+   "seed": 810145,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-146-P",
+   "block": 3,
+   "task_index": 48,
+   "task_id": "48",
+   "seed_index": 2,
+   "unit": 146,
+   "seed": 810146,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-146-Q",
+   "block": 3,
+   "task_index": 48,
+   "task_id": "48",
+   "seed_index": 2,
+   "unit": 146,
+   "seed": 810146,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-147-P",
+   "block": 3,
+   "task_index": 49,
+   "task_id": "49",
+   "seed_index": 0,
+   "unit": 147,
+   "seed": 810147,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-147-Q",
+   "block": 3,
+   "task_index": 49,
+   "task_id": "49",
+   "seed_index": 0,
+   "unit": 147,
+   "seed": 810147,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-148-P",
+   "block": 3,
+   "task_index": 49,
+   "task_id": "49",
+   "seed_index": 1,
+   "unit": 148,
+   "seed": 810148,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-148-Q",
+   "block": 3,
+   "task_index": 49,
+   "task_id": "49",
+   "seed_index": 1,
+   "unit": 148,
+   "seed": 810148,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-149-P",
+   "block": 3,
+   "task_index": 49,
+   "task_id": "49",
+   "seed_index": 2,
+   "unit": 149,
+   "seed": 810149,
+   "member": "P",
+   "gate": {
+    "kind": "pass_all"
+   }
+  },
+  {
+   "episode_id": "e3p-149-Q",
+   "block": 3,
+   "task_index": 49,
+   "task_id": "49",
+   "seed_index": 2,
+   "unit": 149,
+   "seed": 810149,
+   "member": "Q",
+   "gate": {
+    "kind": "pass_all"
+   }
+  }
+ ]
+}

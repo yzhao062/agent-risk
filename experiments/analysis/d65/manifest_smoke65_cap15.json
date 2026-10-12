@@ -1,0 +1,111 @@
+{
+ "name": "D65 feasibility smoke (not part of the log)",
+ "registered_in": "docs/agent-risk-modeling/PLAN-RECONCILE-2026-10-04.md, Section 0.2, D65",
+ "created_utc": "2026-10-04T16:57:26.421200+00:00",
+ "draw_function": "agent_risk_harness.pilot.plan_episodes('smoke65', 5, 799, 799000)",
+ "conditions": {
+  "B": {
+   "stage": "smoke65",
+   "gate": "baseline",
+   "theta": null,
+   "announce": false,
+   "max_steps": 15
+  }
+ },
+ "n_total": 5,
+ "master_seed": 799,
+ "seed_base": 799000,
+ "block_size": 5,
+ "max_steps": 15,
+ "fixed_settings": "as B1: models, prompts, 400,000-token limit, checker v1.1, VLLM_BATCH_INVARIANT=1, prefix caching off, concurrency 32, full raw-request logging; step cap max_steps",
+ "vm": "smoke",
+ "block_order": [
+  {
+   "block": 1,
+   "global_block": 1,
+   "label": "block-01-B",
+   "condition": "B",
+   "vm": "smoke",
+   "n": 5,
+   "first_episode_id": "smoke65-0000",
+   "last_episode_id": "smoke65-0004"
+  }
+ ],
+ "episodes": [
+  {
+   "condition": "B",
+   "stage": "smoke65",
+   "gate": "baseline",
+   "theta": null,
+   "max_steps": 15,
+   "vm": "smoke",
+   "block": 1,
+   "global_block": 1,
+   "position_in_block": 0,
+   "episode_id": "smoke65-0000",
+   "seed": 799000,
+   "task_index": 97,
+   "task_id": "366024"
+  },
+  {
+   "condition": "B",
+   "stage": "smoke65",
+   "gate": "baseline",
+   "theta": null,
+   "max_steps": 15,
+   "vm": "smoke",
+   "block": 1,
+   "global_block": 1,
+   "position_in_block": 1,
+   "episode_id": "smoke65-0001",
+   "seed": 799001,
+   "task_index": 194,
+   "task_id": "403398"
+  },
+  {
+   "condition": "B",
+   "stage": "smoke65",
+   "gate": "baseline",
+   "theta": null,
+   "max_steps": 15,
+   "vm": "smoke",
+   "block": 1,
+   "global_block": 1,
+   "position_in_block": 2,
+   "episode_id": "smoke65-0002",
+   "seed": 799002,
+   "task_index": 243,
+   "task_id": "412933"
+  },
+  {
+   "condition": "B",
+   "stage": "smoke65",
+   "gate": "baseline",
+   "theta": null,
+   "max_steps": 15,
+   "vm": "smoke",
+   "block": 1,
+   "global_block": 1,
+   "position_in_block": 3,
+   "episode_id": "smoke65-0003",
+   "seed": 799003,
+   "task_index": 1,
+   "task_id": "76105"
+  },
+  {
+   "condition": "B",
+   "stage": "smoke65",
+   "gate": "baseline",
+   "theta": null,
+   "max_steps": 15,
+   "vm": "smoke",
+   "block": 1,
+   "global_block": 1,
+   "position_in_block": 4,
+   "episode_id": "smoke65-0004",
+   "seed": 799004,
+   "task_index": 92,
+   "task_id": "504552"
+  }
+ ]
+}

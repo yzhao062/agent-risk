@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-agent-risk"
+dynamic = ["version"]
+description = "Risk modeling for AI agents from logs: replay a proposed change over logged episodes and separate what the log settles, what a declared stop valuation fixes, and what needs bounds."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "BSD-2-Clause"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Yue Zhao", email = "yzhao062@gmail.com" },
+    { name = "Zixiang Xu" },
+    { name = "Angela Huyue Zhang" },
+    { name = "S. Alex Yang" },
+    { name = "Xiyang Hu" },
+]
+
+keywords = [
+    "ai agents",
+    "risk",
+    "monitoring",
+    "counterfactual replay",
+    "clopper-pearson",
+    "paired proportions",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Typing :: Typed",
+]
+dependencies = ["numpy>=1.20", "scipy>=1.7"]
+
+[project.urls]
+Homepage = "https://github.com/yzhao062/agent-risk"
+Repository = "https://github.com/yzhao062/agent-risk"
+Issues = "https://github.com/yzhao062/agent-risk/issues"
+Paper = "https://arxiv.org/abs/XXXX.XXXXX"
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools.dynamic]
+version = { attr = "agent_risk.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+agent_risk = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+filterwarnings = ["error"]

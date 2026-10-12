@@ -1,0 +1,96 @@
+{
+ "name": "D58 smoke (not part of the batch)",
+ "conditions": {
+  "B2": {
+   "stage": "smoke_b2",
+   "gate": "baseline",
+   "theta": null,
+   "n": 2,
+   "master_seed": 591,
+   "seed_base": 590000
+  },
+  "Val3": {
+   "stage": "smoke_val3",
+   "gate": "stopping",
+   "theta": 0.94,
+   "n": 2,
+   "master_seed": 592,
+   "seed_base": 592000
+  }
+ },
+ "block_size": 2,
+ "block_order": [
+  {
+   "block": 1,
+   "label": "block-01-B2",
+   "condition": "B2",
+   "condition_block": 1,
+   "n": 2,
+   "first_episode_id": "smoke_b2-0000",
+   "last_episode_id": "smoke_b2-0001"
+  },
+  {
+   "block": 2,
+   "label": "block-02-Val3",
+   "condition": "Val3",
+   "condition_block": 1,
+   "n": 2,
+   "first_episode_id": "smoke_val3-0000",
+   "last_episode_id": "smoke_val3-0001"
+  }
+ ],
+ "episodes": [
+  {
+   "condition": "B2",
+   "stage": "smoke_b2",
+   "gate": "baseline",
+   "theta": null,
+   "block": 1,
+   "condition_block": 1,
+   "position_in_block": 0,
+   "episode_id": "smoke_b2-0000",
+   "seed": 590000,
+   "task_index": 193,
+   "task_id": "470986"
+  },
+  {
+   "condition": "B2",
+   "stage": "smoke_b2",
+   "gate": "baseline",
+   "theta": null,
+   "block": 1,
+   "condition_block": 1,
+   "position_in_block": 1,
+   "episode_id": "smoke_b2-0001",
+   "seed": 590001,
+   "task_index": 57,
+   "task_id": "334902"
+  },
+  {
+   "condition": "Val3",
+   "stage": "smoke_val3",
+   "gate": "stopping",
+   "theta": 0.94,
+   "block": 2,
+   "condition_block": 1,
+   "position_in_block": 0,
+   "episode_id": "smoke_val3-0000",
+   "seed": 592000,
+   "task_index": 37,
+   "task_id": "93761"
+  },
+  {
+   "condition": "Val3",
+   "stage": "smoke_val3",
+   "gate": "stopping",
+   "theta": 0.94,
+   "block": 2,
+   "condition_block": 1,
+   "position_in_block": 1,
+   "episode_id": "smoke_val3-0001",
+   "seed": 592001,
+   "task_index": 239,
+   "task_id": "308846"
+  }
+ ]
+}

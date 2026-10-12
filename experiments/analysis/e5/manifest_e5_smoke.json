@@ -1,0 +1,157 @@
+{
+ "experiment": "E5",
+ "kind": "smoke",
+ "tau2_commit": "fc0055dc4e0a316c3f83133267fbd6faaa770992",
+ "domain": "airline",
+ "task_split": "base",
+ "lam": 11.186319,
+ "pi": 0.0,
+ "units_file_sha256": "cceee3bd5e55bf34943dba50964cd170e6aae87e6a81c099ada5a7d45812ba40",
+ "block_order": [
+  {
+   "block": 1,
+   "label": "block-01-S",
+   "host": "h1",
+   "stage": "smoke",
+   "lam": 11.186319,
+   "pi": 0.0
+  },
+  {
+   "block": 2,
+   "label": "block-02-S",
+   "host": "h1",
+   "stage": "smoke",
+   "lam": 11.186319,
+   "pi": 0.0
+  }
+ ],
+ "episodes": [
+  {
+   "episode_id": "e5sr-019",
+   "member": "R",
+   "unit": 19,
+   "task_index": 6,
+   "task_id": "6",
+   "seed_index": 1,
+   "seed": 810019,
+   "b": 2,
+   "source_episode_id": "e3p-019-P",
+   "block": 1,
+   "gate": {
+    "kind": "retry",
+    "lam": 11.186319,
+    "pi": 0.0,
+    "retry_cap": 2
+   },
+   "position": 0
+  },
+  {
+   "episode_id": "e5sr-020",
+   "member": "R",
+   "unit": 20,
+   "task_index": 6,
+   "task_id": "6",
+   "seed_index": 2,
+   "seed": 810020,
+   "b": 4,
+   "source_episode_id": "e3p-020-P",
+   "block": 1,
+   "gate": {
+    "kind": "retry",
+    "lam": 11.186319,
+    "pi": 0.0,
+    "retry_cap": 2
+   },
+   "position": 1
+  },
+  {
+   "episode_id": "e5sr-021",
+   "member": "R",
+   "unit": 21,
+   "task_index": 7,
+   "task_id": "7",
+   "seed_index": 0,
+   "seed": 810021,
+   "b": 0,
+   "source_episode_id": "e3p-021-P",
+   "block": 1,
+   "gate": {
+    "kind": "retry",
+    "lam": 11.186319,
+    "pi": 0.0,
+    "retry_cap": 2
+   },
+   "position": 2
+  },
+  {
+   "episode_id": "e5sr-022",
+   "member": "R",
+   "unit": 22,
+   "task_index": 7,
+   "task_id": "7",
+   "seed_index": 1,
+   "seed": 810022,
+   "b": 0,
+   "source_episode_id": "e3p-022-P",
+   "block": 2,
+   "gate": {
+    "kind": "retry",
+    "lam": 11.186319,
+    "pi": 0.0,
+    "retry_cap": 2
+   },
+   "position": 3
+  },
+  {
+   "episode_id": "e5sc-019",
+   "member": "C",
+   "unit": 19,
+   "task_index": 6,
+   "task_id": "6",
+   "seed_index": 1,
+   "seed": 810019,
+   "block": 1,
+   "gate": {
+    "kind": "retry",
+    "lam": 11.186319,
+    "pi": 0.0,
+    "retry_cap": 2
+   },
+   "position": 4
+  },
+  {
+   "episode_id": "e5sc-020",
+   "member": "C",
+   "unit": 20,
+   "task_index": 6,
+   "task_id": "6",
+   "seed_index": 2,
+   "seed": 810020,
+   "block": 1,
+   "gate": {
+    "kind": "retry",
+    "lam": 11.186319,
+    "pi": 0.0,
+    "retry_cap": 2
+   },
+   "position": 5
+  },
+  {
+   "episode_id": "e5sc-021",
+   "member": "C",
+   "unit": 21,
+   "task_index": 7,
+   "task_id": "7",
+   "seed_index": 0,
+   "seed": 810021,
+   "block": 2,
+   "gate": {
+    "kind": "retry",
+    "lam": 11.186319,
+    "pi": 0.0,
+    "retry_cap": 2
+   },
+   "position": 6
+  }
+ ]
+}
