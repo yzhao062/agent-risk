@@ -1,33 +1,57 @@
+<a name="readme-top"></a>
+
 <div align="center">
 
-# agent-risk: Risk Assessment for Changes to AI Agents
+# agent-risk
 
+**Risk assessment for changes to AI agents, starting from the logs you already have**
+
+[![PyPI](https://img.shields.io/pypi/v/ai-agent-risk.svg?color=blue)](https://pypi.org/project/ai-agent-risk/)
 [![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/License-BSD_2--Clause-blue.svg)](https://github.com/yzhao062/agent-risk/blob/main/LICENSE)
-[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
 [![CI](https://github.com/yzhao062/agent-risk/actions/workflows/ci.yml/badge.svg)](https://github.com/yzhao062/agent-risk/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/License-BSD_2--Clause-blue.svg)](https://github.com/yzhao062/agent-risk/blob/main/LICENSE)
+[![Dataset](https://img.shields.io/badge/Hugging%20Face-agent--risk--logs-yellow.svg)](https://huggingface.co/datasets/yzhao062/agent-risk-logs)
+
+[What It Answers](#what-it-answers) · [Key Results](#key-results) · [Install](#install) · [Quickstart](#quickstart) · [Reproduce the Paper](#reproduce-the-paper) · [Citation](#citation)
+
+<img src="https://raw.githubusercontent.com/yzhao062/agent-risk/main/docs/figure1.png" alt="Replaying a logged episode under a proposed change: the log settles agreeing episodes, a declared stop value settles stopped ones, and continuing ones need logged support, a snapshot run, or a bound" width="100%">
 
 </div>
 
-Before changing a deployed AI agent (a stricter safety gate, a new model), organizations must approve the change, starting from existing logs. `agent-risk` extends classical risk analysis to partial records and partial changes to running systems: it replays logged episodes under the proposed change, assuming nothing else changes and the agent does not anticipate the change. The log settles episodes that act as before, a declared stop value settles stopped ones, and the rest need logged support, a saved-state rerun, or a bound. In a bash sandbox, a 7,200-episode log alone decided neither of two retry gates. Rerunning only each gate's blocked episodes from saved states reached both live decisions at half the agent calls of a live test sized post hoc for them, given the log. Without per-step harm, a stopping gate's certified harm ceiling rose up to 2.5-fold, since the log hides whether harm preceded the stop.
+Before changing a deployed AI agent (a stricter safety gate, a new model), organizations must approve the change, starting from existing logs. `agent-risk` extends classical risk analysis to partial records and partial changes to running systems: it replays logged episodes under the proposed change, assuming nothing else changes and the agent does not anticipate the change. The log settles episodes that act as before, a declared stop value settles stopped ones, and the rest need logged support, a saved-state rerun, or a bound.
 
----
+> [!NOTE]
+> This repository accompanies the paper *agent-risk: Risk Assessment for Changes to AI Agents* by Yue Zhao, Zixiang Xu, Angela Huyue Zhang, S. Alex Yang, and Xiyang Hu (arXiv preprint, 2026). It holds the Python package, the 15 finite checks, the experiment code, the registrations, and the survey; the 3.5 GB of run logs are on [Hugging Face](https://huggingface.co/datasets/yzhao062/agent-risk-logs).
 
-## Installation
+## What It Answers
+
+Replay a proposed change over each logged episode and sort the episode by what happens at its first deviation from the log:
+
+| Case | Under the change, the episode... | What settles it | In this repository |
+|---|---|---|---|
+| **Agree** | acts exactly as logged | The log itself | `replay_stop` |
+| **Stop** | is stopped at its first deviation | A declared stop value (needs per-step harm in the log) | `replay_stop`, `certify_replay` |
+| **Continue** | continues past its first deviation | Logged support, a rerun from a saved state, or a bound | `retry_harm_bounds`; saved-state reruns in [`experiments/`](https://github.com/yzhao062/agent-risk/tree/main/experiments) |
+
+## Key Results
+
+**One log, two gates, half the agent calls.** In a bash sandbox, a 7,200-episode log alone decided neither of two retry gates, which let the agent act after refusals the log never shows. Rerunning only each gate's blocked episodes from saved states reached both live decisions at half the agent calls of a live test sized post hoc for them, given the log.
+
+**Per-step harm decides whether a stop can be replayed.** Without per-step harm, a stopping gate's certified harm ceiling rose up to 2.5-fold, since the log hides whether harm preceded the stop.
+
+**A new model needs new evidence.** The new model reproduced none of 99 logged episodes, so replay settled none; the same model reproduced every one at logged inputs and seeds. A model release needs support, bounds, or new runs from step 0.
+
+## Install
 
 ```bash
-# Install from GitHub:
-pip install git+https://github.com/yzhao062/agent-risk
+pip install ai-agent-risk
 ```
 
-Or clone the repository and run `pip install .` at its root. The distribution name is `ai-agent-risk`; the import name is `agent_risk`.
-Requires Python 3.9 or later, NumPy (>= 1.20), and SciPy (>= 1.7).
-
----
+Or install from GitHub with `pip install git+https://github.com/yzhao062/agent-risk`, or clone the repository and run `pip install .` at its root. The distribution name is `ai-agent-risk`; the import name is `agent_risk`. Requires Python 3.9 or later, NumPy (>= 1.20), and SciPy (>= 1.7).
 
 ## Quickstart
 
-The snippet below counterfactually replays three episodes under a stopping gate (theta = 0.94), computes replayed harm, failure, and cost, certifies an exact Clopper-Pearson upper bound on harm, and bounds harm under a retry gate:
+The snippet below replays three episodes under a stopping gate (theta = 0.94), computes replayed harm, failure, and cost, certifies an exact Clopper-Pearson upper bound on harm, and bounds harm under a retry gate:
 
 ```python
 from agent_risk import Episode, certify_replay, replay_stop, retry_harm_bounds
@@ -53,7 +77,10 @@ bounds = retry_harm_bounds(episodes, theta=0.94, cap=2)
 print([round(v, 3) for v in bounds.interval])       # [0.333, 0.667]
 ```
 
-Logs can also be loaded directly from JSON Lines, with `null` indicating unobserved harm:
+<details>
+<summary><b>Loading logs and comparing two policies</b></summary>
+
+Logs load from JSON Lines, with `null` marking unobserved harm:
 
 ```python
 from agent_risk import load_jsonl
@@ -62,7 +89,7 @@ lines = ['{"scores": [0.1, 0.97], "harm": [false, null], "cost": [5, 6], "failed
 episodes = load_jsonl(lines)  # or load_jsonl("log.jsonl")
 ```
 
-For paired policy comparisons and statistical equivalence testing:
+Paired comparisons and equivalence tests:
 
 ```python
 from agent_risk import is_equivalent, newcombe_paired_interval
@@ -72,45 +99,53 @@ print(round(ci.estimate, 3), round(ci.lower, 3), round(ci.upper, 3))  # -0.01 -0
 print(is_equivalent(ci, margin=0.10))  # True: equivalent at alpha = 0.05
 ```
 
----
+</details>
 
-## Running Tests
+## Reproduce the Paper
 
-To run the unit and regression test suite:
+1. **Get the logs.** Download the dataset into `data/` from the repository root; [`data/README.md`](https://github.com/yzhao062/agent-risk/blob/main/data/README.md) explains the layout, checksums, and redactions.
+
+   ```python
+   from huggingface_hub import snapshot_download
+
+   snapshot_download(repo_id="yzhao062/agent-risk-logs", repo_type="dataset", local_dir="data",
+                     allow_patterns=["logs/*", "arm-e/*", "MANIFEST.tsv", "REDACTIONS.tsv"])
+   ```
+
+2. **Regenerate the numbers.** [`ARTIFACT.md`](https://github.com/yzhao062/agent-risk/blob/main/ARTIFACT.md) maps every table and figure of the paper to its logs, its registration, and its command (A1 to A39). The commands write to `outputs/` and leave `data/` untouched.
+3. **Check the theory.** `python checks/run_all.py` runs the 15 finite checks of the formal results ([`checks/README.md`](https://github.com/yzhao062/agent-risk/blob/main/checks/README.md)).
+
+> [!TIP]
+> On the released logs, the documented commands reproduce every number of the registered analyses, and the figure script regenerates the paper's Figures D.1 to D.3. To rerun experiments live (served models, ControlArena, tau2-bench), see [`experiments/RUNNING.md`](https://github.com/yzhao062/agent-risk/blob/main/experiments/RUNNING.md).
+
+<details>
+<summary><b>Repository map</b></summary>
+
+| Directory / File | Description |
+|---|---|
+| [`src/agent_risk/`](https://github.com/yzhao062/agent-risk/tree/main/src/agent_risk) | Core Python package: episode representation, stopping replay, retry bounds, exact Clopper-Pearson certification, and paired Newcombe confidence intervals. |
+| [`tests/`](https://github.com/yzhao062/agent-risk/tree/main/tests) | Unit and regression tests (149) covering replay algorithms, stop valuations, bounds, and paper test vectors. |
+| [`checks/`](https://github.com/yzhao062/agent-risk/tree/main/checks) | 15 finite-instance check scripts verifying the theorems, combinatorial bounds, and design invariants. |
+| [`experiments/`](https://github.com/yzhao062/agent-risk/tree/main/experiments) | Experiment harness, run scripts, analysis and post hoc scripts, and the figure script. |
+| [`registrations/`](https://github.com/yzhao062/agent-risk/tree/main/registrations) | Registration documents for the paper's runs (sample sizes, analysis rules, margins, prediction hashes), each with its registration time, and the run records. |
+| [`data/`](https://github.com/yzhao062/agent-risk/tree/main/data) | Log manifest, SHA-256 checksums, redaction records, run manifests, and download instructions. |
+| [`survey/`](https://github.com/yzhao062/agent-risk/tree/main/survey) | The characteristic survey: 23 coded sources with their recorded versions, 30 AI Incident Database incidents, the 20-code codebook, both coders' matrices, and the agreement script. |
+| [`supplement/`](https://github.com/yzhao062/agent-risk/tree/main/supplement) | Companion files for the paper's appendices. |
+| [`ARTIFACT.md`](https://github.com/yzhao062/agent-risk/blob/main/ARTIFACT.md) | The artifact guide: paper names and run codes, verbatim prompts and policies, and every reproduction command. |
+
+</details>
+
+<details>
+<summary><b>Running the tests</b></summary>
 
 ```bash
 pip install ".[test]"
 pytest
 ```
 
-This executes all 149 tests in [`tests/`](https://github.com/yzhao062/agent-risk/tree/main/tests) (covering replay algorithms, stop valuations, bounds, and paper test vectors). If optional `statsmodels` is not installed, two comparison tests will be skipped (147 passed, 2 skipped).
+This runs the 149 tests in [`tests/`](https://github.com/yzhao062/agent-risk/tree/main/tests). Without the optional `statsmodels`, two comparison tests are skipped (147 passed, 2 skipped).
 
----
-
-## Repository Map
-
-| Directory / File | Description |
-|---|---|
-| [`src/agent_risk/`](https://github.com/yzhao062/agent-risk/tree/main/src/agent_risk) | Core Python package: episode representation, stopping replay, retry bounds, exact Clopper-Pearson certification, and paired Newcombe confidence intervals. |
-| [`tests/`](https://github.com/yzhao062/agent-risk/tree/main/tests) | Unit and regression test suite (149 tests) covering replay algorithms, stop valuations, bounds, and paper test vectors. |
-| [`checks/`](https://github.com/yzhao062/agent-risk/tree/main/checks) | 15 finite-instance mathematical check scripts verifying theorems, combinatorial bounds, and design invariants across parameter spaces. |
-| [`experiments/`](https://github.com/yzhao062/agent-risk/tree/main/experiments) | Experiment harness, execution runners, and analysis scripts for reproducing empirical evaluations. See [`RUNNING.md`](https://github.com/yzhao062/agent-risk/blob/main/experiments/RUNNING.md) for execution commands. |
-| [`registrations/`](https://github.com/yzhao062/agent-risk/tree/main/registrations) | Registration documents for the paper's runs (sample sizes, analysis rules, margins, prediction hashes), each with its registration time; the paper and `ARTIFACT.md` mark which analyses were post hoc. |
-| [`data/`](https://github.com/yzhao062/agent-risk/tree/main/data) | Log manifest, SHA-256 checksums, and download instructions for the experiment logs (hosted on Hugging Face). |
-| [`survey/`](https://github.com/yzhao062/agent-risk/tree/main/survey) | The characteristic survey: 23 coded sources with their recorded versions, 30 AI Incident Database incidents, the 20-code codebook, both coders' matrices, and the agreement script. |
-| [`supplement/`](https://github.com/yzhao062/agent-risk/tree/main/supplement) | Companion files for the paper's appendices (extended survey tables, characteristic and practice mappings, diagnostics), as submitted with the paper. |
-| [`ARTIFACT.md`](https://github.com/yzhao062/agent-risk/blob/main/ARTIFACT.md) | Master artifact reproduction guide mapping paper names to run codes and exact reproduction commands. |
-
----
-
-## Reproducing Paper Results
-
-To reproduce the numbers, tables, and figures from the paper:
-1. Consult [`ARTIFACT.md`](https://github.com/yzhao062/agent-risk/blob/main/ARTIFACT.md) for the master lookup table mapping paper run names to log codes, declared policies, monitor prompts, and exact command lines.
-2. See [`experiments/README.md`](https://github.com/yzhao062/agent-risk/blob/main/experiments/README.md) for instructions on running offline log analysis and reproducing demonstration tables. For running live experiments, serving models, or re-executing harness runs (R0 to R13), see [`experiments/RUNNING.md`](https://github.com/yzhao062/agent-risk/blob/main/experiments/RUNNING.md).
-3. See [`checks/README.md`](https://github.com/yzhao062/agent-risk/blob/main/checks/README.md) to run the 15 finite-instance verification scripts that validate the mathematical claims.
-
----
+</details>
 
 ## Citation
 
@@ -118,18 +153,22 @@ To reproduce the numbers, tables, and figures from the paper:
 @article{zhao2026agentrisk,
   title   = {agent-risk: Risk Assessment for Changes to AI Agents},
   author  = {Zhao, Yue and Xu, Zixiang and Zhang, Angela Huyue and Yang, S. Alex and Hu, Xiyang},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  journal = {arXiv preprint},
   year    = {2026}
 }
 ```
 
----
-
 ## License
 
-- **Code and Package**: The `agent-risk` software and library code in this repository are licensed under the [BSD 2-Clause License](https://github.com/yzhao062/agent-risk/blob/main/LICENSE).
-- **Experiment Logs and Data**: The experimental logs, trajectory traces, analysis outputs, and manifests hosted on Hugging Face ([`yzhao062/agent-risk-logs`](https://huggingface.co/datasets/yzhao062/agent-risk-logs)) are released under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). See [`LICENSE-DATA.md`](https://github.com/yzhao062/agent-risk/blob/main/LICENSE-DATA.md).
-- **Third-Party Components**:
-  - **ControlArena**: Task definitions, environments, and bash tool harnesses (used in all bash-environment runs) derive from [ControlArena](https://github.com/UKGovernmentBEIS/control-arena), licensed under the [MIT License](https://opensource.org/licenses/MIT).
-  - **$\tau^2$-bench**: Airline customer-support benchmark tasks, dialogue environments, and customer simulator code (used in the airline runs, E3 and E5) derive from [$\tau^2$-bench](https://github.com/sierra-research/tau2-bench), licensed under the [MIT License](https://opensource.org/licenses/MIT).
-  - **Qwen Models**: The agent and monitor models (Qwen3-14B-FP8, Qwen3-14B, Qwen3-4B-Instruct-2507, Qwen3.5-27B-FP8, Qwen2.5-14B-Instruct) are released by their developers under the [Apache-2.0 License](https://www.apache.org/licenses/LICENSE-2.0). Neither this repository nor the dataset contains model weights.
+The code is under the [BSD 2-Clause License](https://github.com/yzhao062/agent-risk/blob/main/LICENSE). The logs on [Hugging Face](https://huggingface.co/datasets/yzhao062/agent-risk-logs) are under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) ([`LICENSE-DATA.md`](https://github.com/yzhao062/agent-risk/blob/main/LICENSE-DATA.md)).
+
+<details>
+<summary><b>Third-party components</b></summary>
+
+- **ControlArena**: task definitions, environments, and bash tool harnesses (used in all bash-environment runs) derive from [ControlArena](https://github.com/UKGovernmentBEIS/control-arena), under the [MIT License](https://opensource.org/licenses/MIT).
+- **tau2-bench**: airline customer-support tasks, dialogue environments, and the customer simulator (used in the airline runs, E3 and E5) derive from [tau2-bench](https://github.com/sierra-research/tau2-bench), under the [MIT License](https://opensource.org/licenses/MIT).
+- **Qwen models**: the agent and monitor models (Qwen3-14B-FP8, Qwen3-14B, Qwen3-4B-Instruct-2507, Qwen3.5-27B-FP8, Qwen2.5-14B-Instruct) are released by their developers under the [Apache-2.0 License](https://www.apache.org/licenses/LICENSE-2.0). Neither this repository nor the dataset contains model weights.
+
+</details>
+
+<p align="right"><a href="#readme-top">↑ back to top</a></p>
