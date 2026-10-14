@@ -6,13 +6,14 @@
 
 **Risk assessment for changes to AI agents, starting from the logs you already have**
 
+[![arXiv](https://img.shields.io/badge/arXiv-2610.16280-b31b1b.svg)](https://arxiv.org/abs/2610.16280)
 [![PyPI](https://img.shields.io/pypi/v/ai-agent-risk.svg?color=blue)](https://pypi.org/project/ai-agent-risk/)
 [![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![CI](https://github.com/yzhao062/agent-risk/actions/workflows/ci.yml/badge.svg)](https://github.com/yzhao062/agent-risk/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/License-BSD_2--Clause-blue.svg)](https://github.com/yzhao062/agent-risk/blob/main/LICENSE)
 [![Dataset](https://img.shields.io/badge/Hugging%20Face-agent--risk--logs-yellow.svg)](https://huggingface.co/datasets/yzhao062/agent-risk-logs)
 
-[What It Answers](#what-it-answers) · [Key Results](#key-results) · [Install](#install) · [Quickstart](#quickstart) · [Reproduce the Paper](#reproduce-the-paper) · [Citation](#citation)
+[Paper](https://arxiv.org/abs/2610.16280) · [PDF](https://arxiv.org/pdf/2610.16280) · [What It Answers](#what-it-answers) · [Key Results](#key-results) · [Install](#install) · [Quickstart](#quickstart) · [Reproduce the Paper](#reproduce-the-paper) · [Citation](#citation)
 
 <img src="https://raw.githubusercontent.com/yzhao062/agent-risk/main/docs/figure1.png" alt="Replaying a logged episode under a proposed change: the log settles agreeing episodes, a declared stop value settles stopped ones, and continuing ones need logged support, a snapshot run, or a bound" width="100%">
 
@@ -21,7 +22,7 @@
 Before changing a deployed AI agent (a stricter safety gate, a new model), organizations must approve the change, starting from existing logs. `agent-risk` extends classical risk analysis to partial records and partial changes to running systems: it replays logged episodes under the proposed change, assuming nothing else changes and the agent does not anticipate the change. The log settles episodes that act as before, a declared stop value settles stopped ones, and the rest need logged support, a saved-state rerun, or a bound.
 
 > [!NOTE]
-> This repository accompanies the paper *agent-risk: Risk Assessment for Changes to AI Agents* by Yue Zhao, Zixiang Xu, Angela Huyue Zhang, S. Alex Yang, and Xiyang Hu (arXiv preprint, 2026). It holds the Python package, the 15 finite checks, the experiment code, the registrations, and the survey; the 3.5 GB of run logs are on [Hugging Face](https://huggingface.co/datasets/yzhao062/agent-risk-logs).
+> This repository accompanies the paper [*agent-risk: Risk Assessment for Changes to AI Agents*](https://arxiv.org/abs/2610.16280) by Yue Zhao, Zixiang Xu, Angela Huyue Zhang, S. Alex Yang, and Xiyang Hu (arXiv:2610.16280, 2026). It holds the Python package, the 15 finite checks, the experiment code, the registrations, and the survey; the 3.5 GB of run logs are on [Hugging Face](https://huggingface.co/datasets/yzhao062/agent-risk-logs).
 
 ## What It Answers
 
@@ -151,8 +152,10 @@ This runs the 149 tests in [`tests/`](https://github.com/yzhao062/agent-risk/tre
 @article{zhao2026agentrisk,
   title   = {agent-risk: Risk Assessment for Changes to AI Agents},
   author  = {Zhao, Yue and Xu, Zixiang and Zhang, Angela Huyue and Yang, S. Alex and Hu, Xiyang},
-  journal = {arXiv preprint},
-  year    = {2026}
+  journal = {arXiv preprint arXiv:2610.16280},
+  year    = {2026},
+  doi     = {10.48550/arXiv.2610.16280},
+  url     = {https://arxiv.org/abs/2610.16280}
 }
 ```
 
