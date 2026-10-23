@@ -2,6 +2,13 @@
 
 <div align="center">
 
+<!-- logo-family -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/brand/logo-dark.svg">
+  <img src="docs/assets/brand/logo.svg" alt="agent-risk" width="350">
+</picture>
+
+
 # agent-risk
 
 **Risk assessment for changes to AI agents, starting from the logs you already have**
