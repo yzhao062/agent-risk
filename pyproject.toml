@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "ai-agent-risk"
 dynamic = ["version"]
-description = "Certify an AI agent's violation rate from evaluation episodes with an exact one-sided bound, and replay a proposed change to the agent over the logs you already have."
+description = "Certify an AI agent's violation rate with an exact one-sided bound, and re-check a stricter safety gate against the logs you already have."
 readme = "README.md"
 requires-python = ">=3.9"
 license = "BSD-2-Clause"

@@ -19,7 +19,7 @@ Adds statistical certificates: from per-episode violation outcomes, report wheth
 - The default of `alpha` is now a sentinel. With neither `alpha` nor `confidence`, the one-sided error level is 0.05 as before; passing both raises `TypeError`. `confidence=0.95` stores `alpha=0.05`, so `certify(k, n, confidence=0.95) == certify(k, n, alpha=0.05)`. Existing positional calls keep working.
 - `certify_replay` with a `limit` raises `ValueError` when the replay declares a positive `post_stop_harm`, because the binary count omits that harm. The message names two substitutes: replay with `post_stop_harm = 0`, or certify the worst-case count with `certify`.
 - `compare_logging_schemes` is unchanged and returns certificates without a limit.
-- The package description and the README name both jobs: certification from episodes and replay from logs.
+- The package description and the README present one workflow: certify a deployment, then re-check a stricter gate against the logs you already have.
 
 ## 0.1.0 (2026-10-11)
 

@@ -1,4 +1,4 @@
-"""Risk modeling for AI agents: certification from episodes, replay from logs.
+"""Risk modeling for AI agents: certify a deployment, then re-check a gate from logs.
 
 Certify that an agent's violation rate is at most a limit, at a stated
 one-sided confidence, from per-episode violation outcomes. Replay a proposed
