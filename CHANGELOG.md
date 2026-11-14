@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.2.0 (unreleased)
+## 0.2.0 (2026-11-14)
 
 Adds statistical certificates: from per-episode violation outcomes, report whether the violation rate is at most a limit at a stated one-sided confidence (exact Clopper-Pearson). `replay_stop`, `retry_harm_bounds`, and the paired comparison are unchanged.
 
