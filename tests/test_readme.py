@@ -39,6 +39,19 @@ def test_quickstart_output_matches_comments():
     assert len(quickstart.strip().splitlines()) <= 22
 
 
+def test_certification_example_output_matches_comments():
+    blocks = [b for b in _python_blocks() if "certify_violations" in b]
+    assert len(blocks) == 1
+    out = io.StringIO()
+    with contextlib.redirect_stdout(out):
+        exec(compile(blocks[0], "README certification example", "exec"), {})
+    assert out.getvalue().splitlines() == [
+        "passed 0.0095",
+        "1 500",
+        "473",
+    ]
+
+
 def test_other_examples_run():
     for block in _python_blocks()[1:]:
         with contextlib.redirect_stdout(io.StringIO()) as out:

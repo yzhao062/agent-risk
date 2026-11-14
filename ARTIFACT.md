@@ -1,6 +1,6 @@
 # Artifact Guide
 
-Commands to reproduce and regenerate the analysis and demonstration runs.
+Commands to reproduce and regenerate the analysis and demonstration runs. The commands reproduce the paper at the tag `v0.1.0` of this repository (`git checkout v0.1.0`).
 
 This file accompanies the paper's Appendix D (Registered Demonstrations and Supporting Evidence). It holds declared policies, harm checkers, monitor prompts, bash-setting agent system prompts, refusal and handoff messages, and continuous monitor score readouts for the demonstration settings, verbatim; and the command that regenerates each reported number. Experimental logs are hosted on Hugging Face at [`yzhao062/agent-risk-logs`](https://huggingface.co/datasets/yzhao062/agent-risk-logs); download and layout instructions are described in [data/README.md](data/README.md).
 

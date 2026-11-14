@@ -11,7 +11,7 @@
 
 # agent-risk
 
-**Risk assessment for changes to AI agents, starting from the logs you already have**
+**Certify an AI agent's violation rate from evaluation episodes, and assess a change to the agent from the logs you already have**
 
 [![arXiv](https://img.shields.io/badge/arXiv-2610.16280-b31b1b.svg)](https://arxiv.org/abs/2610.16280)
 [![PyPI](https://img.shields.io/pypi/v/ai-agent-risk.svg?color=blue)](https://pypi.org/project/ai-agent-risk/)
@@ -20,16 +20,28 @@
 [![License](https://img.shields.io/badge/License-BSD_2--Clause-blue.svg)](https://github.com/yzhao062/agent-risk/blob/main/LICENSE)
 [![Dataset](https://img.shields.io/badge/Hugging%20Face-agent--risk--logs-yellow.svg)](https://huggingface.co/datasets/yzhao062/agent-risk-logs)
 
-[Paper](https://arxiv.org/abs/2610.16280) · [PDF](https://arxiv.org/pdf/2610.16280) · [What It Answers](#what-it-answers) · [Key Results](#key-results) · [Install](#install) · [Quickstart](#quickstart) · [Reproduce the Paper](#reproduce-the-paper) · [Citation](#citation)
+[Paper](https://arxiv.org/abs/2610.16280) · [PDF](https://arxiv.org/pdf/2610.16280) · [What We Certify](#what-we-certify) · [What It Answers](#what-it-answers) · [Key Results](#key-results) · [Install](#install) · [Quickstart](#quickstart) · [Reproduce the Paper](#reproduce-the-paper) · [Citation](#citation)
 
 <img src="https://raw.githubusercontent.com/yzhao062/agent-risk/main/docs/figure1.png" alt="Replaying a logged episode under a proposed change: the log settles agreeing episodes, a declared stop value settles stopped ones, and continuing ones need logged support, a snapshot run, or a bound" width="100%">
 
 </div>
 
-Before changing a deployed AI agent (a stricter safety gate, a new model), organizations must approve the change, starting from existing logs. `agent-risk` extends classical risk analysis to partial records and partial changes to running systems: it replays logged episodes under the proposed change, assuming nothing else changes and the agent does not anticipate the change. The log settles episodes that act as before, a declared stop value settles stopped ones, and the rest need logged support, a saved-state rerun, or a bound.
+`agent-risk` does two jobs. For a fixed deployment of an AI agent, it turns per-episode violation outcomes into an exact one-sided upper bound on the violation rate and compares the bound with a limit set in advance. Before a change to a deployed agent (a stricter safety gate, a new model), organizations must approve the change, starting from existing logs. To support that approval, `agent-risk` extends classical risk analysis to partial records and partial changes to running systems: it replays logged episodes under the proposed change, assuming nothing else changes and the agent does not anticipate the change. The log settles episodes that act as before, a declared stop value settles stopped ones, and the rest need logged support, a saved-state rerun, or a bound.
 
 > [!NOTE]
 > This repository accompanies the paper [*agent-risk: Risk Assessment for Changes to AI Agents*](https://arxiv.org/abs/2610.16280) by Yue Zhao, Zixiang Xu, Angela Huyue Zhang, S. Alex Yang, and Xiyang Hu (arXiv:2610.16280, 2026). It holds the Python package, the 15 finite checks, the experiment code, the registrations, and the survey; the 3.5 GB of run logs are on [Hugging Face](https://huggingface.co/datasets/yzhao062/agent-risk-logs).
+
+## What We Certify
+
+"Certify" has three common senses: accreditation (an organization attests that a system meets a standard), formal verification (a proof that a property holds for every input in a set), and a statistical certificate (a one-sided confidence bound on an average rate, compared with a limit set in advance). This library means the third.
+
+Fix a deployment (model, tools, permissions, prompts, and any gates with their thresholds), a task distribution, and a violation rule (the labels or judge you supply, applied as recorded). A passed certificate states that the violation rate is at most the limit at the stated confidence. The rate is the probability that an episode drawn from the task distribution and run on the deployment is labeled a violation. Whenever that rate exceeds the limit, the procedure passes with probability at most 1 - confidence. Individual episodes can still violate, and the certificate covers that deployment and task distribution only. The guarantee rests on three conditions:
+
+- **Independence.** Outcomes are independent draws, with one episode per independently sampled task. Repeated runs of one task estimate that task's rate, not the rate over the task distribution.
+- **Fixed sample.** The number of episodes is set before any outcome is seen, and the certificate uses every episode drawn. Recomputing after each batch and stopping at the first pass inflates the error, and so does dropping episodes after the labels are seen.
+- **Fixed in advance.** The deployment (including any gate threshold), the violation rule, the limit, and the confidence are chosen before the certification episodes are seen and are not tuned on them.
+
+A failed certificate (`not_certified`) does not show that the rate exceeds the limit: too few episodes, too many violations, or both can produce it. Separate certificates, such as one per rule or per benchmark row, each control their own error, but they do not control the chance that at least one incorrect certificate passes.
 
 ## What It Answers
 
@@ -38,8 +50,8 @@ Replay a proposed change over each logged episode and sort the episode by what h
 | Case | Under the change, the episode... | What settles it | In this repository |
 |---|---|---|---|
 | **Agree** | acts exactly as logged | The log itself | `replay_stop` |
-| **Stop** | is stopped at its first deviation | A declared stop value (needs per-step harm in the log) | `replay_stop`, `certify_replay` |
-| **Continue** | continues past its first deviation | Logged support, a rerun from a saved state, or a bound | `retry_harm_bounds`; saved-state reruns in [`experiments/`](https://github.com/yzhao062/agent-risk/tree/main/experiments) |
+| **Stop** | is stopped at its first deviation | A declared stop value (needs per-step harm in the log) | `replay_stop`; `certify_replay` with a `limit` |
+| **Continue** | continues past its first deviation | Logged support, a rerun from a saved state, or a bound | `retry_harm_bounds`, `certify_retry`; saved-state reruns in [`experiments/`](https://github.com/yzhao062/agent-risk/tree/main/experiments) |
 
 ## Key Results
 
@@ -85,6 +97,22 @@ bounds = retry_harm_bounds(episodes, theta=0.94, cap=2)
 print([round(v, 3) for v in bounds.interval])       # [0.333, 0.667]
 ```
 
+The replay certificate assumes no harm after a stop (`post_stop_harm = 0`), which is a modeling choice and does not make stopping harmless in practice; `certify_replay` therefore refuses a `limit` when a positive post-stop harm is declared.
+
+To certify fresh evaluation episodes, pass their binary violation outcomes (`None` or NaN marks a missing label, which counts as a violation) with a limit and a confidence. `sample_size` gives the number of episodes at which a given count of violations still passes:
+
+```python
+from agent_risk import certify_violations, sample_size
+
+outcomes = [False] * 499 + [True]  # 500 fresh episodes, one labeled a violation
+cert = certify_violations(outcomes, limit=0.01, confidence=0.95)
+print(cert.status, round(cert.upper, 4))  # passed 0.0095
+print(cert.n_violations, cert.n)          # 1 500
+print(sample_size(0.01, max_violations=1))  # 473
+```
+
+The certificate also renders with its conditions through `cert.to_markdown()` and `cert.to_json()`, and `scope=` records the deployment it covers.
+
 <details>
 <summary><b>Loading logs and comparing two policies</b></summary>
 
@@ -111,6 +139,8 @@ print(is_equivalent(ci, margin=0.10))  # True: equivalent at alpha = 0.05
 
 ## Reproduce the Paper
 
+The paper's numbers come from the tag `v0.1.0`. After cloning the repository, run `git checkout v0.1.0` before the steps below.
+
 1. **Get the logs.** Download the dataset into `data/` from the repository root; [`data/README.md`](https://github.com/yzhao062/agent-risk/blob/main/data/README.md) explains the layout, checksums, and redactions.
 
    ```bash
@@ -130,7 +160,7 @@ print(is_equivalent(ci, margin=0.10))  # True: equivalent at alpha = 0.05
 | Directory / File | Description |
 |---|---|
 | [`src/agent_risk/`](https://github.com/yzhao062/agent-risk/tree/main/src/agent_risk) | Core Python package: episode representation, stopping replay, retry bounds, exact Clopper-Pearson certification, and paired Newcombe confidence intervals. |
-| [`tests/`](https://github.com/yzhao062/agent-risk/tree/main/tests) | Unit and regression tests (149) covering replay algorithms, stop valuations, bounds, and paper test vectors. |
+| [`tests/`](https://github.com/yzhao062/agent-risk/tree/main/tests) | Unit and regression tests (584) covering replay algorithms, stop valuations, bounds, certificates, and paper test vectors. |
 | [`checks/`](https://github.com/yzhao062/agent-risk/tree/main/checks) | 15 finite-instance check scripts verifying the theorems, combinatorial bounds, and design invariants. |
 | [`experiments/`](https://github.com/yzhao062/agent-risk/tree/main/experiments) | Experiment harness, run scripts, analysis and post hoc scripts, and the figure script. |
 | [`registrations/`](https://github.com/yzhao062/agent-risk/tree/main/registrations) | Registration documents for the paper's runs (sample sizes, analysis rules, margins, prediction hashes), each with its registration time, and the run records. |
@@ -149,7 +179,7 @@ pip install ".[test]"
 pytest
 ```
 
-This runs the 149 tests in [`tests/`](https://github.com/yzhao062/agent-risk/tree/main/tests). Without the optional `statsmodels`, two comparison tests are skipped (147 passed, 2 skipped).
+This runs the 584 tests in [`tests/`](https://github.com/yzhao062/agent-risk/tree/main/tests). The `test` extra installs `statsmodels` for the comparison tests against its Clopper-Pearson interval; without it, those tests are skipped.
 
 </details>
 

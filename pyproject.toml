@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "ai-agent-risk"
 dynamic = ["version"]
-description = "Risk modeling for AI agents from logs: replay a proposed change over logged episodes and separate what the log settles, what a declared stop valuation fixes, and what needs bounds."
+description = "Certify an AI agent's violation rate from evaluation episodes with an exact one-sided bound, and replay a proposed change to the agent over the logs you already have."
 readme = "README.md"
 requires-python = ">=3.9"
 license = "BSD-2-Clause"
@@ -24,6 +24,7 @@ keywords = [
     "monitoring",
     "counterfactual replay",
     "clopper-pearson",
+    "statistical certification",
     "paired proportions",
 ]
 classifiers = [
@@ -51,7 +52,7 @@ Dataset = "https://huggingface.co/datasets/yzhao062/agent-risk-logs"
 Paper = "https://arxiv.org/abs/2610.16280"
 
 [project.optional-dependencies]
-test = ["pytest>=7"]
+test = ["pytest>=7", "statsmodels>=0.13"]
 
 [tool.setuptools.dynamic]
 version = { attr = "agent_risk.__version__" }
