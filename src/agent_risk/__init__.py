@@ -35,7 +35,7 @@ from .paired import PairedInterval, is_equivalent, newcombe_paired_interval, wil
 from .retry import RetryBounds, retry_harm_bounds
 from .stopping import EpisodeReplay, StopReplay, StopValuation, replay_stop
 
-__version__ = "0.2.1"
+__version__ = "0.2.2"
 
 __all__ = [
     "__version__",

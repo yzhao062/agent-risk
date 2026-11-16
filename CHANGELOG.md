@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.2 (2026-11-15)
+
+Documentation only; the code is unchanged from 0.2.0.
+
+- The README examples are shorter, with one idea each. The opening example certifies 0 violations in 50 episodes and asks `sample_size` for the size that passes. Section 1.2 shows a stopping gate before and after on one log, and section 1.3 reuses that log to show that the log alone only bounds a retry gate. Secondary calls are described in the folded details.
+
 ## 0.2.1 (2026-11-15)
 
 Documentation only; the code is unchanged from 0.2.0.
