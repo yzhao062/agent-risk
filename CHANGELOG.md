@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.1 (2026-11-15)
+
+Documentation only; the code is unchanged from 0.2.0.
+
+- The README is organized as function blocks: certify a deployment, re-check a stricter stopping gate, bound a retry gate, compare two policies on the same tasks, and load logs. Each block opens with the question it answers and when to use it, then a runnable example with its output; the mechanism and conditions fold into details, and a reference table lists every public call.
+- `tests/test_readme.py` checks that each README example prints what its comments state and that the quoted certificate is the real `to_markdown()` output.
+
 ## 0.2.0 (2026-11-14)
 
 Adds statistical certificates: from per-episode violation outcomes, report whether the violation rate is at most a limit at a stated one-sided confidence (exact Clopper-Pearson). `replay_stop`, `retry_harm_bounds`, and the paired comparison are unchanged.
