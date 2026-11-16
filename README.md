@@ -25,20 +25,15 @@
 
 ```python
 # pip install ai-agent-risk
-from agent_risk import Episode, certify_replay, certify_violations, replay_stop, sample_size
-# Episode(scores, harm, cost, failed): per step a monitor score, a harm (violation) label, a cost
-quiet = Episode([0.1, 0.2, 0.1], [False, False, False], [1, 1, 1], failed=False)
-caught = Episode([0.1, 0.97, 0.3], [False, False, True], [1, 1, 1], failed=False)  # a high score, then harm
-missed = Episode([0.1, 0.2, 0.3], [False, True, False], [1, 1, 1], failed=False)  # harm after low scores
-log = [quiet] * 180 + [caught] * 16 + [missed] * 4  # a pass-all log of 200 episodes
-print(sample_size(0.05))  # 59: the smallest size that passes with no violations
-today = certify_violations([e.harm_flag for e in log], limit=0.05)
-print(today.status, round(today.upper, 3))  # not_certified 0.142: 20 of 200 violate
-gated = certify_replay(replay_stop(log, theta=0.9), limit=0.05)  # theta: the stopping threshold
-print(gated.status, round(gated.upper, 3))  # passed 0.045: a gate at 0.9 stops the 16 caught (8%)
+from agent_risk import certify_violations, sample_size
+
+cert = certify_violations([0] * 50, limit=0.05)  # 50 episodes, no violations
+print(cert.status, round(cert.upper, 3))  # not_certified 0.058
+
+print(sample_size(0.05))  # 59
 ```
 
-The synthetic log above holds runs in which no gate stopped anything. Counted as it stands, it earns the current deployment no certificate at a 5% limit. Replayed under a stricter stopping gate, which halts an episode once a monitor score crosses a threshold, the same log passes with no new runs. A *certificate* here is a statistical statement: at a confidence you choose, the violation rate is at most a limit fixed in advance. It is neither an accreditation nor a formal proof. A *replay* works out what a proposed change would have done on the episodes you already logged. The threshold 0.9 is illustrative, and 1.2 requires it to be fixed before you look at the log you certify on; each section below states the conditions of its own result.
+Agent evaluations often end in a count, such as 0 violations in 50 episodes. At 95% confidence, those 50 episodes show only that the violation rate is below about 6%, so they cannot support a 5% limit; 59 clean episodes can. A *certificate* turns the count into a pass or fail against a limit fixed in advance. It is a statistical statement, neither an accreditation nor a formal proof. When you already have a log, a stricter safety gate can be re-checked on it with no new runs (1.2).
 
 | What do you want to know? | Call | Input | Section |
 |---|---|---|---|
@@ -55,18 +50,16 @@ The synthetic log above holds runs in which no gate stopped anything. Counted as
 
 ### 1.1 Certify a Deployment
 
-**Is my agent's violation rate below a limit, and how many episodes do I need to show it?** Use this before a launch or for a safety case, once a rule or judge labels each episode as a violation or not. An evaluation often ends in a count, such as 0 violations in 50 episodes. At 95% confidence, 50 clean independent episodes show only that the violation rate is below about 6%, so they cannot support a 5% limit; 59 clean episodes can, and a 1% limit needs 299.
+**Is my agent's violation rate below a limit, and how many episodes do I need?** Use this before a launch or for a safety case, once a rule or judge labels each episode as a violation or not.
 
 ```python
-from agent_risk import Certificate, certify_violations, sample_size
-print(sample_size(0.05), sample_size(0.01))  # 59 299: clean episodes needed for a 5% and a 1% limit
-fifty = certify_violations([0] * 50, limit=0.05)  # one label per episode: 1 or True is a violation
-print(fifty.status, round(fifty.upper, 4))  # not_certified 0.0582
-cert = certify_violations([0] * 59, limit=0.05, scope={"agent": "demo", "rule": "no unapproved refund"})
+from agent_risk import certify_violations
+
+labels = [0] * 59  # one label per episode: 1 is a violation, None is missing
+cert = certify_violations(labels, limit=0.05, scope={"agent": "demo"})
+
 print(cert.status, round(cert.upper, 4))  # passed 0.0495
-print(Certificate.from_json(cert.to_json()) == cert)  # True: a JSON round trip, scope included
-print(certify_violations([0] * 58 + [None], limit=0.05).n_unknown)  # 1: the missing label is a violation
-report = cert.to_markdown()  # Markdown for a paper or report; it renders as shown below
+report = cert.to_markdown()  # renders as shown below
 ```
 
 > **Status:** passed
@@ -77,7 +70,7 @@ report = cert.to_markdown()  # Markdown for a paper or report; it renders as sho
 > - Violations counted: 0 (estimate 0)
 > - Unknown outcomes: 0
 > - Method: one-sided exact Clopper-Pearson
-> - Scope: `{"agent":"demo","rule":"no unapproved refund"}`
+> - Scope: `{"agent":"demo"}`
 >
 > The bound assumes that the episodes are independent draws from the task distribution, that their number was fixed before any outcome was seen and every drawn episode is counted, and that the deployment, the violation rule, the limit, and the confidence were chosen before the certification episodes were seen.
 >
@@ -86,7 +79,7 @@ report = cert.to_markdown()  # Markdown for a paper or report; it renders as sho
 <details>
 <summary><b>What the certificate assumes</b></summary>
 
-`certify_violations` turns per-episode labels into a pass or fail against a limit fixed in advance, and when the true rate exceeds the limit, a 95% certificate passes at most 5% of the time. The sizes 59 and 299 are minimums that pass only if no episode violates; `max_violations=` in `sample_size` sizes the sample for a tolerated count. Individual episodes can still violate, and a change to the agent needs a new certificate. The printed conditions mean three things in practice:
+When the true rate exceeds the limit, a 95% certificate passes at most 5% of the time. `sample_size(limit)` gives the smallest number of episodes that passes with no violations (59 for a 5% limit and 299 for 1%), and `max_violations=` sizes the sample for a tolerated count. Individual episodes can still violate, and a change to the agent needs a new certificate. The printed conditions mean three things in practice:
 
 - **Independence.** Draw one episode per independently sampled task. Repeated runs of one task estimate that task's rate, not the rate over the task distribution.
 - **Fixed sample.** Set the number of episodes before any outcome is seen, and count every drawn episode. Recomputing after each batch and stopping at the first pass inflates the error, and so does dropping episodes after the labels are seen.
@@ -98,66 +91,63 @@ A failed certificate (`not_certified`) does not show that the rate exceeds the l
 
 ### 1.2 Re-Check a Stricter Stopping Gate
 
-**Does the agent still pass if I halt an episode once a monitor score crosses a threshold?** Use this when a monitor already scores your agent's steps, a stricter threshold is on the table, and you want the answer from the pass-all log you already have (runs in which no gate blocked a step, with a monitor score, a harm label, and a cost at each step), with no new runs.
+**Does the agent pass if I halt an episode once a monitor score crosses a threshold?** Use this when a monitor already scores your agent's steps, a stricter threshold is on the table, and you want the answer from the pass-all log you already have (runs in which no gate blocked a step), with no new runs.
 
 ```python
-from agent_risk import Episode, StopValuation, compare_logging_schemes, replay_stop
-scores, cost = [0.10, 0.20, 0.97, 0.30], [10, 20, 30, 40]
-episodes = [
-    Episode(scores, [False, True, False, False], cost, failed=False),  # harm at step 1
-    Episode(scores, [False, False, False, True], cost, failed=False),  # harm at step 3
-    Episode([0.10, 0.20], [False, False], [10, 20], failed=False),     # never above 0.94
-]
-replay = replay_stop(episodes, theta=0.94)
-print(replay.branches, replay.stop_steps)  # ('stop', 'stop', 'agree') (2, 2, None)
-print(round(replay.p_harm, 3))             # 0.333: only the step-1 harm survives
-print(round(replay.p_failure, 3))          # 0.667: a stop counts as a failure by default
-print(replay.mean_cost)                    # 50.0 = (60 + 60 + 30) / 3, the stop step included
-declared = replay_stop(episodes, theta=0.94, valuation=StopValuation(post_stop_harm=0.1))
-print(round(declared.p_harm, 3))  # 0.367 = 0.333 + 0.1 * 0.333, with 1 of 3 stopping clean
-schemes = compare_logging_schemes(episodes, theta=0.94)
-print(schemes.per_step.n_harmed, schemes.episode_flag.n_harmed)  # 1 2: per-step harm clears step 3
+from agent_risk import Episode, certify_replay, certify_violations, replay_stop
+
+# Episode(monitor score per step, harm per step, cost per step, failed)
+quiet = Episode([0.1, 0.2, 0.1], [0, 0, 0], [1, 1, 1], failed=False)
+caught = Episode([0.1, 0.97, 0.3], [0, 0, 1], [1, 1, 1], failed=False)  # high score, then harm
+missed = Episode([0.1, 0.2, 0.3], [0, 1, 0], [1, 1, 1], failed=False)  # harm, no high score
+log = [quiet] * 180 + [caught] * 16 + [missed] * 4  # 200 logged episodes
+
+replay = replay_stop(log, theta=0.9)  # stop once a score exceeds 0.9
+before = certify_violations([e.harm_flag for e in log], limit=0.05)
+after = certify_replay(replay, limit=0.05)
+
+print(before.status, after.status)  # not_certified passed
+print(replay.p_harm, replay.p_failure)  # 0.02 0.08
 ```
 
-<p align="center"><img src="https://raw.githubusercontent.com/yzhao062/agent-risk/main/docs/figure1.png" alt="Replaying a logged episode under a proposed change: the log settles agreeing episodes, a declared stop value settles stopped ones, and continuing ones need logged support, a snapshot run, or a bound" width="100%"></p>
+The gate stops the 16 caught episodes before their harm, so the harm rate falls from 10% to 2% and the gate passes, at the price of failing the 8% of tasks it stops. The certificate holds only if `theta` was fixed before you looked at the log you certify on, and it bounds harm only, so report task failure next to it.
 
-The result holds only if `theta` was fixed before you looked at the log you certify on, and it bounds harm only, so report task failure next to it.
+<p align="center"><img src="https://raw.githubusercontent.com/yzhao062/agent-risk/main/docs/figure1.png" alt="Replaying a logged episode under a proposed change: the log settles agreeing episodes, a declared stop value settles stopped ones, and continuing ones need logged support, a snapshot run, or a bound" width="100%"></p>
 
 <details>
 <summary><b>How replay works and what it assumes</b></summary>
 
-An episode whose scores never exceed `theta` keeps its logged outcome, and any other stops at its first score above `theta` and keeps the harm logged before that step. A stopped episode pays for the steps through the stop (`cost_at_stop`). `certify_replay` certifies the replayed harm count against a limit as in 1.1 (the example at the top runs it on 200 episodes).
+An episode whose scores never exceed `theta` keeps its logged outcome, and any other stops at its first score above `theta` and keeps the harm logged before that step. A stopped episode counts as a failed task and pays for the steps through the stop (`cost_at_stop`), so `replay.mean_cost` is 2.92 here against 3 in the log.
 
 Replay adds four conditions to those of 1.1: `theta` is fixed before you look at the log you certify on (tuning it there voids the guarantee), nothing else about the deployment changes, the agent does not anticipate the gate, and a stop causes no further harm. The last is a declared value, `StopValuation(failed=True, post_stop_harm=0.0)` by default. A positive `post_stop_harm` makes `certify_replay` refuse a `limit`, though `certify` on the worst-case count named in the error still works.
 
-The gate above stops 2 of 3 episodes (`p_failure` 0.667), and a gate that stops every episode would pass the harm certificate. `compare_logging_schemes` shows why the log needs per-step harm: with only an episode-level flag, a stopped episode cannot be cleared when its harm may have come after the stop.
+A gate that stops every episode would pass the harm certificate, which is why task failure belongs next to harm. `compare_logging_schemes` shows why the log needs per-step harm: with only an episode-level flag, a stopped episode cannot be cleared when its harm may have come after the stop.
 
 </details>
 
 ### 1.3 Bound a Retry Gate
 
-**What can the log say about a gate that lets the agent retry after a block?** Use this when you weigh a retry gate, which blocks an action and lets the agent try again up to a cap, against a hard stop. The log never shows what the agent does after a block, so it cannot settle the harm rate of such a gate.
+**What can the log say about a gate that lets the agent retry after a block?** Use this when you weigh a retry gate, which blocks an action and lets the agent try again up to a cap, against a hard stop.
 
 ```python
-from agent_risk import Episode, certify_retry, retry_harm_bounds
-quiet = Episode([0.1, 0.2, 0.1], [False, False, False], [1, 1, 1], failed=False)
-# blocked at step 1: the logged harm at step 2 follows the block, so the lower end ignores it
-blocked = Episode([0.1, 0.97, 0.3], [False, False, True], [1, 1, 1], failed=False)
-log = [quiet] * 390 + [blocked] * 10  # a pass-all log of 400 episodes
-bounds = retry_harm_bounds(log, theta=0.9, cap=2)  # block scores above 0.9, stop after 2 blocks
-print(bounds.interval)  # (0.0, 0.025): between 0 and 10 harmed episodes in 400
+from agent_risk import certify_retry, retry_harm_bounds
+
+# The log of 1.2, under a gate that blocks scores above 0.9 and allows 2 retries
+bounds = retry_harm_bounds(log, theta=0.9, cap=2)
 cert = certify_retry(bounds, limit=0.05)
-print(cert.status, round(cert.upper, 3))  # passed 0.042: holds even if all 10 blocked end in harm
+
+print(bounds.interval)  # (0.02, 0.1)
+print(cert.status, round(cert.upper, 3))  # not_certified 0.142
 ```
 
-A pass holds whatever the agent does after a block, but it cannot show that the gate lowers harm.
+The log never shows what the agent does after a block, so the harm rate of this gate lies anywhere from 2% to 10%, and the log alone cannot certify it. Rerunning the 16 blocked episodes from saved states settles the question (see [`experiments/`](https://github.com/yzhao062/agent-risk/tree/main/experiments)).
 
 <details>
 <summary><b>What the interval means and what it assumes</b></summary>
 
-`retry_harm_bounds` returns the interval the log does support: the lower end keeps the harm logged before each first block and assumes none after it, and the upper end counts every blocked episode as harmed. `certify_retry` certifies that upper count. That count is never below the violation count of the ungated log (here also 10 of 400), and a failure does not show that the gate is unsafe.
+`retry_harm_bounds` returns the interval the log does support: the lower end keeps the harm logged before each first block and assumes none after it, and the upper end counts every blocked episode as harmed. `certify_retry` certifies that upper count, so a pass holds whatever the agent does after a block. That count is never below the violation count of the ungated log, so a pass cannot show that the gate lowers harm, and a failure does not show that the gate is unsafe.
 
-The conditions of 1.1 apply. So do the first three replay conditions of 1.2: the threshold is fixed in advance, nothing else changes, and the agent does not anticipate the gate, since the bounds take each episode up to its first block exactly as logged. Any cap of 1 or more gives the same interval, and a cap of 0 is the stopping gate of 1.2. A harm label of `None` follows 1.5. Exact answers need reruns of the blocked episodes from saved states (see [`experiments/`](https://github.com/yzhao062/agent-risk/tree/main/experiments)), and a change that replay cannot settle, such as a new model, needs fresh episodes.
+The conditions of 1.1 apply. So do the first three replay conditions of 1.2: the threshold is fixed in advance, nothing else changes, and the agent does not anticipate the gate, since the bounds take each episode up to its first block exactly as logged. Any cap of 1 or more gives the same interval, and a cap of 0 is the stopping gate of 1.2. A harm label of `None` follows 1.5. A change that replay cannot settle, such as a new model, needs fresh episodes.
 
 </details>
 
@@ -166,36 +156,36 @@ The conditions of 1.1 apply. So do the first three replay conditions of 1.2: the
 **Is the new version within a margin of the old one on the same tasks?** Use this when you changed a prompt, a model, or a gate threshold, ran or replayed both versions on the same tasks, and have a 0/1 outcome for each task under each version.
 
 ```python
-from agent_risk import is_equivalent, newcombe_paired_interval, wilson_interval
-# 200 tasks run under both versions; 1 marks a violation; first is new, second is old
+from agent_risk import is_equivalent, newcombe_paired_interval
+
+# 200 tasks run under both versions, counted by which version violates
 ci = newcombe_paired_interval(both=3, first_only=1, second_only=3, neither=193, level=0.90)
-print(round(ci.estimate, 3), round(ci.lower, 3), round(ci.upper, 3))  # -0.01 -0.033 0.011
-print(is_equivalent(ci, margin=0.05))  # True: equivalent at alpha = 0.05
-print([round(v, 3) for v in wilson_interval(4, 200)])  # [0.008, 0.05]: 4 violations in 200 tasks
+
+print(round(ci.lower, 3), round(ci.upper, 3))  # -0.033 0.011
+print(is_equivalent(ci, margin=0.05))  # True
 ```
 
 <details>
 <summary><b>How the comparison works</b></summary>
 
-`newcombe_paired_interval` turns the four paired counts into a confidence interval for the difference of the two rates (Newcombe's method 10), `is_equivalent` checks that the whole interval lies inside plus or minus the margin, and `wilson_interval` gives the interval for one version's rate, here the new version alone. The estimate is the new rate minus the old rate. A level of 0.90 gives the two one-sided tests at alpha = 0.05, and `is_equivalent` also fails when the new version is better by more than the margin. Fix the margin before you see the counts, and draw the tasks independently, as in 1.1.
+The four counts are the tasks on which both versions violate, only the new one (`first_only`), only the old one (`second_only`), and neither. `newcombe_paired_interval` turns them into a confidence interval for the difference of the two rates (Newcombe's method 10), the new rate minus the old one, and `is_equivalent` checks that the whole interval lies inside plus or minus the margin. A level of 0.90 gives the two one-sided tests at alpha = 0.05, and `is_equivalent` also fails when the new version is better by more than the margin. `wilson_interval(x, n)` gives the interval for one version's rate. Fix the margin before you see the counts, and draw the tasks independently, as in 1.1.
 
 </details>
 
 ### 1.5 Load Your Logs
 
-**How do I get my logs in?** Use this once, before 1.2 and 1.3, when your logs are files or dicts. An `Episode` is one run: for each step a monitor score in [0, 1], a harm label (`True`, `False`, or `None` when unobserved), and a cost, plus whether the task failed. Only 1.2 and 1.3 need these per-step records.
+**How do I get my logs in?** Use this once, before 1.2 and 1.3, when your logs are files or dicts. An `Episode` is one run: for each step a monitor score in [0, 1], a harm label (`True`, `False`, or `None` when unobserved), and a cost, plus whether the task failed.
 
 ```python
-from agent_risk import any_harm, load_jsonl, replay_stop
-# two layouts: one list per field, or one record per step
+from agent_risk import load_jsonl
+
 lines = [
     '{"scores": [0.1, 0.97], "harm": [false, null], "cost": [5, 6], "failed": false}',
     '{"steps": [{"score": 0.2, "harm": false, "cost": 4}], "failed": true}',
 ]
-episodes = load_jsonl(lines)  # or load_jsonl("log.jsonl"); load_episodes takes a list of dicts
-print([e.harm_flag for e in episodes])  # [None, False]: null marks harm that was not observed
-print(any_harm([False, None, True]))    # True: a known harm outranks an unknown one
-print(replay_stop(episodes, theta=0.9).n_unknown)  # 0: the unknown harm falls after the stop
+episodes = load_jsonl(lines)  # or load_jsonl("log.jsonl")
+
+print([e.harm_flag for e in episodes])  # [None, False]
 ```
 
 Section 1.1 needs only a list of 0/1 labels, and `[e.harm_flag for e in episodes]` makes one from a log.
@@ -203,7 +193,7 @@ Section 1.1 needs only a list of 0/1 labels, and `[e.harm_flag for e in episodes
 <details>
 <summary><b>How unknown harm is counted</b></summary>
 
-A replay counts an unknown harm as harm, the conservative choice, unless the stop removes it or you pass `unknown="no_harm"`. That setting changes only the replay's own counts: `certify_replay` counts an unknown harm as a violation under either setting. `retry_harm_bounds` raises on an unknown harm it has to read.
+A file holds one episode per line, either as one list per field or as one record per step, and `load_episodes` takes a list of dicts. `null` marks harm that was not observed, and `any_harm` combines labels so that a known harm outranks an unknown one. A replay counts an unknown harm as harm, the conservative choice, unless the stop removes it or you pass `unknown="no_harm"`. That setting changes only the replay's own counts: `certify_replay` counts an unknown harm as a violation under either setting. `retry_harm_bounds` raises on an unknown harm it has to read.
 
 </details>
 
